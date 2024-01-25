@@ -20,12 +20,12 @@ import Image from "next/image";
 const conference: { title: string; href: string; description: string }[] = [
   {
     title: "Programme",
-    href: "/docs/primitives/alert-dialog",
-    description: "Mining conference programme information.",
+    href: "/conference-programme",
+    description: "Conference programme information.",
   },
   {
     title: "Speakers",
-    href: "/docs/primitives/hover-card",
+    href: "/speakers-list",
     description: "List of speakers attending the conference.",
   },
 ];
@@ -55,15 +55,14 @@ const past_events: {
   description: string;
 }[] = [
   {
-    title: "Supplier's Platform",
+    title: "Past Presentations",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "Presentation area for exhibitors to display services and product offerings.",
+    description: "Timeline of presentations from 2013 to present.",
   },
   {
-    title: "Speakers",
+    title: "2023 Presentations",
     href: "/docs/primitives/hover-card",
-    description: "List of speakers attending the conference.",
+    description: "All presentations from the 2023 Mining Expo.",
   },
 ];
 
@@ -80,6 +79,13 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <div className="font-bold text-base">Home</div>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="font-bold text-base">
                   Mining Expo
                 </NavigationMenuTrigger>
@@ -89,38 +95,29 @@ const Navbar = () => {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
+                          href="/main-event-programme"
                         >
                           <div className="h-6 w-6" />
                           <div className="mb-2 mt-4 text-lg font-medium">
-                            Mining Expo & Conference 2024
+                            Main Event Programme
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            <ul>
-                              <li>7-8 August</li>
-                              <div className="h-2 w-full"></div>
-                              <li>Windhoek Show Grounds</li>
-                              <div className="h-2 w-full"></div>
-                              <li>Free Entrance to Public</li>
-                            </ul>
+                            Main event schedule for August 7 & 8.
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/docs" title="Main Event Programme">
-                      Event schedule for August 7 & 8.
-                    </ListItem>
                     <ListItem
-                      href="/docs/installation"
+                      href="/registration-info"
                       title="Registration and Info"
                     >
                       Conference registration and exhibitor information.
                     </ListItem>
-                    <ListItem
-                      href="/docs/primitives/typography"
-                      title="Floor Plans"
-                    >
+                    <ListItem href="/floor-plans" title="Floor Plans">
                       Floor plans for all venues.
+                    </ListItem>
+                    <ListItem href="/exhibitors" title="Exhibitors">
+                      List of all exhibitors attending the event.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
