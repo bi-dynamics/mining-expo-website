@@ -5,7 +5,7 @@ import background from "../../public/hero-background.jpg";
 export default function Hero() {
   return (
     <section>
-      <div className="absolute w-full h-full z-[1] bg-gradient-to-b from-blue-950 via-transparent to-blue-950 opacity-75 brightness-90"></div>
+      <div className="absolute top-0 w-full h-full z-[1] bg-gradient-to-b from-blue-950 via-transparent to-blue-950 opacity-75 brightness-90"></div>
       <Image
         src={background}
         alt="Mountains"
