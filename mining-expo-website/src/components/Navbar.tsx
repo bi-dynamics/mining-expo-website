@@ -37,13 +37,13 @@ const marketing_opportunities: {
 }[] = [
   {
     title: "Supplier's Platform",
-    href: "/docs/primitives/alert-dialog",
+    href: "/suppliers-platform",
     description:
       "Presentation area for exhibitors to display services and product offerings.",
   },
   {
     title: "B2B",
-    href: "/docs/primitives/hover-card",
+    href: "/b2b",
     description:
       "Platform for exhibitors to engage directly with potential customers.",
   },
@@ -56,25 +56,25 @@ const past_events: {
 }[] = [
   {
     title: "Past Presentations",
-    href: "/docs/primitives/alert-dialog",
+    href: "/past-presentations",
     description: "Timeline of presentations from 2013 to present.",
   },
   {
     title: "2023 Presentations",
-    href: "/docs/primitives/hover-card",
+    href: "/2023-presentations",
     description: "All presentations from the 2023 Mining Expo.",
   },
 ];
 
 const Navbar = () => {
   return (
-    <nav className="flex z-10 items-center fixed py-8 w-full bg-transparent">
-      <div className="flex mx-24 justify-between items-center w-full">
+    <nav className="flex z-10 items-center fixed py-8 w-full bg-white xl:bg-transparent">
+      <div className="flex sm:mx-10 md:mx-16 xl:mx-24 justify-between items-center w-full">
         {/* LOGO */}
-        <div className="flex items-center justify-center">
+        <div className="flex shrink-0 items-center justify-center">
           <Image src={ExpoLogo} alt="Mining Expo Logo" height={80} />
         </div>
-        <div className="flex flex-row gap-8">
+        <div className="hidden lg:flex flex-row gap-8 border-2">
           {/* Links */}
           <NavigationMenu>
             <NavigationMenuList>
@@ -177,7 +177,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/docs" legacyBehavior passHref>
+                <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <div className="font-bold text-base">Contact</div>
                   </NavigationMenuLink>
