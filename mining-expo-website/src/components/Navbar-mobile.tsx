@@ -56,7 +56,7 @@ const NavbarMobile = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
-      className={`fixed inset-0 z-50 w-full md:hidden ${
+      className={`fixed inset-0 z-50 w-full xl:hidden ${
         isOpen ? "" : "pointer-events-none"
       }`}
       ref={containerRef}
@@ -157,7 +157,9 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
       <MenuItem>
         <button
           className="flex w-full text-2xl"
-          onClick={() => setSubMenuOpen(!subMenuOpen)}
+          onClick={() => {
+            setSubMenuOpen((prevOpen) => !prevOpen);
+          }}
         >
           <div className="flex flex-row justify-between w-full text-left items-center text-primary-foreground">
             <span
