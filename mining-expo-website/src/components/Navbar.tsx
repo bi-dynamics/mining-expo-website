@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import ExpoLogo from "../../public/mining-expo-logo-nobg.png";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { cva } from "class-variance-authority";
 
 const conference: { title: string; href: string; description: string }[] = [
   {
@@ -66,15 +68,49 @@ const past_events: {
   },
 ];
 
+const navbarVariants = cva(
+  "fixed flex z-10 items-center justify-center w-full py-4 border-2",
+  {
+    variants: {
+      variant: {
+        default: "bg-transparent",
+        opaque: "bg-white",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
+
 const Navbar = () => {
+  const [opaqueNav, setOpaqueNav] = useState(false);
+  const scrollNav = () => {
+    window.scrollY > 500 ? setOpaqueNav(true) : setOpaqueNav(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollNav);
+
+    return () => {
+      window.removeEventListener("scroll", scrollNav);
+    };
+  }, []);
+
   return (
-    <nav className="flex z-10 items-center fixed py-8 w-full bg-white xl:bg-transparent">
-      <div className="flex sm:mx-10 md:mx-16 xl:mx-24 justify-between items-center w-full">
+    <nav
+      className={
+        opaqueNav
+          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors "
+          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors "
+      }
+    >
+      <div className="flex flex-row sm:pr-8 w-full items-center justify-between">
         {/* LOGO */}
-        <div className="flex shrink-0 items-center justify-center">
-          <Image src={ExpoLogo} alt="Mining Expo Logo" height={80} />
+        <div className="flex shrink-0 items-center justify-center h-full px-10 py-4 bg-gradient-to-r from-white via-white to-transparent">
+          <Image src={ExpoLogo} alt="Mining Expo Logo" height={90} />
         </div>
-        <div className="hidden lg:flex flex-row gap-8 border-2">
+        <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full">
           {/* Links */}
           <NavigationMenu>
             <NavigationMenuList>
