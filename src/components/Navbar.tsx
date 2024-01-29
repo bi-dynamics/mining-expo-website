@@ -68,21 +68,6 @@ const past_events: {
   },
 ];
 
-const navbarVariants = cva(
-  "fixed flex z-10 items-center justify-center w-full py-4 border-2",
-  {
-    variants: {
-      variant: {
-        default: "bg-transparent",
-        opaque: "bg-white",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-);
-
 const Navbar = () => {
   const [opaqueNav, setOpaqueNav] = useState(false);
   const scrollNav = () => {
