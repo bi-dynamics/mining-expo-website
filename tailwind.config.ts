@@ -18,7 +18,13 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        rubik: ['var(--font-rubik)'],
+        poppins: ['var(--font-poppins)'],
+      },
       colors: {
+        expoOrange: "#F4A637",
+        expoBlue: "#041A51",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
