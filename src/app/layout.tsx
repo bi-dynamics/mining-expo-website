@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NavbarMobile from "@/components/Navbar-mobile";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: "700",
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  variable: "--font-rubik",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Home - Mining Expo Namibia 2024",
@@ -18,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${poppins.variable} ${rubik.variable}`}>
         <Navbar />
         <NavbarMobile />
         {children}
