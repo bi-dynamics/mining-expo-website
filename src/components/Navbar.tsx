@@ -17,7 +17,7 @@ import {
 import ExpoLogo from "../../public/mining-expo-logo-nobg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { cva } from "class-variance-authority";
+import { Icon } from "@iconify/react";
 
 const conference: { title: string; href: string; description: string }[] = [
   {
@@ -71,7 +71,7 @@ const past_events: {
 const Navbar = () => {
   const [opaqueNav, setOpaqueNav] = useState(false);
   const scrollNav = () => {
-    window.scrollY > 500 ? setOpaqueNav(true) : setOpaqueNav(false);
+    window.scrollY > 20 ? setOpaqueNav(true) : setOpaqueNav(false);
   };
 
   useEffect(() => {
@@ -95,7 +95,7 @@ const Navbar = () => {
         <div className="flex shrink-0 items-center justify-center h-full px-10 py-4 bg-gradient-to-r from-white via-white to-transparent">
           <Image src={ExpoLogo} alt="Mining Expo Logo" height={90} />
         </div>
-        <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full">
+        <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full font-rubik">
           {/* Links */}
           <NavigationMenu>
             <NavigationMenuList>
@@ -209,7 +209,15 @@ const Navbar = () => {
 
           {/* CTA */}
           <div>
-            <Button size="lg">Registration</Button>
+            <Button size="lg">
+              Registration{" "}
+              <Icon
+                icon="lucide:chevron-right"
+                width="24"
+                height="24"
+                className=""
+              />
+            </Button>
           </div>
         </div>
       </div>
