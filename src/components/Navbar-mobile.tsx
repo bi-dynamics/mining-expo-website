@@ -56,7 +56,7 @@ const NavbarMobile = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
-      className={`fixed inset-0 z-50 w-full xl:hidden ${
+      className={`fixed inset-0 z-50 w-full xl:hidden font-rubik ${
         isOpen ? "" : "pointer-events-none"
       }`}
       ref={containerRef}
