@@ -133,7 +133,7 @@ const InfoTabs = () => {
             className={
               tab === 1
                 ? "bg-expoOrange hover:bg-expoOrange"
-                : "hover:bg-expoOrange/80 active:bg-expoOrange"
+                : "bg-expoOrange/60 hover:bg-expoOrange/80 active:bg-expoOrange"
             }
           >
             ABOUT
@@ -143,7 +143,7 @@ const InfoTabs = () => {
             className={
               tab === 2
                 ? "bg-expoOrange hover:bg-expoOrange"
-                : "hover:bg-expoOrange/80 active:bg-expoOrange"
+                : "bg-expoOrange/60 hover:bg-expoOrange/80 active:bg-expoOrange"
             }
           >
             EVENT THEME
@@ -153,7 +153,7 @@ const InfoTabs = () => {
             className={
               tab === 3
                 ? "bg-expoOrange hover:bg-expoOrange"
-                : "hover:bg-expoOrange/80 active:bg-expoOrange"
+                : "bg-expoOrange/60 hover:bg-expoOrange/80 active:bg-expoOrange"
             }
           >
             OIL AND GAS SECTOR
