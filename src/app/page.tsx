@@ -3,11 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import sectionBackground from "../../public/section-background.png";
 import videoThumbnail from "../../public/conference-video-thumbnail.jpg";
+import AndradaLogo from "../../public/Andrada_logo_green-black_rgb.webp";
+import ContinentalLogo from "../../public/Continental-Lithium-Africa.webp";
+import RMBLogo from "../../public/RMB_Horizontal_Identity_RGB_Black.webp";
+
 import ButtonWithIcon from "@/components/ui/buttonWithIcon";
 import { ButtonIcon } from "@/components/ui/buttonIcon";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 import InfoTabs from "@/components/InfoTabs";
+import Maps from "@/components/Maps";
 
 export default function Home() {
   return (
@@ -61,6 +64,25 @@ export default function Home() {
           </div>
         </section>
         <InfoTabs />
+        {/* Sponsor Section */}
+        <section className="flex items-center justify-center bg-white">
+          {/* container */}
+          <div className="flex flex-col items-center justify-center w-[80%] mx-auto gap-8 py-16">
+            <h2 className="font-poppins text-5xl font-bold text-expoBlue">
+              Proudly Sponsored By
+            </h2>
+            <div className="flex gap-4">
+              <Image src={RMBLogo} alt="RMB logo" height={300} />
+              <Image src={AndradaLogo} alt="Andrada logo" height={300} />
+              <Image
+                src={ContinentalLogo}
+                alt="Continental logo"
+                height={300}
+              />
+            </div>
+          </div>
+        </section>
+        <Maps />
       </main>
     </>
   );
