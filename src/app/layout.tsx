@@ -3,6 +3,7 @@ import { Rubik, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NavbarMobile from "@/components/Navbar-mobile";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   weight: "700",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Navbar />
         <NavbarMobile />
         {children}
+        <Footer />
       </body>
     </html>
   );
