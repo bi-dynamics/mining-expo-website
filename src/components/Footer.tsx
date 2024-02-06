@@ -147,21 +147,21 @@ function Footer() {
               >
                 <Icon
                   icon="entypo-social:linkedin-with-circle"
-                  width="40"
-                  height="40"
+                  width="45"
+                  height="45"
                   className="text-expoOrange hover:text-white hover:animate-pulse"
                 />
               </Link>
               <Link
                 href="https://twitter.com/CoMinesNamibia"
                 target="blank_"
-                className="bg-expoOrange hover:bg-white hover:animate-pulse rounded-full p-2"
+                className="rounded-full flex items-center justify-center"
               >
                 <Icon
-                  icon="ri:twitter-x-fill"
-                  width="24"
-                  height="24"
-                  className="text-expoBlue hover:bg-white hover:animate-pulse"
+                  icon="pajamas:twitter"
+                  width="45"
+                  height="45"
+                  className="text-expoBlue bg-expoOrange hover:bg-white hover:animate-pulse p-2 rounded-full"
                 />
               </Link>
               <Link
@@ -171,8 +171,8 @@ function Footer() {
               >
                 <Icon
                   icon="ic:baseline-facebook"
-                  width="40"
-                  height="40"
+                  width="50"
+                  height="50"
                   className="text-expoOrange hover:text-white hover:animate-pulse"
                 />
               </Link>
