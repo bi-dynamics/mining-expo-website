@@ -11,8 +11,7 @@ function Maps() {
               width="600"
               height="450"
               className="w-full h-full rounded-s-xl shadow-xl"
-              allowFullScreen
-              loading="lazy"
+              loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
