@@ -27,7 +27,7 @@ const conference: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Speakers",
-    href: "/speakers-list",
+    href: "/conference-programme/speakers-list",
     description: "List of speakers attending the conference.",
   },
 ];
@@ -45,7 +45,7 @@ const marketing_opportunities: {
   },
   {
     title: "B2B",
-    href: "/b2b",
+    href: "/suppliers-platform/b2b",
     description:
       "Platform for exhibitors to engage directly with potential customers.",
   },
@@ -63,7 +63,7 @@ const past_events: {
   },
   {
     title: "2023 Presentations",
-    href: "/2023-presentations",
+    href: "/past-presentations/2023-presentations",
     description: "All presentations from the 2023 Mining Expo.",
   },
 ];
@@ -86,8 +86,8 @@ const Navbar = () => {
     <nav
       className={
         opaqueNav
-          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors "
-          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors "
+          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors shadow-md "
+          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors"
       }
     >
       <div className="flex flex-row sm:pr-8 w-full items-center justify-between">
@@ -129,15 +129,21 @@ const Navbar = () => {
                       </NavigationMenuLink>
                     </li>
                     <ListItem
-                      href="/registration-info"
+                      href="/main-event-programme/registration-info"
                       title="Registration and Info"
                     >
                       Conference registration and exhibitor information.
                     </ListItem>
-                    <ListItem href="/floor-plans" title="Floor Plans">
+                    <ListItem
+                      href="/main-event-programme/floor-plans"
+                      title="Floor Plans"
+                    >
                       Floor plans for all venues.
                     </ListItem>
-                    <ListItem href="/exhibitors" title="Exhibitors">
+                    <ListItem
+                      href="/main-event-programme/exhibitors"
+                      title="Exhibitors"
+                    >
                       List of all exhibitors attending the event.
                     </ListItem>
                   </ul>
