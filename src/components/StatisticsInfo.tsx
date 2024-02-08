@@ -7,7 +7,7 @@ import {
   useInView,
   useTransform,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -59,7 +59,7 @@ function StatisticsInfo() {
   return (
     <section
       ref={ref}
-      className="flex flex-col gap-16 items-center justify-center pb-16 w-full h-fit bg-expoBlue font-rubik"
+      className="flex flex-col gap-16 items-center justify-center py-16 w-full h-fit bg-expoBlue font-rubik"
     >
       <h2 className="font-bold text-4xl text-white w-1/2 text-center">
         "Namibia’s role in the sustainable supply of minerals to support the
