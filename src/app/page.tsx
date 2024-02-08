@@ -12,6 +12,7 @@ import { ButtonIcon } from "@/components/ui/buttonIcon";
 import InfoTabs from "@/components/InfoTabs";
 import Maps from "@/components/Maps";
 import StatisticsInfo from "@/components/StatisticsInfo";
+import ImageSlides from "@/components/ImageSlides";
 
 export default function Home() {
   return (
@@ -65,6 +66,7 @@ export default function Home() {
           </div>
         </section>
         <InfoTabs />
+        <ImageSlides />
         <StatisticsInfo />
         {/* Sponsor Section */}
         <section className="flex items-center justify-center bg-white">
