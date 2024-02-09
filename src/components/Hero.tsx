@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import background from "../../public/hero-background.jpg";
+import backgroundImage from "../../public/mining-expo-hero.webp";
 import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO.png";
 import { Icon } from "@iconify/react";
 
@@ -55,13 +55,13 @@ export default function Hero() {
       {/* container for image */}
       <div className="absolute top-0 w-full h-full -z-10">
         <Image
-          src={background}
+          src={backgroundImage}
           alt="Background image"
           quality={100}
           fill
           placeholder="blur"
           sizes="100vw"
-          className=" object-cover brightness-75"
+          className=" object-cover brightness-75 blur-[5px]"
         />
       </div>
       {/* gradient layer */}
