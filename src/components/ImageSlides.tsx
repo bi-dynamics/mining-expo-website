@@ -11,16 +11,34 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 //Images
-import image1 from "../../public/about-info-tab.jpg";
-import image2 from "../../public/about-info-tab2.jpg";
-import image3 from "../../public/about-info-tab3.jpg";
-import image4 from "../../public/conference-video-thumbnail.jpg";
+import image1 from "../../public/mining-expo-gallery-1.webp";
+import image2 from "../../public/mining-expo-gallery-2.webp";
+import image3 from "../../public/mining-expo-gallery-3.webp";
+import image4 from "../../public/mining-expo-gallery-4.webp";
+import image5 from "../../public/mining-expo-gallery-5.webp";
+import image6 from "../../public/mining-expo-gallery-6.webp";
+import image7 from "../../public/mining-expo-gallery-7.webp";
+import image8 from "../../public/mining-expo-gallery-8.webp";
+import image9 from "../../public/mining-expo-gallery-9.webp";
+import image10 from "../../public/mining-expo-gallery-10.webp";
+import image11 from "../../public/mining-expo-gallery-11.webp";
+import image12 from "../../public/mining-expo-gallery-12.jpg";
+import image13 from "../../public/mining-expo-gallery-13.jpg";
 
 const images = [
   { src: image1, alt: "First Image" },
   { src: image2, alt: "Second Image" },
   { src: image3, alt: "Third Image" },
   { src: image4, alt: "Fourth Image" },
+  { src: image5, alt: "Fith Image" },
+  { src: image6, alt: "Sixth Image" },
+  { src: image7, alt: "Seventh Image" },
+  { src: image8, alt: "Eigth Image" },
+  { src: image9, alt: "Ninth Image" },
+  { src: image10, alt: "Tenth Image" },
+  { src: image11, alt: "Eleventh Image" },
+  { src: image12, alt: "Twelfth Image" },
+  { src: image13, alt: "Thirteenth Image" },
 ];
 
 function ImageSlides() {
@@ -55,6 +73,7 @@ function ImageSlides() {
                   src={image.src}
                   alt={image.alt}
                   className="block h-full w-full object-cover rounded-xl z-50"
+                  placeholder="blur"
                 />
               </div>
             </SwiperSlide>
