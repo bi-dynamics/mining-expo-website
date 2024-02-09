@@ -1,6 +1,6 @@
 function Maps() {
   return (
-    <section className="flex items-center justify-center bg-[url('../../public/about-info-tab.jpg')] bg-cover bg-top h-[60vh]">
+    <section className="flex items-center justify-center bg-[url('../../public/mining-expo-namibia-venue.webp')] bg-cover bg-center h-[60vh]">
       {/* gradient layer */}
       <div className="h-full w-full z-[1] bg-expoBlue/80 to-transparent">
         {/* container */}
