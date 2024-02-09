@@ -11,7 +11,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/about-info-tab.jpg')] bg-cover bg-top duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
@@ -40,7 +40,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/about-info-tab2.jpg')] bg-cover bg-center duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
@@ -49,7 +49,7 @@ const InfoTabs = () => {
                 <div className="w-12 h-52 bg-expoOrange"></div>
                 <div className="font-rubik flex flex-col gap-4 w-1/2 h-fit">
                   <h2 className=" text-5xl text-white font-bold">
-                    Mining Conference 2024
+                    Mining Conference 2024 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
                     The Theme for this year’s event is “Namibia’s role in the
@@ -68,7 +68,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/about-info-tab3.jpg')] bg-cover bg-[center_top_-25rem] duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/oil-and-gas-sector.webp')] bg-cover bg-[center_top_-25rem] duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
@@ -95,7 +95,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/about-info-tab.jpg')] bg-cover bg-top transition-all">
+            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
