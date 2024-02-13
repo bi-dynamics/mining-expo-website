@@ -11,14 +11,14 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top duration-300 transition-all">
               {/* gradient layer */}
-              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
+              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
-              <div className="absolute h-[70%] w-full z-[2] flex items-center justify-start gap-4">
+              <div className="absolute h-fit w-full z-[2] flex items-center justify-start gap-4">
                 {/* Orange tag */}
-                <div className="w-12 h-52 bg-expoOrange"></div>
-                <div className="font-rubik flex flex-col gap-4 w-1/2 h-fit">
+                <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
+                <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-5xl text-white font-bold">
                     Mining Expo 2024
                   </h2>
@@ -40,14 +40,14 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
-              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
+              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
-              <div className="absolute h-[70%] w-full z-[2] flex items-center justify-start gap-4">
+              <div className="absolute h-fit w-full z-[2] flex items-center justify-start gap-4">
                 {/* Orange tag */}
-                <div className="w-12 h-52 bg-expoOrange"></div>
-                <div className="font-rubik flex flex-col gap-4 w-1/2 h-fit">
+                <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
+                <div className="font-rubik flex flex-col gap-4 4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-5xl text-white font-bold">
                     Mining Conference 2024 Theme
                   </h2>
@@ -68,14 +68,14 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/oil-and-gas-sector.webp')] bg-cover bg-[center_top_-25rem] duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/oil-and-gas-sector.webp')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
-              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
+              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
-              <div className="absolute h-[70%] w-full z-[2] flex items-center justify-start gap-4">
+              <div className="absolute h-fit w-full z-[2] flex items-center justify-start gap-4">
                 {/* Orange tag */}
-                <div className="w-12 h-52 bg-expoOrange"></div>
-                <div className="font-rubik flex flex-col gap-4 w-1/2 h-fit">
+                <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
+                <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-5xl text-white font-bold">
                     New Sector: Oil & Gas
                   </h2>
@@ -95,14 +95,14 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
-              <div className="absolute h-[70%] w-full z-[2] flex items-center justify-start gap-4">
+              <div className="absolute h-fit w-full z-[2] flex items-center justify-start gap-4">
                 {/* Orange tag */}
                 <div className="w-12 h-52 bg-expoOrange"></div>
-                <div className="font-rubik flex flex-col gap-4 w-1/2 h-fit">
+                <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-5xl text-white font-bold">
                     Mining Expo 2024
                   </h2>
@@ -123,11 +123,11 @@ const InfoTabs = () => {
   };
 
   return (
-    <section className="flex flex-col py-16 gap-4 h-[100vh] bg-expoBlue">
+    <section className="flex flex-col py-16 gap-4 h-[120vh] md:h-[90vh] w-full bg-expoBlue">
       {/* Heading and buttons */}
-      <div className="flex flex-col gap-4 px-24 items-start justify-start">
+      <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-24 items-start justify-start">
         <h2 className="font-poppins text-5xl font-bold text-white">THE EXPO</h2>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-wrap gap-4">
           <Button
             onClick={() => setTab(1)}
             className={
