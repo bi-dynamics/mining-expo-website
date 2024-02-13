@@ -61,18 +61,18 @@ function StatisticsInfo() {
       ref={ref}
       className="flex flex-col gap-16 items-center justify-center py-16 w-full h-fit bg-expoBlue font-rubik"
     >
-      <h2 className="font-bold text-4xl text-white w-1/2 text-center">
+      <h2 className="font-bold text-4xl text-white w-[90%] xl:w-1/2 text-center">
         "Namibia’s role in the sustainable supply of minerals to support the
         global energy transition"
       </h2>
       {/* Container */}
-      <div className="flex flex-wrap items-center justify-center mx-auto w-[80%] h-full text-[#F2F2F2] overflow-hidden">
+      <div className="flex items-center justify-center mx-auto w-[90%] xl:w-[80%] h-full text-[#F2F2F2] overflow-hidden">
         <motion.ul
           transition={{ staggerChildren: 0.4, delayChildren: 0.7 }}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="flex gap-8 w-full h-full items-center justify-center"
+          className="flex gap-8 w-full h-full items-center justify-center flex-wrap"
         >
           {/* Days */}
           <motion.li
