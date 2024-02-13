@@ -23,27 +23,16 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         {/* About section */}
-        <section className="flex items-center justify-center px-24 py-16 gap-48 w-full h-[60vh]">
-          {/* container for image */}
-          <div className="absolute top-auto w-full h-full -z-10 ">
-            <Image
-              src={sectionBackground}
-              alt="Background image"
-              quality={100}
-              fill
-              placeholder="blur"
-              sizes="100vw"
-              className=" object-cover brightness-50 contrast-[5]"
-            />
-          </div>
+
+        <section className="relative py-16 flex flex-col-reverse xl:flex-row items-center justify-center gap-16 w-full h-fit bg-[url('../../public/section-background.png')] bg-bottom">
           {/* gradient layer */}
-          <div className="absolute h-full w-full z-[-9] bg-gradient-to-b from-expoBlue to-expoBlue/70"></div>
+          <div className="absolute h-full w-full z-[1] bg-gradient-to-b from-expoBlue to-expoBlue/80"></div>
           {/* Text */}
-          <div className="flex flex-col items-start justify-start gap-6 w-[40%] line-clamp-3 text-white h-full px-4">
-            <h3 className=" font-rubik text-lg text-expoOrange">
+          <div className="z-[2] flex flex-col items-start justify-start gap-6 w-[90%] xl:w-[40%] line-clamp-3 text-white h-full px-4">
+            <h3 className="font-rubik text-lg text-expoOrange">
               Mining Exhibition
             </h3>
-            <h2 className="font-poppins text-5xl font-bold">
+            <h2 className="font-poppins text-3xl xl:text-5xl font-bold">
               Welcome to the Mining Expo & Conference <br /> 2024
             </h2>
             <p className="text-base font-rubik text-white/80">
@@ -54,7 +43,7 @@ export default function Home() {
             <ButtonWithIcon>Registration</ButtonWithIcon>
           </div>
           {/* Video */}
-          <div className="flex items-center justify-center w-[40%] h-fit">
+          <div className="z-[2] flex items-center justify-center w-[90%] xl:w-[40%] h-fit">
             <div className="absolute">
               <ButtonIcon />
             </div>
@@ -67,21 +56,30 @@ export default function Home() {
         </section>
         <InfoTabs />
         <ImageSlides />
+
         <StatisticsInfo />
         {/* Sponsor Section */}
         <section className="flex items-center justify-center bg-white">
           {/* container */}
-          <div className="flex flex-col items-center justify-center w-[80%] mx-auto gap-8 py-16">
-            <h2 className="font-poppins text-5xl font-bold text-expoBlue">
+          <div className="flex flex-col items-center justify-center w-[80%] mx-auto gap-8 py-8">
+            <h2 className="font-poppins text-5xl font-bold text-expoBlue text-center">
               Proudly Sponsored By
             </h2>
-            <div className="flex gap-4">
-              <Image src={RMBLogo} alt="RMB logo" height={300} />
-              <Image src={AndradaLogo} alt="Andrada logo" height={300} />
+            <div className="flex items-center justify-center gap-4 xl:flex-row flex-wrap">
+              <Image
+                src={RMBLogo}
+                alt="RMB logo"
+                className="h-32 w-auto xl:h-72"
+              />
+              <Image
+                src={AndradaLogo}
+                alt="Andrada logo"
+                className="h-40 w-auto xl:h-72"
+              />
               <Image
                 src={ContinentalLogo}
                 alt="Continental logo"
-                height={300}
+                className="h-40 w-auto xl:h-72"
               />
             </div>
           </div>
