@@ -4,7 +4,10 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../../public/mining-expo-hero.webp";
 import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO.png";
+import heroLogo from "../../public/hero-logo.png";
 import { Icon } from "@iconify/react";
+import ButtonWithIcon from "./ui/buttonWithIcon";
+import { Button } from "./ui/button";
 
 export default function Hero() {
   // Countdown timer logic
@@ -51,7 +54,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="flex items-start justify-center w-full h-full">
+    <section className="relative flex items-start justify-center w-full h-full">
       {/* container for image */}
       <div className="absolute top-0 w-full h-full -z-10">
         <Image
@@ -69,37 +72,21 @@ export default function Hero() {
       {/* content container */}
       <div className="h-full w-full mt-32 flex flex-col items-center justify-center">
         {/* top half part content */}
-        <div className="flex flex-row items-center justify-center gap-8 w-full h-full px-24 py-28">
+        <div className="flex flex-wrap items-center justify-center gap-8 w-[90%] h-fit py-20 xl:py-28">
           {/* Expo logo */}
-          <section className="flex flex-row h-fit w-fit p-2 gap-4">
-            {/* Left side with text */}
-            <div className="flex flex-col gap-2 font-poppins items-center justify-center">
-              <span className="text-8xl font-bold text-gray-200 tracking-tighter mb-2">
-                Mining
-              </span>
-              <span className="w-full h-1 bg-gray-300"></span>
-              <span className="text-9xl font-bold text-expoOrange tracking-tighter ">
-                Expo
-              </span>
-              <span className=" text-[44px] font-bold tracking-tight text-gray-300">
-                & Conference
-              </span>
-              <span className=" text-xl font-bold tracking-tight text-black bg-expoOrange px-2">
-                CHAMBER OF MINES NAMIBIA
-              </span>
-            </div>
-            {/* Right side with number */}
-            <div className="flex items-center justify-center">
-              <span className="font-poppins text-transparent text-[156px] tracking-tight py-4 px-8 border-[12px] border-expoOrange bg-gradient-to-br from-[#031236] via-[#08329D] to-[#1151F2] bg-clip-text">
-                24
-              </span>
-            </div>
+          <section className="flex shrink-0 h-full w-fit">
+            <Image
+              src={heroLogo}
+              alt="hero image"
+              quality={100}
+              className=" object-cover shrink-0"
+            />
           </section>
           {/* Expo Info */}
-          <section className="w-fit h-full flex flex-col items-start justify-between gap-4">
+          <section className="w-fit h-ful flex flex-col items-center justify-between gap-8">
             {/* Dates */}
             <div className="w-fit h-full flex flex-col items-start justify-center gap-2 p-2 font-rubik">
-              <h3 className="flex items-center justify-center text-white text-3xl">
+              <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
                 <Icon
                   icon="clarity:date-solid"
                   width="36"
@@ -108,7 +95,7 @@ export default function Hero() {
                 />{" "}
                 <span className="font-bold mr-2">Date:</span>7 & 8 August 2024
               </h3>
-              <h3 className="flex items-center justify-center text-white text-3xl">
+              <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
                 <Icon
                   icon="mdi:location"
                   width="36"
@@ -118,7 +105,7 @@ export default function Hero() {
                 <span className="font-bold mr-2">Venue:</span>
                 Windhoek Show Grounds
               </h3>
-              <h3 className="flex items-center justify-center gap-4 text-white text-3xl">
+              <h3 className="flex items-center justify-center gap-4 text-white text-sm md:text-3xl">
                 <Icon
                   icon="material-symbols:info"
                   width="36"
@@ -128,21 +115,25 @@ export default function Hero() {
                 Free Public Entry
               </h3>
             </div>
+
+            <Button className="block xl:hidden w-[80%] bg-expoOrange">
+              Registration
+            </Button>
             {/* sponsor logo */}
-            <div className="relative top-36 w-full h-full flex items-center justify-end">
+            <div className="relative xl:top-24 top-20 w-full h-full flex items-center justify-center xl:justify-end">
               <Image src={rmbSponsorLogo} alt="RMB Logo" height={100} />
             </div>
           </section>
         </div>
         {/* bottom part of content */}
         {/* countdown section */}
-        <section className="w-full h-[20vh] bg-expoOrange flex items-center justify-center py-8">
+        <section className="w-full h-fit bg-expoOrange flex items-center justify-center py-8">
           {endCountdown ? (
             ""
           ) : (
-            <div className="w-full h-full flex items-center justify-center gap-8 font-rubik text-white font-bold">
+            <div className="w-full h-full flex flex-wrap items-center justify-center gap-8 font-rubik text-white font-bold">
               {/* Days */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl">
+              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
                 {days}
                 {days == 1 ? (
                   <p className="text-base font-bold">Day</p>
@@ -150,9 +141,9 @@ export default function Hero() {
                   <p className="text-base font-bold">Days</p>
                 )}
               </span>
-              <span className="bg-gray-300 h-5/6 w-px"></span>
+
               {/* Hours */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl">
+              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
                 {hours}
                 {hours == 1 ? (
                   <p className="text-base font-bold">Hour</p>
@@ -160,15 +151,15 @@ export default function Hero() {
                   <p className="text-base font-bold">Hours</p>
                 )}
               </span>
-              <span className="bg-gray-300 h-5/6 w-px"></span>
+
               {/* Minutes */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl">
+              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
                 {minutes}
                 <p className="text-base font-bold">Minutes</p>
               </span>
-              <span className="bg-gray-300 h-5/6 w-px"></span>
+
               {/* Seconds */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl">
+              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
                 {seconds}
                 <p className="text-base font-bold">Seconds</p>
               </span>

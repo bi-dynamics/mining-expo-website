@@ -105,7 +105,7 @@ function Footer() {
               />
               Exhibitor Coordinator: Loide Armas
             </p>
-            <p className="flex items-center justify-center gap-2">
+            <p className="flex flex-wrap items-center justify-start gap-2">
               <Icon
                 icon="material-symbols:mail-outline"
                 width="24"
@@ -182,10 +182,9 @@ function Footer() {
         <Image
           src={RMBSponsorLogo}
           alt="RMB Logo"
-          height={150}
-          className="mx-auto"
+          className="mx-auto h-20 xl:h-40 w-auto"
         />
-        <p className="text-white/80">
+        <p className="text-white/80 text-center">
           © 2024,{" "}
           <Link
             href="http://bi-dynamics.com/"

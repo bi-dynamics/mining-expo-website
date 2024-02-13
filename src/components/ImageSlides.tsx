@@ -56,7 +56,10 @@ function ImageSlides() {
           zoom={{ minRatio: 1, maxRatio: 2 }}
           pagination={{ clickable: true, dynamicBullets: true }}
           modules={[Navigation, Pagination, Zoom, EffectCoverflow]}
-          slidesPerView={3}
+          slidesPerView={1.3}
+          breakpoints={{
+            "768": { slidesPerView: 2.3 },
+          }}
           centeredSlides={true}
           coverflowEffect={{
             slideShadows: false,
@@ -64,10 +67,10 @@ function ImageSlides() {
             rotate: 20,
           }}
           effect={"coverflow"}
-          className="h-full w-[90%] rounded-lg"
+          className="h-full w-full md:w-[90%] rounded-lg"
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="px-10 py-14">
+            <SwiperSlide key={index} className="md:px-10 md:py-14">
               <div className="swiper-zoom-container flex flex-row h-fit w-full items-center justify-center my-8">
                 <Image
                   src={image.src}
