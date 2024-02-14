@@ -57,7 +57,7 @@ function Footer() {
           <div className="flex flex-col gap-4 text-sm items-start">
             <h4 className="font-bold text-lg mb-4">MARKETING OPPORTUNITIES</h4>
             <Link href="/suppliers-platform" className=" hover:text-expoOrange">
-              Supplier's PLatform
+              Supplier&#39;s PLatform
             </Link>
             <Link
               href="/suppliers-platform/b2b"
