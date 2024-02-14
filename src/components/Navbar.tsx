@@ -93,11 +93,13 @@ const Navbar = () => {
       <div className="flex flex-row sm:pr-8 w-full items-center justify-between">
         {/* LOGO */}
         <div className="flex shrink-0 items-center justify-center h-full px-10 py-4 bg-gradient-to-r from-white via-white to-transparent">
-          <Image
-            src={ExpoLogo}
-            alt="Mining Expo Logo"
-            className="h-[60px] w-auto xl:h-[100px]"
-          />
+          <Link href="/#">
+            <Image
+              src={ExpoLogo}
+              alt="Mining Expo Logo"
+              className="h-[60px] w-auto xl:h-[100px]"
+            />
+          </Link>
         </div>
         <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full font-rubik">
           {/* Links */}
