@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Head from "next/head";
 import { Metadata } from "next";
 import Image from "next/image";
 import videoThumbnail from "../../public/conference-video-thumbnail.jpg";
@@ -16,6 +15,8 @@ import ImageSlides from "@/components/ImageSlides";
 
 export const metadata: Metadata = {
   title: "Home | MINING EXPO Namibia",
+  description:
+    "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds,",
 };
 
 export default function Home() {
