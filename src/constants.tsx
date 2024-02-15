@@ -1,5 +1,7 @@
 import { SideNavItem } from "./types";
 
+//Routes for Navigation Menu
+
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: "Home",

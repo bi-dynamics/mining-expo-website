@@ -17,7 +17,7 @@ import {
 import ExpoLogo from "../../public/mining-expo-logo-nobg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { cva } from "class-variance-authority";
+import { Icon } from "@iconify/react";
 
 const conference: { title: string; href: string; description: string }[] = [
   {
@@ -27,7 +27,7 @@ const conference: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Speakers",
-    href: "/speakers-list",
+    href: "/conference-programme/speakers-list",
     description: "List of speakers attending the conference.",
   },
 ];
@@ -45,7 +45,7 @@ const marketing_opportunities: {
   },
   {
     title: "B2B",
-    href: "/b2b",
+    href: "/suppliers-platform/b2b",
     description:
       "Platform for exhibitors to engage directly with potential customers.",
   },
@@ -63,7 +63,7 @@ const past_events: {
   },
   {
     title: "2023 Presentations",
-    href: "/2023-presentations",
+    href: "/past-presentations/2023-presentations",
     description: "All presentations from the 2023 Mining Expo.",
   },
 ];
@@ -71,7 +71,7 @@ const past_events: {
 const Navbar = () => {
   const [opaqueNav, setOpaqueNav] = useState(false);
   const scrollNav = () => {
-    window.scrollY > 500 ? setOpaqueNav(true) : setOpaqueNav(false);
+    window.scrollY > 20 ? setOpaqueNav(true) : setOpaqueNav(false);
   };
 
   useEffect(() => {
@@ -86,16 +86,22 @@ const Navbar = () => {
     <nav
       className={
         opaqueNav
-          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors "
-          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors "
+          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors shadow-md "
+          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors"
       }
     >
       <div className="flex flex-row sm:pr-8 w-full items-center justify-between">
         {/* LOGO */}
         <div className="flex shrink-0 items-center justify-center h-full px-10 py-4 bg-gradient-to-r from-white via-white to-transparent">
-          <Image src={ExpoLogo} alt="Mining Expo Logo" height={90} />
+          <Link href="/#">
+            <Image
+              src={ExpoLogo}
+              alt="Mining Expo Logo"
+              className="h-[60px] w-auto xl:h-[100px]"
+            />
+          </Link>
         </div>
-        <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full">
+        <div className="hidden xl:flex flex-row items-center justify-end gap-8 w-full font-rubik">
           {/* Links */}
           <NavigationMenu>
             <NavigationMenuList>
@@ -129,15 +135,21 @@ const Navbar = () => {
                       </NavigationMenuLink>
                     </li>
                     <ListItem
-                      href="/registration-info"
+                      href="/main-event-programme/registration-info"
                       title="Registration and Info"
                     >
                       Conference registration and exhibitor information.
                     </ListItem>
-                    <ListItem href="/floor-plans" title="Floor Plans">
+                    <ListItem
+                      href="/main-event-programme/floor-plans"
+                      title="Floor Plans"
+                    >
                       Floor plans for all venues.
                     </ListItem>
-                    <ListItem href="/exhibitors" title="Exhibitors">
+                    <ListItem
+                      href="/main-event-programme/exhibitors"
+                      title="Exhibitors"
+                    >
                       List of all exhibitors attending the event.
                     </ListItem>
                   </ul>
@@ -209,7 +221,15 @@ const Navbar = () => {
 
           {/* CTA */}
           <div>
-            <Button size="lg">Registration</Button>
+            <Button size="lg">
+              Registration{" "}
+              <Icon
+                icon="lucide:chevron-right"
+                width="24"
+                height="24"
+                className=""
+              />
+            </Button>
           </div>
         </div>
       </div>
