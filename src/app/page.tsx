@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Head from "next/head";
+import { Metadata } from "next";
 import Image from "next/image";
-import sectionBackground from "../../public/section-background.png";
 import videoThumbnail from "../../public/conference-video-thumbnail.jpg";
 import AndradaLogo from "../../public/Andrada_logo_green-black_rgb.webp";
 import ContinentalLogo from "../../public/Continental-Lithium-Africa.webp";
@@ -14,12 +14,13 @@ import Maps from "@/components/Maps";
 import StatisticsInfo from "@/components/StatisticsInfo";
 import ImageSlides from "@/components/ImageSlides";
 
+export const metadata: Metadata = {
+  title: "Home | MINING EXPO Namibia",
+};
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title> Home - Mining Expo Namibia 2024 </title>
-      </Head>
       <main className="flex flex-col">
         <Hero />
         {/* About section */}
