@@ -63,6 +63,7 @@ export default function Hero() {
           quality={100}
           fill
           placeholder="blur"
+          loading="eager"
           sizes="100vw"
           className=" object-cover brightness-75 blur-[5px]"
         />
