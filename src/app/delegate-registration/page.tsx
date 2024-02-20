@@ -12,7 +12,7 @@ function delegateRegistrationPage() {
           src="https://www.cognitoforms.com/f/2QVll_rxDEOR3mB1yLnroQ/1"
           className="w-[80%] h-[100vh]"
         ></iframe>
-        <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+        <script src="https://www.cognitoforms.com/f/iframe.js" async />
       </section>
     </main>
   );
