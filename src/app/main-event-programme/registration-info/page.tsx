@@ -92,7 +92,7 @@ const RegistrationInfoPage = () => {
   return (
     <main>
       <PageBanner title="Registration" />
-      <section className="flex flex-col w-full h-fit py-16 justify-center items-center">
+      <section className="flex flex-col w-full h-fit gap-6 py-16 justify-center items-center">
         <div className="flex flex-col items-center justify-center w-[80%] gap-4">
           <h2 className=" text-5xl font-poppins font-bold text-black text-center">
             Exhibitor Information
@@ -106,7 +106,7 @@ const RegistrationInfoPage = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center h-full w-[90%] xl:w-[80%] py-16">
-          <Accordion type="single" collapsible className="w-full xl:w-[50%]">
+          <Accordion type="single" collapsible className="w-full xl:w-[60%]">
             <AccordionItem value="item-1">
               <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange">
                 STAND ALLOCATION & REQUIREMENTS
@@ -202,9 +202,9 @@ const RegistrationInfoPage = () => {
           {boothPackages.map((boothPackage, index) => (
             <div
               key={index}
-              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[25vw] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:border-expoOrange hover:shadow-[0_0_25px_rgba(244,166,55,0.7)] transition-all duration-200"
+              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[25vw] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:border-expoOrange  transition-all duration-200"
             >
-              <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-full py-4 rounded-t-lg px-3">
+              <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-20 py-4 rounded-t-lg px-3">
                 {boothPackage.title}
               </h3>
               <div className="w-full text-center pb-4 font-rubik font-semibold text-white bg-expoBlue rounded-bl-full rounded-br-full">
