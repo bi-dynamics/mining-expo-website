@@ -1,25 +1,24 @@
 import Hero from "@/components/Hero";
-import Head from "next/head";
+import { Metadata } from "next";
 import Image from "next/image";
-import sectionBackground from "../../public/section-background.png";
-import videoThumbnail from "../../public/conference-video-thumbnail.jpg";
 import AndradaLogo from "../../public/Andrada_logo_green-black_rgb.webp";
 import ContinentalLogo from "../../public/Continental-Lithium-Africa.webp";
 import RMBLogo from "../../public/RMB_Horizontal_Identity_RGB_Black.webp";
-
 import ButtonWithIcon from "@/components/ui/buttonWithIcon";
-import { ButtonIcon } from "@/components/ui/buttonIcon";
 import InfoTabs from "@/components/InfoTabs";
 import Maps from "@/components/Maps";
 import StatisticsInfo from "@/components/StatisticsInfo";
 import ImageSlides from "@/components/ImageSlides";
 
+export const metadata: Metadata = {
+  title: "Home | MINING EXPO Namibia",
+  description:
+    "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia located at the Windhoek Show Grounds. Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds,",
+};
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title> Home - Mining Expo Namibia 2024 </title>
-      </Head>
       <main className="flex flex-col">
         <Hero />
         {/* About section */}
@@ -44,14 +43,15 @@ export default function Home() {
           </div>
           {/* Video */}
           <div className="z-[2] flex items-center justify-center w-[90%] xl:w-[40%] h-fit">
-            <div className="absolute">
-              <ButtonIcon />
-            </div>
-            <Image
-              src={videoThumbnail}
-              alt="Mining Expo Video Thumbnail"
-              className="rounded-xl"
-            />
+            <iframe
+              width="760"
+              height="515"
+              src="https://www.youtube.com/embed/rOlnU5Oeq7w?si=wY6Z_appCAYfZaOa"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="rounded-2xl shadow-2xl"
+            ></iframe>
           </div>
         </section>
         <InfoTabs />

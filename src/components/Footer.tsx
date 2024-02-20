@@ -9,7 +9,7 @@ function Footer() {
   return (
     <section className="flex items-center justify-center py-8 w-full h-fit bg-expoBlue">
       {/* container */}
-      <div className="flex flex-col gap-4 items-center justify-start mx-auto w-[80%] h-full text-[#F2F2F2] font-rubik">
+      <div className="flex flex-col gap-4 items-center justify-start mx-auto w-[80%] xl:w-[90%] h-full text-[#F2F2F2] font-rubik">
         {/* Links */}
         <div className="flex flex-wrap items-start justify-start  xl:justify-center w-full h-full gap-8">
           <div className="flex flex-col gap-4 text-sm items-start">

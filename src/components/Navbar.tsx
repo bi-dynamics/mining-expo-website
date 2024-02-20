@@ -86,8 +86,8 @@ const Navbar = () => {
     <nav
       className={
         opaqueNav
-          ? " fixed flex z-10 items-center justify-center w-full bg-white transition-colors shadow-md "
-          : "fixed flex z-10 items-center justify-center w-full bg-white xl:bg-transparent transition-colors"
+          ? " fixed flex z-50 items-center justify-center w-full bg-white transition-colors shadow-md "
+          : "fixed flex z-50 items-center justify-center w-full bg-white xl:bg-transparent transition-colors"
       }
     >
       <div className="flex flex-row sm:pr-8 w-full items-center justify-between">
