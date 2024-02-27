@@ -7,6 +7,9 @@ export interface SpeakerData {
   profilePicture?: string;
   speakerName?: string;
   title?: string;
+  linkedinProfile?: string;
+  websiteLink?: string;
+  email?: string;
 }
 
 export async function getSpeakers(): Promise<SpeakerData[]> {
