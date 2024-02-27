@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Metadata } from "next";
-import Speakers from "@/components/Speakers";
 import PageBanner from "@/components/PageBanner";
+import SpeakerCardSkeleton from "@/components/SpeakerCardSkeleton";
+import { SpeakersListWithSuspense } from "@/components/SpeakersWithSuspense";
 
 export const metadata: Metadata = {
   title: "Speakers",
@@ -12,13 +13,13 @@ export const metadata: Metadata = {
   },
 };
 
-const SpeakersListPage = () => {
+export default async function SpeakersListPage() {
   return (
     <div className="flex items-center justify-center flex-col w-full h-full">
       <PageBanner title="Speakers" />
-      <Speakers />
+      <Suspense fallback={<SpeakerCardSkeleton />}>
+        <SpeakersListWithSuspense />
+      </Suspense>
     </div>
   );
-};
-
-export default SpeakersListPage;
+}

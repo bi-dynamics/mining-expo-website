@@ -182,9 +182,9 @@ function Footer() {
         <Image
           src={RMBSponsorLogo}
           alt="RMB Logo"
-          className="mx-auto h-20 xl:h-40 w-auto"
+          className="mx-auto h-20 xl:h-40 w-auto brightness-50"
         />
-        <p className="text-white/80 text-center">
+        <p className="text-white/50 text-center">
           © 2024,{" "}
           <Link
             href="http://bi-dynamics.com/"

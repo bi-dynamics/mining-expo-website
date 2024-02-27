@@ -80,6 +80,7 @@ export default function Hero() {
               src={heroLogo}
               alt="hero image"
               quality={100}
+              loading="eager"
               className=" object-cover shrink-0"
             />
           </section>

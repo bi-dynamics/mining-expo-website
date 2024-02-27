@@ -5,7 +5,7 @@ interface PageBannerProps {
 const PageBanner: React.FC<PageBannerProps> = ({ title }) => {
   return (
     <section
-      className={` relative bg-[url('../../public/mining-expo-header.webp')] bg-cover bg-center h-[50vh] w-full flex items-center justify-center tracking-tight`}
+      className={` relative bg-[url('../../public/mining-expo-header.webp')] bg-cover bg-center h-[30vh] xl:h-[50vh] w-full flex items-center justify-center tracking-tight`}
     >
       {/* gradient layer */}
       <div className="absolute h-full w-full z-[1] overflow-hidden bg-gradient-to-b from-expoBlue via-transparent to-expoBlue"></div>

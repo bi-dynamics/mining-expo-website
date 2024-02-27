@@ -11,7 +11,8 @@ function Maps() {
               width="600"
               height="650"
               className="w-full h-full  xl:rounded-s-xl shadow-xl shrink-0"
-              loading="eager"
+              loading="lazy"
+              title="Event venue location"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
