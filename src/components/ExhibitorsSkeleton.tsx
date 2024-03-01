@@ -8,8 +8,8 @@ function ExhibitorsSkeleton() {
         <div className="flex flex-wrap items-center justify-center gap-16 w-full">
           {Array(skeletonCount)
             .fill(null)
-            .map(() => (
-              <Skeleton className="h-[250px] w-1/4 rounded-xl" />
+            .map((skeleton, index) => (
+              <Skeleton key={index} className="h-[250px] w-1/4 rounded-xl" />
             ))}
         </div>
       </div>
