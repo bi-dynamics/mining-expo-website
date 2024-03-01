@@ -1,4 +1,4 @@
-function Maps() {
+async function Maps() {
   return (
     <section className="flex items-center justify-center bg-[url('../../public/mining-expo-namibia-venue.webp')] bg-cover bg-center h-fit">
       {/* gradient layer */}
@@ -17,7 +17,7 @@ function Maps() {
             ></iframe>
           </div>
           <aside className="flex flex-col gap-4 bg-[#F2F2F2] xl:h-[50vh] w-full xl:w-1/3 py-8 px-8 xl:rounded-e-xl shadow-xl">
-            <h2 className="font-poppins text-5xl font-bold text-expoBlue mb-6">
+            <h2 className="font-poppins text-3xl xl:text-5xl font-bold text-expoBlue xl:mb-6">
               Directions
             </h2>
             <div className="flex flex-col gap-3">
