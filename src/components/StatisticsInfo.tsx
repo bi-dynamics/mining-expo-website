@@ -54,7 +54,7 @@ function StatisticsInfo() {
       });
     }
     return animateDays?.stop, animateAttendees?.stop, animateSpeakers?.stop;
-  }, [isInView]);
+  });
 
   return (
     <section
