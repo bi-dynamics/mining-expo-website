@@ -70,7 +70,7 @@ function SpeakerPage({ params }: { params: { speakerId: string } }) {
       }
     }
     fetchSpeakers();
-  }, []);
+  });
 
   if (!speaker) {
     return (
