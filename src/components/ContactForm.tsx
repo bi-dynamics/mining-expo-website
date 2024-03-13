@@ -51,8 +51,9 @@ function ContactForm() {
           className="p-8 flex flex-col gap-4 bg-white w-[90%] xl:w-[40%]"
           data-netlify="true"
           method="POST"
-          name="contact-form"
+          name="contact"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <h2 className="text-xl sm:text-2xl xl:text-4xl font-bold font-poppins text-expoBlue">
             Get in touch with us
           </h2>
