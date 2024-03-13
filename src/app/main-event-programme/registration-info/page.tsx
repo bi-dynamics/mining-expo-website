@@ -94,14 +94,14 @@ const RegistrationInfoPage = () => {
       <PageBanner title="Registration" />
       <section className="flex flex-col w-full h-fit gap-6 py-16 justify-center items-center">
         <div className="flex flex-col items-center justify-center w-[80%] gap-4">
-          <h2 className=" text-5xl font-poppins font-bold text-black text-center">
+          <h2 className="text-2xl  lg:text-5xl font-poppins font-bold text-black text-center">
             Exhibitor Information
           </h2>
-          <h3 className="text-xl text-center font-semibold font-rubik text-expoOrange">
+          <h3 className="text-base lg:text-xl text-center font-semibold font-rubik text-expoOrange">
             Please read this important information before submitting your
             registration
           </h3>
-          <p className="text-black/70 font-rubik text-lg text-center">
+          <p className="text-black/70 font-rubik text-sm lg:text-lg text-center p-4 bg-slate-100 rounded-xl">
             Payment due date: 8 August 2024
           </p>
         </div>
@@ -207,7 +207,7 @@ const RegistrationInfoPage = () => {
               <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-20 py-4 rounded-t-lg px-3">
                 {boothPackage.title}
               </h3>
-              <div className="w-full text-center pb-4 font-rubik font-semibold text-white bg-expoBlue rounded-bl-full rounded-br-full">
+              <div className="w-full text-center pb-4 font-rubik font-semibold text-white bg-expoBlue ">
                 <p>{boothPackage.price}</p>
                 <p className=" text-sm text-white/80 w-[80%] mx-auto">
                   {boothPackage.priceNB}
