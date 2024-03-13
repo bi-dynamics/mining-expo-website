@@ -40,7 +40,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[100%] xl:h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
@@ -123,7 +123,7 @@ const InfoTabs = () => {
   };
 
   return (
-    <section className="flex flex-col py-16 gap-4 h-[120vh] md:h-[90vh] w-full bg-expoBlue">
+    <section className="flex flex-col py-16 gap-4 h-[130vh] md:h-[90vh] w-full bg-expoBlue">
       {/* Heading and buttons */}
       <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-24 items-start justify-start">
         <h2 className="font-poppins text-5xl font-bold text-white">THE EXPO</h2>

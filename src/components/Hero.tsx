@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../../public/mining-expo-hero.webp";
+import backgroundImage from "../../public/mining-expo-hero_1440x960_resize.webp";
 import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO.png";
 import heroLogo from "../../public/hero-logo.png";
 import { Icon } from "@iconify/react";
 import ButtonWithIcon from "./ui/buttonWithIcon";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   // Countdown timer logic
@@ -73,7 +74,7 @@ export default function Hero() {
       {/* content container */}
       <div className="h-full w-full mt-32 flex flex-col items-center justify-center">
         {/* top half part content */}
-        <div className="flex flex-wrap items-center justify-center gap-8 w-[90%] h-fit py-20 xl:py-28">
+        <div className="flex flex-wrap items-center justify-center gap-8 w-[100%] h-fit py-20 xl:py-28">
           {/* Expo logo */}
           <section className="flex shrink-0 h-full w-fit">
             <Image
@@ -85,7 +86,7 @@ export default function Hero() {
             />
           </section>
           {/* Expo Info */}
-          <section className="w-fit h-ful flex flex-col items-center justify-between gap-8">
+          <section className="w-fit h-full flex flex-col items-center justify-between gap-8">
             {/* Dates */}
             <div className="w-fit h-full flex flex-col items-start justify-center gap-2 p-2 font-rubik">
               <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
@@ -118,9 +119,11 @@ export default function Hero() {
               </h3>
             </div>
 
-            <Button className="block xl:hidden w-[80%] bg-expoOrange">
-              Registration
-            </Button>
+            <Link href="/delegate-registration" className="w-full">
+              <Button className="block xl:hidden w-full bg-expoOrange">
+                Registration
+              </Button>
+            </Link>
             {/* sponsor logo */}
             <div className="relative xl:top-24 top-20 w-full h-full flex items-center justify-center xl:justify-end">
               <Image src={rmbSponsorLogo} alt="RMB Logo" height={100} />

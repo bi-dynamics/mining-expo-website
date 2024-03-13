@@ -1,6 +1,6 @@
 async function Maps() {
   return (
-    <section className="flex items-center justify-center bg-[url('../../public/mining-expo-namibia-venue.webp')] bg-cover bg-center h-fit">
+    <section className="flex items-center justify-center bg-[url('../../public/mining-expo-namibia-venue_resize.webp')] bg-cover bg-center h-fit">
       {/* gradient layer */}
       <div className="h-full w-full z-[1] bg-expoBlue/80 to-transparent">
         {/* container */}
