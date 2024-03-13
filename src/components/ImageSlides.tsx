@@ -11,19 +11,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 //Images
-import image1 from "../../public/mining-expo-gallery-1.webp";
-import image2 from "../../public/mining-expo-gallery-2.webp";
-import image3 from "../../public/mining-expo-gallery-3.webp";
-import image4 from "../../public/mining-expo-gallery-4.webp";
-import image5 from "../../public/mining-expo-gallery-5.webp";
-import image6 from "../../public/mining-expo-gallery-6.webp";
-import image7 from "../../public/mining-expo-gallery-7.webp";
-import image8 from "../../public/mining-expo-gallery-8.webp";
-import image9 from "../../public/mining-expo-gallery-9.webp";
-import image10 from "../../public/mining-expo-gallery-10.webp";
-import image11 from "../../public/mining-expo-gallery-11.webp";
-import image12 from "../../public/mining-expo-gallery-12.jpg";
-import image13 from "../../public/mining-expo-gallery-13.jpg";
+import image1 from "../../public/mining-expo-gallery-1_resize.webp";
+import image2 from "../../public/mining-expo-gallery-2_resize.webp";
+import image3 from "../../public/mining-expo-gallery-3_resize.webp";
+import image4 from "../../public/mining-expo-gallery-4_resize.webp";
+import image5 from "../../public/mining-expo-gallery-5_resize.webp";
+import image6 from "../../public/mining-expo-gallery-6_resize.webp";
+import image7 from "../../public/mining-expo-gallery-7_resize.webp";
+import image8 from "../../public/mining-expo-gallery-8_resize.webp";
+import image9 from "../../public/mining-expo-gallery-9_resize.webp";
+import image10 from "../../public/mining-expo-gallery-10_resize.webp";
+import image11 from "../../public/mining-expo-gallery-11_resize.webp";
+import image12 from "../../public/mining-expo-gallery-12_resize.webp";
+import image13 from "../../public/mining-expo-gallery-13_resize.webp";
 
 const images = [
   { src: image1, alt: "First Image" },

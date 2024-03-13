@@ -108,12 +108,12 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <div className="font-bold text-base">Home</div>
+                    <div className="font-semibold text-base">Home</div>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-bold text-base">
+                <NavigationMenuTrigger className="font-semibold text-base">
                   Mining Expo
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -156,7 +156,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-base font-bold">
+                <NavigationMenuTrigger className="text-base font-semibold">
                   Conference
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -174,7 +174,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-base font-bold">
+                <NavigationMenuTrigger className="text-base font-semibold">
                   Marketing Opportunities
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -192,7 +192,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-base font-bold">
+                <NavigationMenuTrigger className="text-base font-semibold">
                   Past Events
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -212,7 +212,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <div className="font-bold text-base">Contact</div>
+                    <div className="font-semibold text-base">Contact</div>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -221,15 +221,20 @@ const Navbar = () => {
 
           {/* CTA */}
           <div>
-            <Button size="lg">
-              Registration{" "}
-              <Icon
-                icon="lucide:chevron-right"
-                width="24"
-                height="24"
-                className=""
-              />
-            </Button>
+            <Link href="/delegate-registration">
+              <Button
+                size="lg"
+                className="bg-expoOrange text-expoBlue hover:bg-expoBlue hover:text-expoOrange text-base font-bold"
+              >
+                Registration{" "}
+                <Icon
+                  icon="lucide:chevron-right"
+                  width="24"
+                  height="24"
+                  className=""
+                />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
