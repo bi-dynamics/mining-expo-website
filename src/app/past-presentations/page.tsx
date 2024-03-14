@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import { Download } from "lucide-react";
 import Link from "next/link";
@@ -178,7 +177,7 @@ const PastPresentationsPage = () => {
         </h2>
         <div className="flex flex-wrap gap-2 items-start justify-center">
           {pastPresentations.map((year, index) => (
-            <div>
+            <div key={index}>
               <Button
                 key={index}
                 onClick={() => {
