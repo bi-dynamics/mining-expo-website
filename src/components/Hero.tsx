@@ -6,7 +6,6 @@ import backgroundImage from "../../public/mining-expo-hero_1440x960_resize.webp"
 import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO.png";
 import heroLogo from "../../public/hero-logo.png";
 import { Icon } from "@iconify/react";
-import ButtonWithIcon from "./ui/buttonWithIcon";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
@@ -61,7 +60,7 @@ export default function Hero() {
         <Image
           src={backgroundImage}
           alt="Background image"
-          quality={100}
+          quality={40}
           fill
           placeholder="blur"
           loading="eager"
