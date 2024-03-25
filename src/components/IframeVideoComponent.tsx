@@ -19,7 +19,7 @@ const IframeVideoComponent = () => {
       ) : (
         // Video Thumbnail
         <div
-          className="flex items-center justify-center relative bg-center bg-cover bg-no-repeat cursor-pointer bg-[url('https://img.youtube.com/vi/rOlnU5Oeq7w/maxresdefault.jpg')] w-[600px] h-[330px] group rounded-2xl shadow-2xl"
+          className="flex items-center justify-center relative bg-center bg-cover bg-no-repeat cursor-pointer bg-[url('https://img.youtube.com/vi/rOlnU5Oeq7w/maxresdefault.jpg')] w-[350px] h-[190px] md:w-[800px] md:h-[500px] lg:w-[600px] lg:h-[330px] group rounded-2xl shadow-2xl"
           onClick={() => setShowVideo(true)}
         >
           {/* Play Button */}
