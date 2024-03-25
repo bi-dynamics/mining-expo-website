@@ -16,8 +16,8 @@ const B2bPage = () => {
         <h2 className="text-2xl  lg:text-5xl font-poppins text-center font-bold text-black md:text-start">
           Discover Marketing Opportunities
         </h2>
-        <div className="w-full h-full flex flex-wrap gap-4 ">
-          <p className="text-black/70 font-rubik text-sm lg:text-lg text-left">
+        <div className="w-full h-full items-center justify-center flex flex-wrap gap-4 ">
+          <p className="text-black/70 font-rubik text-sm lg:text-lg text-center">
             The B2B offering allows the individual supplier or potential
             customer to set up person-to-person meetings during the Expo. The
             platform allows exhibitors direct engagement with potential clients
