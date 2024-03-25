@@ -11,7 +11,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-about.webp?alt=media&token=1f55da11-3bf0-4e3c-aeb0-356a1286b3e6')] bg-cover bg-top duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
@@ -19,7 +19,7 @@ const InfoTabs = () => {
                 {/* Orange tag */}
                 <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
                 <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
-                  <h2 className=" text-5xl text-white font-bold">
+                  <h2 className=" text-3xl lg:text-5xl text-white font-bold">
                     Mining Expo 2024
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
@@ -40,7 +40,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-[100%] xl:h-full bg-[url('../../public/mining-expo-event-theme.webp')] bg-cover bg-center duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[100%] xl:h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-event-theme.webp?alt=media&token=05d47b71-5c4f-45c7-821f-8f1f53c9a07c')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
@@ -48,7 +48,7 @@ const InfoTabs = () => {
                 {/* Orange tag */}
                 <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
                 <div className="font-rubik flex flex-col gap-4 4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
-                  <h2 className=" text-5xl text-white font-bold">
+                  <h2 className=" text-3xl lg:text-5xl text-white font-bold">
                     Mining Conference 2024 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
@@ -68,7 +68,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/oil-and-gas-sector.webp')] bg-cover bg-center duration-300 transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Foil-and-gas-sector.webp?alt=media&token=fa29dc9a-983d-403f-a352-13358056237f')] bg-cover bg-center duration-300 transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
@@ -76,7 +76,7 @@ const InfoTabs = () => {
                 {/* Orange tag */}
                 <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
                 <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
-                  <h2 className=" text-5xl text-white font-bold">
+                  <h2 className=" text-3xl lg:text-5xl text-white font-bold">
                     New Sector: Oil & Gas
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
@@ -95,7 +95,7 @@ const InfoTabs = () => {
         return (
           <>
             {/* Image carousel */}
-            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('../../public/mining-expo-about.webp')] bg-cover bg-top transition-all">
+            <div className="flex items-center justify-start w-full h-[70%] xl:h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-about.webp?alt=media&token=1f55da11-3bf0-4e3c-aeb0-356a1286b3e6')] bg-cover bg-top transition-all">
               {/* gradient layer */}
               <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent"></div>
               {/* Content */}
@@ -103,7 +103,7 @@ const InfoTabs = () => {
                 {/* Orange tag */}
                 <div className="w-12 h-52 bg-expoOrange"></div>
                 <div className="font-rubik flex flex-col gap-4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
-                  <h2 className=" text-5xl text-white font-bold">
+                  <h2 className=" text-3xl lg:text-5xl text-white font-bold">
                     Mining Expo 2024
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
@@ -126,7 +126,9 @@ const InfoTabs = () => {
     <section className="flex flex-col py-16 gap-4 h-[130vh] md:h-[90vh] w-full bg-expoBlue">
       {/* Heading and buttons */}
       <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-24 items-start justify-start">
-        <h2 className="font-poppins text-5xl font-bold text-white">THE EXPO</h2>
+        <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white">
+          THE EXPO
+        </h2>
         <div className="flex flex-wrap gap-4">
           <Button
             onClick={() => setTab(1)}

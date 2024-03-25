@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -18,6 +17,7 @@ import ExpoLogo from "../../public/mining-expo-logo-nobg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import React from "react";
 
 const conference: { title: string; href: string; description: string }[] = [
   {
@@ -221,7 +221,7 @@ const Navbar = () => {
 
           {/* CTA */}
           <div>
-            <Link href="/delegate-registration">
+            <Link href="/main-event-programme/registration-info">
               <Button
                 size="lg"
                 className="bg-expoOrange text-expoBlue hover:bg-expoBlue hover:text-expoOrange text-base font-bold"

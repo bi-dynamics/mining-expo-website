@@ -17,7 +17,10 @@ function Speakers({ speakersList }: { speakersList: SpeakerData[] }) {
   return (
     <section className="h-full w-full bg-white">
       <div className="flex flex-wrap gap-8 items-start justify-center w-full xl:w-[80%] h-full mx-auto py-16">
-        {speakersList.map((speaker) => (
+        <h2 className="text-xl md:text-3xl  font-semibold text-expoOrange">
+          Coming Soon
+        </h2>
+        {/* {speakersList.map((speaker) => (
           <div
             key={speaker.id}
             className="w-full md:w-[45vw] xl:w-[35vw] flex flex-col xl:flex-row h-fit shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:shadow-[0_0_15px_rgba(0,0,0,0.30)] transition-all duration-200 overflow-hidden rounded-xl"
@@ -57,7 +60,7 @@ function Speakers({ speakersList }: { speakersList: SpeakerData[] }) {
               </p>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </section>
   );

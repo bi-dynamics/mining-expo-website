@@ -1,71 +1,31 @@
 "use client";
-
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import backgroundImage from "../../public/mining-expo-hero_1440x960_resize.webp";
-import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO.png";
+import React from "react";
 import heroLogo from "../../public/hero-logo.png";
 import { Icon } from "@iconify/react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import CountDownTimer from "./CountDownTimer";
+import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO_resize.webp";
 
 export default function Hero() {
   // Countdown timer logic
-  const [endCountdown, setEndCountdown] = useState(false);
-  const [days, setDays] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-
-  useEffect(() => {
-    const target = new Date("08/07/2024 07:30:00");
-
-    const interval = setInterval(() => {
-      const dateNow = new Date();
-      const difference = target.getTime() - dateNow.getTime();
-
-      const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDays(daysLeft);
-
-      const hoursLeft = Math.floor(
-        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      setHours(hoursLeft);
-
-      const minutesLeft = Math.floor(
-        (difference % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      setMinutes(minutesLeft);
-
-      const secondsLeft = Math.floor((difference % (1000 * 60)) / 1000);
-      setSeconds(secondsLeft);
-
-      if (
-        daysLeft <= 0 &&
-        hoursLeft <= 0 &&
-        minutesLeft <= 0 &&
-        secondsLeft <= 0
-      ) {
-        setEndCountdown(true);
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative flex items-start justify-center w-full h-full">
       {/* container for image */}
       <div className="absolute top-0 w-full h-full -z-10">
         <Image
-          src={backgroundImage}
+          src="https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-hero_1440x960_resize.webp?alt=media&token=5481fd88-c1d3-43f6-9d0f-1d0d3b4985b2"
           alt="Background image"
           quality={40}
-          fill
+          fill={true}
+          priority={true}
           placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRhwCAABXRUJQVlA4WAoAAAAgAAAABQAAAwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggLgAAANABAJ0BKgYABAADgFolAE6P4AK5NjEgAPzZW1eMXM6VIwZEPg8yqL6u6hDtoAA="
           loading="eager"
           sizes="100vw"
-          className=" object-cover brightness-75 blur-[5px]"
+          className=" object-cover brightness-50 blur-[5px]"
         />
       </div>
       {/* gradient layer */}
@@ -131,45 +91,7 @@ export default function Hero() {
         </div>
         {/* bottom part of content */}
         {/* countdown section */}
-        <section className="w-full h-fit bg-expoOrange flex items-center justify-center py-8">
-          {endCountdown ? (
-            ""
-          ) : (
-            <div className="w-full h-full flex flex-wrap items-center justify-center gap-8 font-rubik text-white font-bold">
-              {/* Days */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
-                {days}
-                {days == 1 ? (
-                  <p className="text-base font-bold">Day</p>
-                ) : (
-                  <p className="text-base font-bold">Days</p>
-                )}
-              </span>
-
-              {/* Hours */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
-                {hours}
-                {hours == 1 ? (
-                  <p className="text-base font-bold">Hour</p>
-                ) : (
-                  <p className="text-base font-bold">Hours</p>
-                )}
-              </span>
-
-              {/* Minutes */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
-                {minutes}
-                <p className="text-base font-bold">Minutes</p>
-              </span>
-
-              {/* Seconds */}
-              <span className="h-full w-fit flex flex-col items-center justify-center text-4xl gap-3">
-                {seconds}
-                <p className="text-base font-bold">Seconds</p>
-              </span>
-            </div>
-          )}
-        </section>
+        <CountDownTimer />
       </div>
     </section>
   );

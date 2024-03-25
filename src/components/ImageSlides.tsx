@@ -1,44 +1,35 @@
 "use client";
-import Image from "next/image";
 
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Zoom, EffectCoverflow } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-//Images
-import image1 from "../../public/mining-expo-gallery-1_resize.webp";
-import image2 from "../../public/mining-expo-gallery-2_resize.webp";
-import image3 from "../../public/mining-expo-gallery-3_resize.webp";
-import image4 from "../../public/mining-expo-gallery-4_resize.webp";
-import image5 from "../../public/mining-expo-gallery-5_resize.webp";
-import image6 from "../../public/mining-expo-gallery-6_resize.webp";
-import image7 from "../../public/mining-expo-gallery-7_resize.webp";
-import image8 from "../../public/mining-expo-gallery-8_resize.webp";
-import image9 from "../../public/mining-expo-gallery-9_resize.webp";
-import image10 from "../../public/mining-expo-gallery-10_resize.webp";
-import image11 from "../../public/mining-expo-gallery-11_resize.webp";
-import image12 from "../../public/mining-expo-gallery-12_resize.webp";
-import image13 from "../../public/mining-expo-gallery-13_resize.webp";
-
 const images = [
-  { src: image1, alt: "First Image" },
-  { src: image2, alt: "Second Image" },
-  { src: image3, alt: "Third Image" },
-  { src: image4, alt: "Fourth Image" },
-  { src: image5, alt: "Fith Image" },
-  { src: image6, alt: "Sixth Image" },
-  { src: image7, alt: "Seventh Image" },
-  { src: image8, alt: "Eigth Image" },
-  { src: image9, alt: "Ninth Image" },
-  { src: image10, alt: "Tenth Image" },
-  { src: image11, alt: "Eleventh Image" },
-  { src: image12, alt: "Twelfth Image" },
-  { src: image13, alt: "Thirteenth Image" },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-1_resize.webp?alt=media&token=3427f917-bd07-462c-a637-4b6a6be899fd",
+    alt: "First Image",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-2_resize.webp?alt=media&token=9078be81-f428-4bd6-9a5f-406510bc84a6",
+    alt: "Second Image",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-3_resize.webp?alt=media&token=e76f0940-a9d9-42d0-8432-8334278d8254",
+    alt: "Third Image",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-4_resize.webp?alt=media&token=ce0178d1-d71b-4d56-a54b-476669b0706d",
+    alt: "Fourth Image",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-5_resize.webp?alt=media&token=3ea396fe-5c0a-47a8-9a63-b268870f43b1",
+    alt: "Fith Image",
+  },
 ];
 
 function ImageSlides() {
@@ -75,8 +66,9 @@ function ImageSlides() {
                 <Image
                   src={image.src}
                   alt={image.alt}
+                  width={1200}
+                  height={900}
                   className="block h-full w-full object-cover rounded-xl z-50"
-                  placeholder="blur"
                 />
               </div>
             </SwiperSlide>
