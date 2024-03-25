@@ -5,13 +5,26 @@ import AndradaLogo from "../../public/Andrada_logo_green-black_rgb.webp";
 import ContinentalLogo from "../../public/Continental-Lithium-Africa.webp";
 import RMBLogo from "../../public/RMB_Horizontal_Identity_RGB_Black.webp";
 import ButtonWithIcon from "@/components/ui/buttonWithIcon";
-import InfoTabs from "@/components/InfoTabs";
-import Maps from "@/components/Maps";
-import StatisticsInfo from "@/components/StatisticsInfo";
-import ImageSlides from "@/components/ImageSlides";
 import IframeVideoComponent from "@/components/IframeVideoComponent";
-import { Suspense } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+//lazy load components
+const ImageSlidesComponent = dynamic(() => import("@/components/ImageSlides"), {
+  ssr: false,
+});
+const InfoTabsComponent = dynamic(() => import("@/components/InfoTabs"), {
+  ssr: false,
+});
+const StatisticsInfoComponent = dynamic(
+  () => import("@/components/StatisticsInfo"),
+  {
+    ssr: false,
+  }
+);
+const MapsComponent = dynamic(() => import("@/components/Maps"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: {
@@ -51,17 +64,16 @@ export default function Home() {
             </Link>
           </div>
           {/* Video */}
-          <Suspense fallback={<p>Loading</p>}>
-            <IframeVideoComponent />
-          </Suspense>
-        </section>
-        <InfoTabs />
-        <ImageSlides />
 
-        <StatisticsInfo />
+          <IframeVideoComponent />
+        </section>
+        <InfoTabsComponent />
+        <ImageSlidesComponent />
+
+        <StatisticsInfoComponent />
         {/* Sponsor Section */}
-        <section className="flex items-center justify-center bg-white">
-          {/* container */}
+        {/* <section className="flex items-center justify-center bg-white">
+          
           <div className="flex flex-col items-center justify-center w-[80%] mx-auto gap-8 py-8">
             <h2 className="font-poppins text-2xl xl:text-5xl font-bold text-expoBlue text-center">
               Proudly Sponsored By
@@ -84,8 +96,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
-        <Maps />
+        </section> */}
+        <MapsComponent />
       </main>
     </>
   );
