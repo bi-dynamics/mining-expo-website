@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 const boothPackages = [
   {
-    title: "Namibian Companies & Other Chamber Members",
-    price: "N$18,425",
+    title: "Namibian Companies & Associate Chamber Members",
+    price: "N$ 19,530.50",
     priceNB: "(per 9m\u00B2 booth)",
     features: [
       {
@@ -36,7 +36,7 @@ const boothPackages = [
   },
   {
     title: "Chamber Member Class A, B & C",
-    price: "N$19,250",
+    price: "N$ 20,405",
     priceNB: "(per 9m\u00B2 booth)",
     features: [
       {
@@ -49,7 +49,7 @@ const boothPackages = [
   },
   {
     title: "SADC Member States",
-    price: "N$33,000",
+    price: "N$ 34,980",
     priceNB: "(per 9m\u00B2 booth)",
     features: [
       {
@@ -61,21 +61,8 @@ const boothPackages = [
     ],
   },
   {
-    title: "Oil & Gas Companies",
-    price: "N$38,000",
-    priceNB: "(USD 2,000 per 9m\u00B2 booth)",
-    features: [
-      {
-        one: "2x lunch tickets",
-        two: "2x cocktail function access tickets",
-        three: "Suppliers Platform",
-        four: "B2B",
-      },
-    ],
-  },
-  {
     title: "International Companies",
-    price: "N$55,000",
+    price: "N$ 58,300",
     priceNB: "(USD 3,000 per 9m\u00B2 booth)",
     features: [
       {
@@ -202,7 +189,7 @@ const RegistrationInfoPage = () => {
           {boothPackages.map((boothPackage, index) => (
             <div
               key={index}
-              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[25vw] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:border-expoOrange  transition-all duration-200"
+              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[33%] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:border-expoOrange  transition-all duration-200"
             >
               <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-20 py-4 rounded-t-lg px-3">
                 {boothPackage.title}
@@ -230,7 +217,7 @@ const RegistrationInfoPage = () => {
               </div>
               <Button
                 asChild
-                className="bg-expoOrange text-expoBlue hover:text-expoOrange hover:bg-expoBlue"
+                className=" w-[80%] bg-expoOrange text-expoBlue hover:text-expoOrange hover:bg-expoBlue"
                 size="lg"
               >
                 <Link href="/delegate-registration">Register Now</Link>
