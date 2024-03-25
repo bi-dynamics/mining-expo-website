@@ -1,6 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 
-export default function CountDownTimer() {
+function CountDownTimer() {
   // Countdown timer logic
   const targetDate = new Date("08/07/2024 07:30:00");
   const [endCountdown, setEndCountdown] = useState(false);
@@ -84,3 +85,5 @@ export default function CountDownTimer() {
     </section>
   );
 }
+
+export default CountDownTimer;
