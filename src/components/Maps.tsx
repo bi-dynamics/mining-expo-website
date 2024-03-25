@@ -8,7 +8,7 @@ async function Maps() {
       {/* gradient layer */}
       <div className="h-full w-full z-[1] bg-expoBlue/80 to-transparent">
         {/* container */}
-        <div className="flex flex-col xl:flex-row z-10 items-center  justify-center w-[90%] xl:w-[80%] mx-auto h-full py-8 xl:gap-8">
+        <div className="flex flex-col xl:flex-row z-10 items-center  justify-center w-[90%] xl:w-[80%] mx-auto h-full py-8 gap-4 xl:gap-8">
           <Link
             href="https://maps.app.goo.gl/sdAnFakCxxNqqWi26"
             aria-label="Expo Venue Location"
@@ -24,7 +24,7 @@ async function Maps() {
             />
           </Link>
 
-          <aside className="flex flex-col gap-4 bg-[#F2F2F2] xl:h-fit w-full xl:w-fit p-10 xl:rounded-xl shadow-xl">
+          <aside className="flex flex-col gap-4 bg-[#F2F2F2] xl:h-fit w-full xl:w-fit p-10 rounded-xl shadow-xl">
             <h2 className="font-poppins text-3xl xl:text-5xl font-bold text-expoBlue xl:mb-6">
               Directions
             </h2>
