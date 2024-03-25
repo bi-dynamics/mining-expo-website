@@ -9,7 +9,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title }) => {
     >
       {/* gradient layer */}
       <div className="absolute h-full w-full z-[1] overflow-hidden bg-gradient-to-tr from-expoBlue/85 from-30% via-transparent to-expoBlue"></div>
-      <div className="z-10 flex items-center justify-center xl:justify-start backdrop-filter backdrop-blur-[4px] w-full h-full sm:px-48 pt-10">
+      <div className="z-10 flex items-end pb-[10%] sm:pb-0 sm:items-center justify-center xl:justify-start backdrop-filter backdrop-blur-[4px] w-full h-full sm:px-48 pt-10">
         <h1 className="text-expoOrange text-center text-3xl md:text-4xl lg:text-6xl font-poppins font-bold z-10">
           {title}
         </h1>

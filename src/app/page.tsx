@@ -59,7 +59,10 @@ export default function Home() {
               07 – 08 August, 2024 at the Windhoek Show Grounds, bringing the
               entire extractives sector under one roof.
             </p>
-            <Link href="/delegate-registration" className="w-fit">
+            <Link
+              href="/main-event-programme/registration-info"
+              className="w-fit"
+            >
               <ButtonWithIcon>Registration</ButtonWithIcon>
             </Link>
           </div>

@@ -36,18 +36,17 @@ function ContactForm() {
     },
   });
 
-  // submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+  // // submit handler.
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  //   // Do something with the form values.
+  //   // ✅ This will be type-safe and validated.
+  //   console.log(values);
+  // }
 
   return (
     <div className="flex min-h-fit flex-col w-full items-center justify-center bg-white py-8">
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
           className="p-8 flex flex-col gap-4 bg-white w-[90%] xl:w-[40%]"
           data-netlify="true"
           method="POST"

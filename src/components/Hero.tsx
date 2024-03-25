@@ -33,7 +33,7 @@ export default function Hero() {
       {/* content container */}
       <div className="h-full w-full mt-32 flex flex-col items-center justify-center">
         {/* top half part content */}
-        <div className="flex flex-wrap items-center justify-center gap-8 w-[100%] h-fit py-20 xl:py-28">
+        <div className="flex flex-wrap items-center justify-center gap-8 w-[90%] h-fit py-20 xl:py-28">
           {/* Expo logo */}
           <section className="flex shrink-0 h-full w-fit">
             <Image
@@ -78,7 +78,10 @@ export default function Hero() {
               </h3>
             </div>
 
-            <Link href="/delegate-registration" className="w-full">
+            <Link
+              href="/main-event-programme/registration-info"
+              className="w-full"
+            >
               <Button className="block xl:hidden w-full bg-expoOrange">
                 Registration
               </Button>

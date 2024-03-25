@@ -18,7 +18,7 @@ function Footer() {
                 <Image
                   src={RMBSponsorLogo}
                   alt="RMB Logo"
-                  className="h-20 xl:ml-[-2rem] xl:h-40 w-fit brightness-75"
+                  className="h-auto ml-[-1rem] sm:ml-[-2rem] w-fit brightness-75"
                 />
               </div>
               <h4 className="font-bold text-lg xl:text-xl mb-4">

@@ -61,7 +61,7 @@ function StatisticsInfo() {
       ref={ref}
       className="flex flex-col gap-16 items-center justify-center py-16 w-full h-fit bg-expoBlue font-rubik"
     >
-      <h2 className="font-bold text-4xl text-white w-[90%] xl:w-1/2 text-center">
+      <h2 className="font-bold text-2xl lg:text-4xl text-white w-[90%] xl:w-1/2 text-center">
         {`"Namibia's role in the sustainable supply of minerals to support
         the global energy transition"`}
       </h2>
@@ -79,7 +79,9 @@ function StatisticsInfo() {
             variants={fadeInAnimationVariants}
             className="text-2xl flex flex-col justify-center items-center gap-4"
           >
-            <motion.p className="text-4xl font-bold">{roundedDays}</motion.p>
+            <motion.p className="text-2xl lg:text-4xl font-bold">
+              {roundedDays}
+            </motion.p>
             Days
           </motion.li>
           {/* Attendees */}
@@ -87,8 +89,8 @@ function StatisticsInfo() {
             variants={fadeInAnimationVariants}
             className="text-2xl flex flex-col justify-center items-center gap-4"
           >
-            <div className="flex gap-2 text-4xl font-bold">
-              <motion.p className="text-4xl font-bold text-white">
+            <div className="flex gap-2 text-2xl lg:text-4xl font-bold">
+              <motion.p className="text-2xl lg:text-4xl font-bold text-white">
                 {roundedAttendees}
               </motion.p>
               <motion.span
@@ -108,8 +110,8 @@ function StatisticsInfo() {
             variants={fadeInAnimationVariants}
             className="text-2xl flex flex-col justify-center items-center gap-4"
           >
-            <div className="flex gap-2 text-4xl font-bold">
-              <motion.p className="text-4xl font-bold text-white">
+            <div className="flex gap-2 text-2xl lg:text-4xl font-bold">
+              <motion.p className="text-2xl lg:text-4xl font-bold text-white">
                 {roundedSpeakers}
               </motion.p>
               <motion.span
