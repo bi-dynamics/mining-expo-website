@@ -40,17 +40,17 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
             Programme Schedule
           </h2>
           <h2 className="text-xl md:text-3xl  font-semibold text-expoOrange">
-            30-31 August
+            Coming Soon
           </h2>
         </div>
-        <div className="w-full h-full flex flex-col gap-8 bg-white">
-          <div className="flex flex-wrap border bg-expoOrange px-8">
+        {/* <div className="w-full h-full flex flex-col gap-8 bg-white">
+          <div className="flex items-center justify-center bg-slate-100 px-8">
             <Button
               onClick={() => setDay(1)}
               className={
                 day === 1
-                  ? "bg-black/20 rounded-none py-8 hover:bg-black/20 transition-all duration-200"
-                  : "bg-expoOrange hover:bg-black/10 rounded-none py-8 transition-all duration-200"
+                  ? "bg-expoOrange rounded-none py-8 p-12 hover:bg-expoOrange transition-all duration-200"
+                  : "bg-expoOrange/70 hover:bg-expoOrange rounded-none py-8 p-12 transition-all duration-200"
               }
             >
               DAY 1
@@ -59,8 +59,8 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
               onClick={() => setDay(2)}
               className={
                 day === 2
-                  ? "bg-black/20 rounded-none py-8 hover:bg-black/20 transition-all duration-200"
-                  : "bg-expoOrange hover:bg-black/10 rounded-none py-8 transition-all duration-200"
+                  ? "bg-expoOrange rounded-none py-8 p-12 hover:bg-expoOrange transition-all duration-200"
+                  : "bg-expoOrange/70 hover:bg-expoOrange rounded-none py-8 p-12 transition-all duration-200"
               }
             >
               DAY 2
@@ -207,7 +207,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
               ))}
             </Accordion>
           )}
-        </div>
+        </div> */}
       </div>
     </section>
   );
