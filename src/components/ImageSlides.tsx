@@ -37,7 +37,7 @@ function ImageSlides() {
     <section className="py-16 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
       {/* Container */}
       <div className="flex flex-col gap-8 items-center justify-center w-full h-fit">
-        <h2 className="font-bold text-5xl text-expoBlue font-poppins">
+        <h2 className="font-bold text-3xl lg:text-5xl text-expoBlue font-poppins">
           Gallery
         </h2>
         <Swiper
