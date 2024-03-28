@@ -19,7 +19,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://miningexponamibia.com"),
   title: {
     template: "%s | MINING EXPO Namibia",
     default: "MINING EXPO Namibia",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
   openGraph: {
     type: "website",
-    url: "https://new.miningexponamibia.com/",
-    title: "%s | Mining Expo Namibia 2024",
+    url: "https://miningexponamibia.com/",
+    title: "Mining Expo & Conference Namibia 2024",
     description:
       "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
     siteName: "Mining Expo & Conference Namibia",
@@ -38,7 +38,9 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Mining Expo & Conference Namibia 2024",
     images:
-      "https://miningexponamibia.com/wp-content/uploads/2023/07/Expo-logo1-2048x1245.jpg",
+      "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2FExpo-logo1.jpg?alt=media&token=14132796-0eb1-49a8-8d06-3bc81720d78c",
+    description:
+      "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
   },
 };
 
@@ -49,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${rubik.variable}`}>
+      <body className={`${poppins.variable} ${rubik.variable} antialiased`}>
         <Navbar />
         <NavbarMobile />
         {children}
