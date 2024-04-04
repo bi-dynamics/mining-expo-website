@@ -13,9 +13,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Registration",
   description:
-    "Exhibitor Information Please read this important information before submitting your registration Payment due date: 8 August 2024 DISMANTLING OF STANDS STAND ALLOCATION & REQUIREMENTS For your convenience, the floor plan will be uploaded on the website prior to the event. A maximum of two people per nine square metre stand is permitted. DISMANTLING OF STANDS",
+    "Exhibitor Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
   openGraph: {
     title: "Registration & Exhibitor Information",
+    description:
+      "Exhibitor Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
     images: [{ url: "../../opengraph-image.jpg" }],
   },
 };
@@ -63,7 +65,7 @@ const boothPackages = [
   {
     title: "International Companies",
     price: "N$ 58,300",
-    priceNB: "(USD 3,000 per 9m\u00B2 booth)",
+    priceNB: "(per 9m\u00B2 booth)",
     features: [
       {
         one: "2x lunch tickets",

@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import SpeakerCardSkeleton from "@/components/SpeakerCardSkeleton";

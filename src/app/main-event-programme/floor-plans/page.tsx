@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "View floor plans for all venues of the 2024 Mining Expo & Conference.",
   openGraph: {
     images: [{ url: "../../opengraph-image.jpg" }],
+    description:
+      "View floor plans for all venues of the 2024 Mining Expo & Conference.",
   },
 };
 

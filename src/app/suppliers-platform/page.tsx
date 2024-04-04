@@ -6,13 +6,22 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `Supplier's Platform`,
+  description:
+    "Discover Marketing Opportunities The Supplier’s platform is a centrally located presentation area for exhibitors to display their unique service and product offerings to a broader spectrum of Expo-goers and other exhibitors. This platform provides suppliers with greater exposure and access to business opportunities by directing participants and interested customers to exhibitor stands for further meetings.",
+
+  openGraph: {
+    description:
+      "Discover Marketing Opportunities The Supplier’s platform is a centrally located presentation area for exhibitors to display their unique service and product offerings to a broader spectrum of Expo-goers and other exhibitors. This platform provides suppliers with greater exposure and access to business opportunities by directing participants and interested customers to exhibitor stands for further meetings.",
+
+    images: [{ url: "../../opengraph-image.jpg" }],
+  },
 };
 
 const SuppliersPlatformPage = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <PageBanner title="Suppliers Platform" />
-      <div className="flex flex-col items-center justify-center w-[90%] xl:w-[80%] gap-16 py-16">
+      <div className="flex flex-col items-center justify-center w-[90%] xl:w-[80%] max-w-screen-xl gap-16 py-16">
         <h2 className="text-2xl  lg:text-5xl font-poppins text-center font-bold text-black md:text-start">
           Discover Marketing Opportunities
         </h2>
