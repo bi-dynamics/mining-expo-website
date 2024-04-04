@@ -7,8 +7,11 @@ import MainEventScheduleSkeleton from "@/components/MainEventScheduleSkeleton";
 export const metadata: Metadata = {
   title: "Main Event Programme",
   description:
-    "30 - 31 August Our Event Schedule 1st Day 2nd Day 07h30 – 09h00 #Windhoek Show Grounds Office Arrival of Exhibitors 09h00 – 09h10 #Makalani Hall Arrival by H.E. Dr Hage Geingob, President of the Republic of Namibia AU & Namibia Anthems Mr Ricardo Goagoseb - Director of ceremonies AU & Namibia Anthems Mr Ricardo",
+    "View the main event schedule for mining expo Day 1 & Day 2 taking place at the Windhoek Show Grounds 7-8 August 2024",
   openGraph: {
+    description:
+      "View the main event schedule for mining expo Day 1 & Day 2 taking place at the Windhoek Show Grounds 7-8 August 2024",
+
     images: [{ url: "../../opengraph-image.jpg" }],
   },
 };

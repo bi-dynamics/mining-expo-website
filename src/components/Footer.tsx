@@ -9,16 +9,16 @@ function Footer() {
   return (
     <section className="flex items-center justify-center py-4 w-full h-fit bg-expoBlue">
       {/* container */}
-      <div className="flex flex-col gap-4 items-center justify-start mx-auto w-[80%] xl:w-[70%] h-full text-[#F2F2F2] font-rubik">
+      <div className="max-w-screen-xl flex flex-col gap-4 items-center justify-start mx-auto w-[80%] xl:w-[70%] h-full text-[#F2F2F2] font-rubik">
         {/* Links */}
         <div className="flex flex-wrap items-start justify-start  xl:justify-center w-full h-full py-8">
-          <div className="flex w-full h-full text-lg flex-wrap gap-8  justify-between items-center">
-            <div className="flex flex-col justify-end w-1/3 h-full">
-              <div>
+          <div className="flex w-full h-full text-lg flex-wrap gap-16  justify-between items-center">
+            <div className="flex flex-col justify-end w-fit h-full">
+              <div className="w-56">
                 <Image
                   src={RMBSponsorLogo}
                   alt="RMB Logo"
-                  className="h-auto ml-[-1rem] sm:ml-[-2rem] w-fit brightness-75"
+                  className="h-auto min-h-12 ml-[-2rem] w-fit brightness-75"
                 />
               </div>
               <h4 className="font-bold text-lg xl:text-xl mb-4">
@@ -63,7 +63,7 @@ function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-4 text-lg items-start justify-start">
+            <div className="flex flex-col w-fit gap-4 text-lg items-start justify-start">
               <Link
                 href="https://maps.app.goo.gl/9qvpi1GzQvyYyMCf8"
                 target="blank_"

@@ -6,17 +6,26 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "B2B",
+  description:
+    "The B2B offering allows the individual supplier or potential customer to set up person-to-person meetings during the Expo. The platform allows exhibitors direct engagement with potential clients to negotiate and conclude deals or explore future business opportunities. NB: The B2B is a service offering for Exhibitors ONLY.",
+
+  openGraph: {
+    description:
+      "The B2B offering allows the individual supplier or potential customer to set up person-to-person meetings during the Expo. The platform allows exhibitors direct engagement with potential clients to negotiate and conclude deals or explore future business opportunities. NB: The B2B is a service offering for Exhibitors ONLY.",
+
+    images: [{ url: "../../opengraph-image.jpg" }],
+  },
 };
 
 const B2bPage = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <PageBanner title="B2B" />
-      <div className="flex flex-col items-center justify-center w-[90%] xl:w-[80%] gap-16 py-16">
+      <div className="flex flex-col items-center justify-center w-[90%] xl:w-[80%] max-w-screen-xl gap-16 py-16">
         <h2 className="text-2xl  lg:text-5xl font-poppins text-center font-bold text-black md:text-start">
           Discover Marketing Opportunities
         </h2>
-        <div className="w-full h-full items-center justify-center flex flex-wrap gap-4 ">
+        <div className="w-full h-full items-center justify-start flex flex-wrap gap-4 ">
           <p className="text-black/70 font-rubik text-sm lg:text-lg text-left">
             The B2B offering allows the individual supplier or potential
             customer to set up person-to-person meetings during the Expo. The
@@ -30,7 +39,7 @@ const B2bPage = () => {
             close a few days prior to the event.
           </p>
         </div>
-        <div className="w-full h-fit flex flex-col xl:flex-row gap-8 items-center xl:items-end justify-center text-black/70 font-rubik">
+        <div className="w-full h-fit flex flex-col xl:flex-row gap-8 items-center xl:items-end justify-between text-black/70 font-rubik">
           <div className=" w-full xl:w-[45%] h-full flex flex-col justify-between gap-8">
             <div className="w-full h-full">
               <h3 className="font-bold text-black/80 text-xl">
