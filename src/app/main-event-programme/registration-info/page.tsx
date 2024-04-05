@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 const boothPackages = [
   {
     title: "Namibian Companies & Associate Chamber Members",
-    price: "N$ 19,530.50",
-    priceNB: "(per 9m\u00B2 booth)",
+    price: "N$ 20,267.50",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
         one: "2x lunch tickets",
@@ -38,8 +38,8 @@ const boothPackages = [
   },
   {
     title: "Chamber Member Class A, B & C",
-    price: "N$ 20,405",
-    priceNB: "(per 9m\u00B2 booth)",
+    price: "N$ 21,175",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
         one: "2x lunch tickets",
@@ -51,8 +51,8 @@ const boothPackages = [
   },
   {
     title: "SADC Member States",
-    price: "N$ 34,980",
-    priceNB: "(per 9m\u00B2 booth)",
+    price: "N$ 36,300",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
         one: "2x lunch tickets",
@@ -64,8 +64,8 @@ const boothPackages = [
   },
   {
     title: "International Companies",
-    price: "N$ 58,300",
-    priceNB: "(per 9m\u00B2 booth)",
+    price: "N$ 60,500",
+    priceNB: "(per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
         one: "2x lunch tickets",
@@ -80,7 +80,7 @@ const boothPackages = [
 const RegistrationInfoPage = () => {
   return (
     <main>
-      <PageBanner title="Registration" />
+      <PageBanner title="Registration Information" />
       <section className="flex flex-col w-full h-fit gap-6 py-16 justify-center items-center">
         <div className="flex flex-col items-center justify-center w-[80%] gap-4">
           <h2 className="text-2xl  lg:text-5xl font-poppins font-bold text-black text-center">
@@ -90,8 +90,11 @@ const RegistrationInfoPage = () => {
             Please read this important information before submitting your
             registration
           </h3>
-          <p className="text-black/70 font-rubik text-sm lg:text-lg text-center p-4 bg-slate-100 rounded-xl">
-            Payment due date: 8 August 2024
+          <p className="text-black/70 font-semibold font-rubik text-sm lg:text-lg text-center p-4 bg-slate-100 rounded-xl">
+            Payment due date: 26 July 2024 <br />
+            <span className="font-semibold text-red-500">
+              Stands will only be erected upon receipt of 100% payment.
+            </span>
           </p>
         </div>
         <div className="flex flex-col items-center justify-center h-full w-[90%] xl:w-[80%] py-16">
@@ -114,26 +117,42 @@ const RegistrationInfoPage = () => {
                 DISMANTLING OF STANDS
               </AccordionTrigger>
               <AccordionContent>
+                <span className="font-bold text-red-500">
+                  NB! No breaking down/dismantling of exhibition spaces is
+                  allowed on the last day of the EXPO
+                </span>
+                <br />
+                This includes the removal of products. There will be guards at
+                the entrance gates and on the Show Grounds during these periods
+                and entrance is restricted to authorized persons only. The
+                Windhoek Show Grounds are guarded throughout the night.
+                <br />
+                <br />
                 Friday,{" "}
                 <span className="font-bold text-black/80">
-                  01 September 2023
+                  09 August 2024
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 07h00 Halls will
-                close at 16h00. <br /> Saturday,{" "}
+                close at 16h00. <br />
+                <br /> Saturday,{" "}
                 <span className="font-bold text-black/80">
-                  02 September 2023
+                  10 August 2024
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 08h30 Halls will
                 close at 13h00.
                 <br />
-                <span className="font-bold text-black/80">
-                  NB! No breaking down/dismantling of exhibition spaces is
-                  allowed on the last day of the EXPO
-                </span>{" "}
-                . This includes the removal of products. There will be guards at
-                the entrance gates and on the Show Grounds during these periods
-                and entrance is restricted to authorized persons only. The
-                Windhoek Show Grounds are guarded throughout the night.
+                <br />
+                <span className="font-semibold text-red-500">
+                  The Chamber of Mines of Namibia, as the organisers of the
+                  event, does not accept any responsibility or liability for the
+                  loss, damage or theft of the exhibitor’s equipment, items on
+                  display, stand and/or personal belongings.
+                </span>
+                <br />
+                <br />
+                We agree to abide by the terms and conditions and by any
+                amendment which may be made by the Organisers and/or the hall
+                owner
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -141,21 +160,16 @@ const RegistrationInfoPage = () => {
                 TERMS AND CONDITIONS
               </AccordionTrigger>
               <AccordionContent>
-                The exhibitor is legally bound to take part in the trade
-                exhibition on receipt of the completed registration form. The
-                rented area specified on the registration form shall apply for
-                the duration of the event. Every square meter or part thereof
-                shall be charged in full. Stands will only be erected once full
-                payment is received.{" "}
+                <span className="text-red-500 font-semibold">
+                  The exhibitor is legally bound to take part in the trade
+                  exhibition on receipt of the completed registration form.
+                </span>{" "}
+                The rented area specified on the registration form shall apply
+                for the duration of the event. Every square meter or part
+                thereof shall be charged in full.{" "}
                 <span className="font-bold text-black/80">
                   All prices are quoted exclusive of VAT.
-                </span>{" "}
-                The Chamber of Mines of Namibia, as the organisers of the event,
-                does not accept any responsibility or liability for the loss,
-                damage or theft of the exhibitor’s equipment, items on display,
-                stand and/or personal belongings. The exhibitor also agrees to
-                abide by the terms and conditions and by any amendment which may
-                be made by the Organisers and/or the hall owner.
+                </span>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
@@ -165,33 +179,38 @@ const RegistrationInfoPage = () => {
               <AccordionContent>
                 <span className="font-bold text-black">Cancellation fee:</span>
                 <br />
-                <span className="font-bold text-black/80">
-                  ​01 July – 31 July 2023
+                <br />
+                If the exhibitor cancels or withdraws his application, the
+                following cancellation charges shall apply:
+                <br />
+                <span className="font-bold text-red-500">
+                  ​06 June – 06 July 2024
                 </span>{" "}
                 = 50% of total stand fee.
                 <br />
-                <span className="font-bold text-black/80">
-                  01 August – 31 August 2023
+                <span className="font-bold text-red-500">
+                  06 July – 07 August 2024 to the start of the fair
                 </span>{" "}
-                = 100% of total stand fee.
-                <br />A no-show will constitute a cancellation and will be
-                charged 100% of total stand fee. In all cases all taxes,
-                contributions, fees and extra costs will also have to paid. We
-                agree to abide by the terms and conditions and by any amendment
-                which may be made by the Chamber of Mines of Namibia and/or the
-                hall owner.
+                = 100% of total stand rent.
+                <br />A{" "}
+                <span className=" font-semibold text-red-500 underline">
+                  no-show
+                </span>{" "}
+                will constitute a cancellation and will be charged 100% of total
+                stand fee. In all cases all taxes, contributions, fees and extra
+                costs will also have to paid.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
-        <h2 className=" text-5xl font-poppins font-bold text-black">
+        <h2 className="text-2xl lg:text-5xl font-poppins font-bold text-black">
           Packages
         </h2>
-        <div className="flex flex-wrap gap-4 items-center justify-center h-full w-[90%] xl:w-[80%] py-16">
+        <div className="flex flex-wrap gap-4 items-center justify-center h-full w-[90%] xl:w-[80%] pt-4">
           {boothPackages.map((boothPackage, index) => (
             <div
               key={index}
-              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[33%] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)] hover:border-expoOrange  transition-all duration-200"
+              className="pb-8 flex flex-col items-center justify-center border border-black/10 w-full sm:w-[40vw] xl:w-[33%] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.10)]  hover:-mt-2 hover:shadow-[0_0_15px_rgba(0,0,0,0.20)]  transition-all duration-200"
             >
               <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-20 py-4 rounded-t-lg px-3">
                 {boothPackage.title}
@@ -202,13 +221,13 @@ const RegistrationInfoPage = () => {
                   {boothPackage.priceNB}
                 </p>
               </div>
-              <div className=" w-[80%] flex flex-col items-center justify-center gap-4 py-8">
+              <div className=" w-full flex flex-col items-center justify-center gap-4 px-10 p-8">
                 <div className="w-full h-px bg-expoBlue/20"></div>
                 <p className="text-center font-semibold">Package Includes:</p>
                 {boothPackage.features.map((feature, index) => (
                   <ul
                     key={index}
-                    className="pl-8 list-disc list-inside text-base font-rubik font-medium text-black/80 w-full"
+                    className="list-disc list-inside text-sm font-rubik font-light text-black/80 w-full"
                   >
                     <li>{feature.one}</li>
                     <li>{feature.two}</li>
