@@ -138,7 +138,7 @@ const Navbar = () => {
                       href="/main-event-programme/registration-info"
                       title="Registration and Info"
                     >
-                      Conference registration and exhibitor information.
+                      Exhibitor registration and information.
                     </ListItem>
                     <ListItem
                       href="/main-event-programme/floor-plans"
@@ -226,7 +226,7 @@ const Navbar = () => {
                 size="lg"
                 className="bg-expoOrange text-expoBlue hover:bg-expoBlue hover:text-expoOrange text-base font-bold"
               >
-                Registration{" "}
+                Exhibitor Registration{" "}
                 <Icon
                   icon="lucide:chevron-right"
                   width="24"

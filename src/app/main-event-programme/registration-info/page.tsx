@@ -11,11 +11,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Registration",
+  title: "Exhibitor Registration",
   description:
-    "Exhibitor Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
+    "Exhibitor Registration Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
   openGraph: {
-    title: "Registration & Exhibitor Information",
+    title: "Exhibitor Registration & Information",
     description:
       "Exhibitor Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
     images: [{ url: "../../opengraph-image.jpg" }],
@@ -80,11 +80,11 @@ const boothPackages = [
 const RegistrationInfoPage = () => {
   return (
     <main>
-      <PageBanner title="Registration Information" />
+      <PageBanner title="Exhibition Registration" />
       <section className="flex flex-col w-full h-fit gap-6 py-16 justify-center items-center">
         <div className="flex flex-col items-center justify-center w-[80%] gap-4">
           <h2 className="text-2xl  lg:text-5xl font-poppins font-bold text-black text-center">
-            Exhibitor Information
+            Exhibitor Information for Registration
           </h2>
           <h3 className="text-base lg:text-xl text-center font-semibold font-rubik text-expoOrange">
             Please read this important information before submitting your
@@ -94,6 +94,8 @@ const RegistrationInfoPage = () => {
             Payment due date: 26 July 2024 <br />
             <span className="font-semibold text-red-500">
               Stands will only be erected upon receipt of 100% payment.
+              <br />
+              Registrations are currently closed and will be opening soon.
             </span>
           </p>
         </div>

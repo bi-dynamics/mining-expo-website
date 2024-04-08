@@ -63,7 +63,7 @@ export default function Home() {
               href="/main-event-programme/registration-info"
               className="w-fit"
             >
-              <ButtonWithIcon>Registration</ButtonWithIcon>
+              <ButtonWithIcon>Exhibitor Registration</ButtonWithIcon>
             </Link>
           </div>
           {/* Video */}
