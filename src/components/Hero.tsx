@@ -83,7 +83,7 @@ export default function Hero() {
               className="w-full"
             >
               <Button className="block xl:hidden w-full bg-expoOrange">
-                Registration
+                Exhibitor Registration
               </Button>
             </Link>
             {/* sponsor logo */}
