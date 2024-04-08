@@ -65,6 +65,7 @@ export default function Home() {
             >
               <ButtonWithIcon>Exhibitor Registration</ButtonWithIcon>
             </Link>
+            <i>Conference registration opening soon*</i>
           </div>
           {/* Video */}
 

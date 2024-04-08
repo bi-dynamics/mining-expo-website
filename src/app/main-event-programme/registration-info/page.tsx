@@ -94,8 +94,6 @@ const RegistrationInfoPage = () => {
             Payment due date: 26 July 2024 <br />
             <span className="font-semibold text-red-500">
               Stands will only be erected upon receipt of 100% payment.
-              <br />
-              Registrations are currently closed and will be opening soon.
             </span>
           </p>
         </div>
