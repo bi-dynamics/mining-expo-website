@@ -14,13 +14,16 @@ function FloorPlans({ floorPlansList }: { floorPlansList: FloorPlanData[] }) {
   const sortedFloorPlansList = floorPlansList.sort(
     (a: any, b: any) => a.id - b.id
   );
-  console.log(floorPlansList);
 
   return (
     <section className="py-16 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
       {/* Container */}
       <div className="flex flex-col gap-2 items-center justify-center w-full h-fit">
-        <Swiper
+        <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
+          <span className=" font-bold">NB: </span>
+          2024 Floor Plans will be published soon.
+        </p>
+        {/* <Swiper
           navigation={true}
           loop={true}
           grabCursor={true}
@@ -52,7 +55,7 @@ function FloorPlans({ floorPlansList }: { floorPlansList: FloorPlanData[] }) {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
       </div>
     </section>
   );
