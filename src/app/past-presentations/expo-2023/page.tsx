@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import { Download } from "lucide-react";
 import Link from "next/link";
+import { getExhibitors } from "@/lib/getExhibitors";
+import { getFloorPlans } from "@/lib/getFloorPlans";
+import PastExpo from "@/components/Expo2023";
 
 export const metadata: Metadata = {
   title: "2023 Presentations",
@@ -32,15 +35,21 @@ const pdfFiles = [
   },
 ];
 
-const Presentations2023Page = () => {
+const Presentations2023Page = async () => {
+  const exhibitors = await getExhibitors();
+  const floorplans2023 = await getFloorPlans();
   return (
-    <div className="flex flex-col  w-full h-full">
-      <PageBanner title="2023 Presentations" />
-      <div className="py-16 gap-16 flex items-center justify-center flex-col w-[90%] lg:w-[60%] mx-auto">
+    <div className="flex flex-col  w-full h-full bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
+      <PageBanner title="Expo 2023" />
+      <div className="py-16 gap-4 md:gap-[-2px] flex items-center justify-center flex-col w-[90%] lg:w-[70%] mx-auto">
         <h2 className="text-xl md:text-5xl font-poppins font-bold text-black text-center w-full">
-          Mining Expo & Conference 2023 Presentations
+          Mining Expo & Conference 2023
         </h2>
-        <div className="flex flex-col gap-2 items-start justify-center">
+        <PastExpo exhibitorsList={exhibitors} floorPlans={floorplans2023} />
+        <div className="flex flex-col gap-2 w-full items-start justify-start border-l-expoBlue border-l-8 rounded-md pl-8">
+          <h3 className="text-xl pb-6  lg:text-4xl font-poppins font-bold text-expoBlue ">
+            2023 Presentations
+          </h3>
           {pdfFiles.map((file, index) => (
             <Link
               href={file.src}

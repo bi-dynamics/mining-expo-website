@@ -125,7 +125,7 @@ const InfoTabs = () => {
   return (
     <section className="flex flex-col py-16 gap-4 h-[130vh] md:h-[90vh] w-full bg-expoBlue">
       {/* Heading and buttons */}
-      <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-24 items-start justify-start">
+      <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-16 items-start justify-start">
         <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white">
           THE EXPO
         </h2>

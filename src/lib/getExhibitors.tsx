@@ -8,7 +8,7 @@ export interface ExhibitorData {
   name?: string;
 }
 
-export async function getExhibitors(): Promise<ExhibitorData[]> {
+export async function getExhibitors() {
   const querySnapshot = await getDocs(collection(db, "exhibitors"));
   const exhibitors: ExhibitorData[] = [];
 

@@ -8,6 +8,7 @@ import ButtonWithIcon from "@/components/ui/buttonWithIcon";
 import IframeVideoComponent from "@/components/IframeVideoComponent";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import SponsorSlides from "@/components/SponsorSlides";
 
 //lazy load components
 const ImageSlidesComponent = dynamic(() => import("@/components/ImageSlides"), {
@@ -75,6 +76,7 @@ export default function Home() {
         <ImageSlidesComponent />
 
         <StatisticsInfoComponent />
+        <SponsorSlides />
         {/* Sponsor Section */}
         {/* <section className="flex items-center justify-center bg-white">
           

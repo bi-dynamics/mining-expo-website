@@ -35,13 +35,17 @@ function StatisticsInfo() {
   const countDays = useMotionValue(0);
   const countAttendees = useMotionValue(0);
   const countSpeakers = useMotionValue(0);
+  const countExhibitors = useMotionValue(0);
   const roundedDays = useTransform(countDays, Math.round);
   const roundedAttendees = useTransform(countAttendees, Math.round);
   const roundedSpeakers = useTransform(countSpeakers, Math.round);
+  const roundedExhibitors = useTransform(countExhibitors, Math.round);
+
   useEffect(() => {
     let animateDays;
     let animateAttendees;
     let animateSpeakers;
+    let animateExhibitors;
     if (isInView) {
       animateDays = animate(countDays, 2, { duration: 4.5 });
       animateAttendees = animate(countAttendees, 500, {
@@ -52,8 +56,17 @@ function StatisticsInfo() {
         duration: 2,
         delay: 1.5,
       });
+      animateExhibitors = animate(countExhibitors, 90, {
+        duration: 2,
+        delay: 2,
+      });
     }
-    return animateDays?.stop, animateAttendees?.stop, animateSpeakers?.stop;
+    return (
+      animateDays?.stop,
+      animateAttendees?.stop,
+      animateSpeakers?.stop,
+      animateExhibitors?.stop
+    );
   });
 
   return (
@@ -61,7 +74,7 @@ function StatisticsInfo() {
       ref={ref}
       className="flex flex-col gap-16 items-center justify-center py-16 w-full h-fit bg-expoBlue font-rubik"
     >
-      <h2 className="font-bold text-2xl lg:text-4xl text-white w-[90%] xl:w-1/2 text-center">
+      <h2 className="font-bold text-2xl lg:text-4xl text-white w-[90%] xl:w-2/3 text-center">
         {`"Namibia's role in the sustainable supply of minerals to support
         the global energy transition"`}
       </h2>
@@ -72,7 +85,7 @@ function StatisticsInfo() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="flex gap-8 w-full h-full items-center justify-center flex-wrap"
+          className="flex gap-16 md:gap-8 w-full h-full items-center justify-center flex-col md:flex-row"
         >
           {/* Days */}
           <motion.li
@@ -125,6 +138,27 @@ function StatisticsInfo() {
               </motion.span>
             </div>
             Speakers
+          </motion.li>
+          {/* Exhibitors */}
+          <motion.li
+            variants={fadeInAnimationVariants}
+            className="text-2xl flex flex-col justify-center items-center gap-4"
+          >
+            <div className="flex gap-2 text-2xl lg:text-4xl font-bold">
+              <motion.p className="text-2xl lg:text-4xl font-bold text-white">
+                {roundedExhibitors}
+              </motion.p>
+              <motion.span
+                variants={plusIconVariants}
+                transition={{ delay: 4 }}
+                initial="initial"
+                animate="animate"
+                className="text-expoOrange"
+              >
+                +
+              </motion.span>
+            </div>
+            Exhibitors
           </motion.li>
         </motion.ul>
       </div>
