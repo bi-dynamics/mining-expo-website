@@ -62,9 +62,9 @@ const past_events: {
     description: "Timeline of presentations from 2013 to present.",
   },
   {
-    title: "2023 Presentations",
-    href: "/past-presentations/2023-presentations",
-    description: "All presentations from the 2023 Mining Expo.",
+    title: "Expo 2023",
+    href: "/past-presentations/expo-2023",
+    description: "Exhibitors, floor plans and presentations from 2023.",
   },
 ];
 
@@ -97,6 +97,7 @@ const Navbar = () => {
             <Image
               src={ExpoLogo}
               alt="Mining Expo Logo"
+              priority
               className="h-[60px] w-auto xl:h-[100px]"
             />
           </Link>
@@ -129,7 +130,7 @@ const Navbar = () => {
                             Main Event Programme
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Main event schedule for August 7 & 8.
+                            Main event schedule for August 7 & 8, 2024.
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -144,13 +145,14 @@ const Navbar = () => {
                       href="/main-event-programme/floor-plans"
                       title="Floor Plans"
                     >
-                      Floor plans for all venues.
+                      Floor plans for 2024 venues. <br /> COMING SOON
                     </ListItem>
+
                     <ListItem
                       href="/main-event-programme/exhibitors"
                       title="Exhibitors"
                     >
-                      List of all exhibitors attending the event.
+                      Exhibitors for 2024 <br /> COMING SOON
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

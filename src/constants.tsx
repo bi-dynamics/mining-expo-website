@@ -46,8 +46,8 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     subMenuItems: [
       { title: "Past Presentations", path: "/past-presentations" },
       {
-        title: "2023 Presentations",
-        path: "/past-presentations/2023-presentations",
+        title: "Expo 2023",
+        path: "/past-presentations/expo-2023",
       },
     ],
   },
