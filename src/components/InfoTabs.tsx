@@ -52,12 +52,9 @@ const InfoTabs = () => {
                     Mining Conference 2024 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    The Theme for this year’s event is “Namibia’s role in the
-                    sustainable supply of minerals to support the global energy
-                    transition.” With untapped resources of critical minerals
-                    and uranium, Namibia is increasing its prominence to support
-                    the global shift to more sustainable uses of energy giving
-                    rise to new economic opportunities in the mining sector.
+                    The Theme for this year’s event is “Green Shoots for
+                    Namibia's Mining Industry: a Season of Opportunity and
+                    Growth to Drive Economic Expansion”
                   </p>
                 </div>
               </div>
