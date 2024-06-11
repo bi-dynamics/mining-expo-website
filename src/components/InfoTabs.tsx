@@ -52,7 +52,7 @@ const InfoTabs = () => {
                     Mining Conference 2024 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    The Theme for this year’s event is “Green Shoots for
+                    The Theme for this year&apos;s event is “Green Shoots for
                     Namibia's Mining Industry: a Season of Opportunity and
                     Growth to Drive Economic Expansion”
                   </p>
