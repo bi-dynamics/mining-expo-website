@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 const InfoTabs = () => {
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(2);
   const renderSwitch = (tab: number) => {
     switch (tab) {
       case 1:
@@ -126,7 +126,7 @@ const InfoTabs = () => {
         <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white">
           THE EXPO
         </h2>
-        <div className="flex flex-wrap gap-4">
+        {/* <div className="flex flex-wrap gap-4">
           <Button
             onClick={() => setTab(1)}
             className={
@@ -157,7 +157,7 @@ const InfoTabs = () => {
           >
             OIL AND GAS SECTOR
           </Button>
-        </div>
+        </div> */}
       </div>
       {renderSwitch(tab)}
     </section>
