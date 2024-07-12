@@ -61,12 +61,11 @@ export default function Home() {
               entire extractives sector under one roof.
             </p>
             <Link
-              href="/main-event-programme/registration-info"
+              href="/conference-programme/conference-registration"
               className="w-fit"
             >
-              <ButtonWithIcon>Exhibitor Registration</ButtonWithIcon>
+              <ButtonWithIcon>Conference Registration</ButtonWithIcon>
             </Link>
-            <i>Conference registration opening soon*</i>
           </div>
           {/* Video */}
 
