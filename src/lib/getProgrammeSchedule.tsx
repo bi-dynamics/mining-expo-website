@@ -12,6 +12,34 @@ export interface ScheduleData {
   tracks?: string;
   speakerProfilePicture?: string;
   speakerTitle?: string;
+  speakers?: SpeakersAttending[];
+  chairperson?: ChairpersonAttending[];
+  moderator?: ModeratorAttending[];
+  panelists?: PanelistsAttending[];
+}
+
+export interface SpeakersAttending {
+  speakerName: string;
+  speakerTitle: string;
+  speakerProfilePicture: string;
+}
+
+export interface ChairpersonAttending {
+  speakerName: string;
+  speakerTitle: string;
+  speakerProfilePicture?: string;
+}
+
+export interface ModeratorAttending {
+  speakerName: string;
+  speakerTitle: string;
+  speakerProfilePicture?: string;
+}
+
+export interface PanelistsAttending {
+  speakerName: string;
+  speakerTitle: string;
+  speakerProfilePicture?: string;
 }
 
 export async function getProgrammeSchedule(): Promise<ScheduleData[]> {
