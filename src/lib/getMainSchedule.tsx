@@ -6,12 +6,16 @@ export interface ScheduleData {
   description?: string;
   location?: string;
   name?: string;
-  speakerNames?: string;
   timeEnd?: Timestamp;
   timeStart?: Timestamp;
   tracks?: string;
-  speakerProfilePicture?: string;
-  speakerTitle?: string;
+  speakers?: SpeakersAttending[];
+}
+
+export interface SpeakersAttending {
+  speakerName: string;
+  speakerTitle: string;
+  speakerProfilePicture: string;
 }
 
 export async function getMainSchedule(): Promise<ScheduleData[]> {

@@ -26,6 +26,11 @@ const conference: { title: string; href: string; description: string }[] = [
     description: "Conference programme information.",
   },
   {
+    title: "Conference Registration",
+    href: "/conference-programme/conference-registration",
+    description: "Register for the Expo conference.",
+  },
+  {
     title: "Speakers",
     href: "/conference-programme/speakers-list",
     description: "List of speakers attending the conference.",
@@ -162,7 +167,7 @@ const Navbar = () => {
                   Conference
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ul className="flex flex-col w-[250px] left-5 gap-3 py-4 px-3 md:w-[350px] md:grid-cols-2 lg:w-[400px] ">
                     {conference.map((conference) => (
                       <ListItem
                         key={conference.title}
