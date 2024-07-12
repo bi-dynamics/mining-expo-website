@@ -39,11 +39,8 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
           <h2 className="text-2xl md:text-5xl font-poppins font-bold text-black">
             Programme Schedule
           </h2>
-          <h2 className="text-xl md:text-3xl  font-semibold text-expoOrange">
-            Coming Soon
-          </h2>
         </div>
-        {/* <div className="w-full h-full flex flex-col gap-8 bg-white">
+        <div className="w-full h-full flex flex-col gap-8 bg-white">
           <div className="flex items-center justify-center bg-slate-100 px-8">
             <Button
               onClick={() => setDay(1)}
@@ -69,145 +66,357 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
           {day == 1 ? (
             <Accordion
               type="multiple"
-              defaultValue={["1"]}
               className="w-full flex flex-col gap-6 px-8 pb-8"
             >
-              {day1Schedule.map((schedule, index) => (
-                <AccordionItem
-                  key={index}
-                  value={index + ""}
-                  className="border-none"
-                >
-                  <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
-                    <div className="flex gap-2 lg:gap-8 flex-wrap text-left">
-                      <div className="font-rubik font-light text-sm sm:text-base">
-                        {schedule.timeStart
-                          ? format(
-                              new Date(schedule.timeStart?.seconds! * 1000),
-                              "MMMM dd, yyyy"
-                            )
-                          : ""}
-                      </div>
-                      <div className="font-rubik font-light text-sm sm:text-base">
-                        {schedule.timeStart
-                          ? format(
-                              new Date(schedule.timeStart?.seconds! * 1000),
-                              "HH:mm "
-                            )
-                          : ""}
-                      </div>
-                      <div className="flex flex-col gap-2 text-left">
-                        <h3 className="font-semibold">{schedule.name} </h3>
-                        <h3 className="font-bold text-expoOrange">
-                          {schedule.location}
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="border-x border-b border-slate-200 rounded-lg p-8 flex flex-col gap-8">
-                    <div>{schedule.description}</div>
-                    {schedule.speakerNames ? (
-                      <div className="flex gap-4 items-center justify-start flex-wrap ">
-                        <p className="font-semibold">Speakers:</p>
-                        <div className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4">
-                          <div className="w-fit h-fit">
-                            <Image
-                              src={schedule.speakerProfilePicture as string}
-                              alt={schedule.speakerNames}
-                              width={50}
-                              height={50}
-                              className="rounded-full bg-expoBlue"
-                            />
-                          </div>
-                          <div className="font-rubik flex flex-col items-start justify-start">
-                            <p className="text-black text-base font-normal">
-                              {schedule.speakerNames}
-                            </p>
-                            <p className="text-black/50 text-sm font-medium">
-                              {schedule.speakerTitle}
-                            </p>
-                          </div>
+              {day1Schedule.map(
+                (
+                  {
+                    description,
+                    location,
+                    name,
+                    speakers,
+                    chairperson,
+                    moderator,
+                    panelists,
+                    timeStart,
+                  },
+                  index
+                ) => (
+                  <AccordionItem
+                    key={index}
+                    value={index + ""}
+                    className="border-none"
+                    disabled={!description}
+                  >
+                    <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
+                      <div className="flex gap-2 lg:gap-8 flex-wrap text-left">
+                        <div className="font-rubik font-light text-sm sm:text-base">
+                          {timeStart
+                            ? format(
+                                new Date(timeStart?.seconds! * 1000),
+                                "MMMM dd, yyyy"
+                              )
+                            : ""}
+                        </div>
+                        <div className="font-rubik font-light text-sm sm:text-base">
+                          {timeStart
+                            ? format(
+                                new Date(timeStart?.seconds! * 1000),
+                                "HH:mm "
+                              )
+                            : ""}
+                        </div>
+                        <div className="flex flex-col gap-2 text-left">
+                          <h3 className="font-semibold">{name} </h3>
+                          <h3 className="font-bold text-expoOrange">
+                            {location}
+                          </h3>
                         </div>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+                    </AccordionTrigger>
+                    <AccordionContent className="border-x border-b border-slate-200 rounded-lg p-8 flex flex-col gap-8">
+                      <div>{description}</div>
+                      {speakers && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Speakers:</p>
+                          {speakers.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {chairperson && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">
+                            Chairperson of Session:
+                          </p>
+                          {chairperson.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {moderator && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Moderator:</p>
+                          {moderator.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {panelists && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Panelists:</p>
+                          {panelists.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              )}
             </Accordion>
           ) : (
             <Accordion
               type="multiple"
-              defaultValue={["0", "1"]}
               className="w-full flex flex-col gap-6 px-8 pb-8"
             >
-              {day2Schedule.map((schedule, index) => (
-                <AccordionItem
-                  key={index}
-                  value={index + ""}
-                  className="border-none"
-                >
-                  <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
-                    <div className="flex gap-2 lg:gap-8 flex-wrap">
-                      <div className="font-rubik font-light text-sm sm:text-base">
-                        {schedule.timeStart
-                          ? format(
-                              new Date(schedule.timeStart?.seconds! * 1000),
-                              "MMMM dd, yyyy"
-                            )
-                          : ""}
-                      </div>
-                      <div className="font-rubik font-light text-sm sm:text-base">
-                        {schedule.timeStart
-                          ? format(
-                              new Date(schedule.timeStart?.seconds! * 1000),
-                              "HH:mm"
-                            )
-                          : ""}
-                      </div>
-                      <div className="flex flex-col gap-2 text-left">
-                        <h3 className="font-semibold">{schedule.name}</h3>
-                        <h3 className="font-bold text-expoOrange">
-                          {schedule.location}
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="border-x border-b border-slate-200 rounded-lg p-8 flex flex-col gap-8">
-                    <div>{schedule.description}</div>
-                    {schedule.speakerProfilePicture ? (
-                      <div className="flex gap-4 items-center justify-start flex-wrap ">
-                        <p className="font-semibold">Speakers:</p>
-                        <div className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4">
-                          <div className="w-fit h-fit">
-                            <Image
-                              src={schedule.speakerProfilePicture as string}
-                              alt={schedule.speakerNames as string}
-                              width={50}
-                              height={50}
-                              className="rounded-full bg-expoBlue"
-                            />
-                          </div>
-                          <div className="font-rubik flex flex-col items-start justify-start">
-                            <p className="text-black text-base font-normal">
-                              {schedule.speakerNames}
-                            </p>
-                            <p className="text-black/50 text-sm font-medium">
-                              {schedule.speakerTitle}
-                            </p>
-                          </div>
+              {day2Schedule.map(
+                (
+                  {
+                    description,
+                    location,
+                    name,
+                    speakers,
+                    chairperson,
+                    moderator,
+                    panelists,
+                    timeStart,
+                  },
+                  index
+                ) => (
+                  <AccordionItem
+                    key={index}
+                    value={index + ""}
+                    className="border-none"
+                    disabled={!description}
+                  >
+                    <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
+                      <div className="flex gap-2 lg:gap-8 flex-wrap text-left">
+                        <div className="font-rubik font-light text-sm sm:text-base">
+                          {timeStart
+                            ? format(
+                                new Date(timeStart?.seconds! * 1000),
+                                "MMMM dd, yyyy"
+                              )
+                            : ""}
+                        </div>
+                        <div className="font-rubik font-light text-sm sm:text-base">
+                          {timeStart
+                            ? format(
+                                new Date(timeStart?.seconds! * 1000),
+                                "HH:mm "
+                              )
+                            : ""}
+                        </div>
+                        <div className="flex flex-col gap-2 text-left">
+                          <h3 className="font-semibold">{name} </h3>
+                          <h3 className="font-bold text-expoOrange">
+                            {location}
+                          </h3>
                         </div>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+                    </AccordionTrigger>
+                    <AccordionContent className="border-x border-b border-slate-200 rounded-lg p-8 flex flex-col gap-8">
+                      <div>{description}</div>
+                      {speakers && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Speakers:</p>
+                          {speakers.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {chairperson && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">
+                            Chairperson of Session:
+                          </p>
+                          {chairperson.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {moderator && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Moderator:</p>
+                          {moderator.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {panelists && (
+                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                          <p className="font-semibold">Panelists:</p>
+                          {panelists.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                            >
+                              <div className="w-fit h-fit">
+                                <Image
+                                  src={speaker.speakerProfilePicture as string}
+                                  alt={speaker.speakerName}
+                                  width={50}
+                                  height={50}
+                                  className="rounded-full bg-transparent"
+                                />
+                              </div>
+                              <div className="font-rubik flex flex-col items-start justify-start">
+                                <p className="text-black text-base font-normal">
+                                  {speaker.speakerName}
+                                </p>
+                                <p className="text-black/50 text-sm font-medium">
+                                  {speaker.speakerTitle}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              )}
             </Accordion>
           )}
-        </div> */}
+        </div>
       </div>
     </section>
   );
