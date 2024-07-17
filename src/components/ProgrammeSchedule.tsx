@@ -13,19 +13,33 @@ import { format } from "date-fns";
 import Image from "next/image";
 
 function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
-  const sortedSchedules = schedules.sort((a: any, b: any) => a.id - b.id);
+  // const sortedSchedules = schedules.sort((a: any, b: any) => a.id - b.id);
+
+  // Handle cases where timeStart may not be a valid Date object
+  const sortedSchedules = schedules.slice().sort((a, b) => {
+    const timeA = new Date(a.timeStart?.seconds! * 1000);
+    const timeB = new Date(b.timeStart?.seconds! * 1000);
+
+    // Ensure both are valid dates before comparison
+    if (isNaN(timeA.getTime()) || isNaN(timeB.getTime())) {
+      console.warn("Invalid timeStart format for schedule items:", a, b);
+      return 0; // Return 0 to avoid unexpected behavior (e.g., incorrect sorting)
+    }
+
+    return timeA.getTime() - timeB.getTime();
+  });
 
   const day1Schedule = sortedSchedules.filter((schedule) =>
     schedule.timeStart
       ? format(new Date(schedule.timeStart?.seconds! * 1000), "dd").includes(
-          "30"
+          "7"
         )
       : ""
   );
   const day2Schedule = sortedSchedules.filter((schedule) =>
     schedule.timeStart
       ? format(new Date(schedule.timeStart?.seconds! * 1000), "dd").includes(
-          "31"
+          "8"
         )
       : ""
   );
@@ -65,8 +79,10 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
           </div>
           {day == 1 ? (
             <Accordion
-              type="multiple"
+              type="single"
               className="w-full flex flex-col gap-6 px-8 pb-8"
+              defaultValue={"1"}
+              collapsible
             >
               {day1Schedule.map(
                 (
@@ -84,9 +100,9 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                 ) => (
                   <AccordionItem
                     key={index}
-                    value={index + ""}
+                    value={description ? "1" : "0"}
                     className="border-none"
-                    disabled={!description}
+                    disabled={!description || description === null}
                   >
                     <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
                       <div className="flex gap-2 lg:gap-8 flex-wrap text-left">
@@ -206,7 +222,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                         </div>
                       )}
                       {panelists && (
-                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                        <div className="flex gap-4 items-start justify-start flex-col ">
                           <p className="font-semibold">Panelists:</p>
                           {panelists.map((speaker, index) => (
                             <div
@@ -241,8 +257,10 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
             </Accordion>
           ) : (
             <Accordion
-              type="multiple"
+              type="single"
               className="w-full flex flex-col gap-6 px-8 pb-8"
+              defaultValue={"1"}
+              collapsible
             >
               {day2Schedule.map(
                 (
@@ -260,9 +278,9 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                 ) => (
                   <AccordionItem
                     key={index}
-                    value={index + ""}
+                    value={description ? "1" : "0"}
                     className="border-none"
-                    disabled={!description}
+                    disabled={!description || description === null}
                   >
                     <AccordionTrigger className="font-bold focus:text-expoOrange hover:text-expoOrange bg-slate-100 hover:bg-white focus:bg-white border border-slate-200 rounded-lg px-8">
                       <div className="flex gap-2 lg:gap-8 flex-wrap text-left">
@@ -366,7 +384,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                                   alt={speaker.speakerName}
                                   width={50}
                                   height={50}
-                                  className="rounded-full bg-transparent"
+                                  className="rounded-full object-contain bg-transparent"
                                 />
                               </div>
                               <div className="font-rubik flex flex-col items-start justify-start">
