@@ -1,5 +1,10 @@
 import { db } from "./firebaseConfig";
-import { Timestamp, collection, getDocs } from "firebase/firestore";
+import {
+  Timestamp,
+  collection,
+  getDocs,
+  getDocsFromServer,
+} from "firebase/firestore";
 
 export interface ScheduleData {
   id?: string;
@@ -19,7 +24,9 @@ export interface SpeakersAttending {
 }
 
 export async function getMainSchedule(): Promise<ScheduleData[]> {
-  const querySnapshot = await getDocs(collection(db, "conference_schedule"));
+  const querySnapshot = await getDocsFromServer(
+    collection(db, "conference_schedule")
+  );
   const schedule: ScheduleData[] = [];
 
   querySnapshot.forEach((doc) => {

@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, getDocsFromServer } from "firebase/firestore";
 
 export interface FloorPlanData {
   id?: string;
@@ -8,7 +8,7 @@ export interface FloorPlanData {
 }
 
 export async function getFloorPlans(): Promise<FloorPlanData[]> {
-  const querySnapshot = await getDocs(collection(db, "floor_plans"));
+  const querySnapshot = await getDocsFromServer(collection(db, "floor_plans"));
   const floorPlans: FloorPlanData[] = [];
 
   querySnapshot.forEach((doc) => {
