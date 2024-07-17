@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, getDocsFromServer } from "firebase/firestore";
 
 export interface ExhibitorData {
   id?: string;
@@ -9,7 +9,7 @@ export interface ExhibitorData {
 }
 
 export async function getExhibitors() {
-  const querySnapshot = await getDocs(collection(db, "exhibitors"));
+  const querySnapshot = await getDocsFromServer(collection(db, "exhibitors"));
   const exhibitors: ExhibitorData[] = [];
 
   querySnapshot.forEach((doc) => {
