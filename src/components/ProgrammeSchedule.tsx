@@ -133,7 +133,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                     <AccordionContent className="border-x border-b border-slate-200 rounded-lg p-8 flex flex-col gap-8">
                       <div>{description}</div>
                       {speakers && (
-                        <div className="flex gap-4 items-center justify-start flex-wrap ">
+                        <div className="flex gap-4 items-start justify-start flex-col ">
                           <p className="font-semibold">Speakers:</p>
                           {speakers.map((speaker, index) => (
                             <div
