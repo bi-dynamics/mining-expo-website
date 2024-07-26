@@ -169,7 +169,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                           {chairperson.map((speaker, index) => (
                             <div
                               key={index}
-                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-4 gap-4"
                             >
                               <div className="w-fit h-fit">
                                 <Image
@@ -347,7 +347,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                           {chairperson.map((speaker, index) => (
                             <div
                               key={index}
-                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-2 px-4 gap-4"
+                              className="h-fit flex flex-wrap bg-slate-100 rounded-lg p-4 gap-4"
                             >
                               <div className="w-fit h-fit">
                                 <Image
