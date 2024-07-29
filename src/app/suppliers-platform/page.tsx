@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
-import suppliersPlatform from "../../../public/suppliers-platform.png";
+import suppliersPlatform from "../../../public/Suppliers-platform-2024.svg";
 import Image from "next/image";
 
 export const metadata: Metadata = {
