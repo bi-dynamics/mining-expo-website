@@ -157,7 +157,7 @@ const Navbar = () => {
                       href="/main-event-programme/exhibitors"
                       title="Exhibitors"
                     >
-                      Exhibitors for 2024 <br /> COMING SOON
+                      Exhibitors for 2024
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
