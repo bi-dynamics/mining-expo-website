@@ -13,7 +13,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/zoom";
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { X } from "lucide-react";
 
 function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
   const sortedExhibitorsList = exhibitorsList.sort(
@@ -21,18 +22,24 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
   );
 
   const swiperBoundaryRef = useRef(null);
+  const [openModal, setOpenModal] = useState(false);
+  interface ModalInfoProps {
+    companyName: string | undefined;
+    companyDescription: string | undefined;
+  }
+  const [modalInfo, setModalInfo] = useState<ModalInfoProps | null>(null);
 
   return (
     <section className="bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top w-full">
       {/* Container */}
-      <div className="flex flex-col gap-8 items-center justify-start  w-[90%] lg:w-[70%] mx-auto h-fit sm:py-16">
-        <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
+      <div className="flex flex-col gap-8 items-center justify-start  w-[90%] lg:w-[70%] mx-auto h-fit py-16">
+        {/* <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
           <span className=" font-bold">NB: </span>
           Exhibitors for 2024 will be published soon
-        </p>
-        {/* <div className="h-fit w-full border-l-expoBlue border-l-8 rounded-md flex flex-col gap-8 pl-8">
-          <h3 className="text-xl  lg:text-4xl font-poppins font-bold text-expoBlue ">
-            2023 Exhibitors
+        </p> */}
+        <div className="h-fit w-full rounded-md flex flex-col gap-8">
+          <h3 className="text-xl text-center  lg:text-4xl font-poppins font-bold text-expoBlue ">
+            2024 Exhibitors
           </h3>
 
           <Swiper
@@ -62,6 +69,13 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
                 <SwiperSlide
                   key={index}
                   className="h-full py-4 w-fit flex items-center justify-center"
+                  onClick={() => {
+                    setOpenModal(true),
+                      setModalInfo({
+                        companyName: image.name,
+                        companyDescription: image.description,
+                      });
+                  }}
                 >
                   <HoverCard>
                     <HoverCardTrigger
@@ -78,7 +92,7 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
                     </HoverCardTrigger>
                     <HoverCardContent
                       className="w-80 max-h-80 overflow-y-scroll z-40"
-                      side="right"
+                      side="bottom"
                       align="center"
                       avoidCollisions
                       collisionBoundary={
@@ -96,7 +110,23 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
               )
             )}
           </Swiper>
-        </div> */}
+          {openModal && (
+            <div className="w-[90vw] p-4 max-h-[30vh] fixed bottom-2 right-2 md:hidden mx-auto overflow-y-scroll z-40 bg-expoBlue border-2 border-expoOrange text-white rounded-lg">
+              <div
+                onClick={() => setOpenModal(false)}
+                className="w-full h-fit flex items-end justify-end"
+              >
+                <X />
+              </div>
+
+              <div className="font-bold font-poppins py-4">
+                {modalInfo?.companyName}
+              </div>
+
+              <div>{modalInfo?.companyDescription}</div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
