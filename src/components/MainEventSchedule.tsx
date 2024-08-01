@@ -13,23 +13,20 @@ import { format } from "date-fns";
 import Image from "next/image";
 
 function MainEventSchedule({ schedules }: { schedules: ScheduleData[] }) {
-  // const sortedSchedules = schedules.sort(
-  //   (a: any, b: any) => a.timeStart - b.timeStart
-  // );
+  const sortedSchedules = schedules.sort((a: any, b: any) => a.id - b.id);
 
-  // Handle cases where timeStart may not be a valid Date object
-  const sortedSchedules = schedules.slice().sort((a, b) => {
-    const timeA = new Date(a.timeStart?.seconds! * 1000);
-    const timeB = new Date(b.timeStart?.seconds! * 1000);
+  // const sortedSchedules = schedules.slice().sort((a, b) => {
+  //   const timeA = new Date(a.timeStart?.seconds! * 1000);
+  //   const timeB = new Date(b.timeStart?.seconds! * 1000);
 
-    // Ensure both are valid dates before comparison
-    if (isNaN(timeA.getTime()) || isNaN(timeB.getTime())) {
-      console.warn("Invalid timeStart format for schedule items:", a, b);
-      return 0; // Return 0 to avoid unexpected behavior (e.g., incorrect sorting)
-    }
+  //   // Ensure both are valid dates before comparison
+  //   if (isNaN(timeA.getTime()) || isNaN(timeB.getTime())) {
+  //     console.warn("Invalid timeStart format for schedule items:", a, b);
+  //     return 0; // Return 0 to avoid unexpected behavior (e.g., incorrect sorting)
+  //   }
 
-    return timeA.getTime() - timeB.getTime();
-  });
+  //   return timeA.getTime() - timeB.getTime();
+  // });
 
   const day1Schedule = sortedSchedules.filter((schedule) =>
     schedule.timeStart
