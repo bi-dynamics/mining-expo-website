@@ -41,12 +41,12 @@ const SuppliersPlatformPage = () => {
             their marketing channels.
           </p>
         </div>
-        {/* Add image */}
-        <div>
+
+        <div className="relative w-full h-full">
           <Image
             src={suppliersPlatform}
             alt="Suppliers Platform"
-            className="block h-full w-full object-cover rounded-xl z-50"
+            className="block h-full w-dvw relative right-[4dvw] object-contain rounded-xl"
           />
         </div>
       </div>
