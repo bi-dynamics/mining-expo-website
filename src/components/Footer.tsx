@@ -125,12 +125,12 @@ function Footer() {
         </div>
 
         <p className="text-white/50 text-center">
-          © 2024,{" "}
+          © 2024, Powered by{" "}
           <Link
             href="http://bi-dynamics.com/"
             className="font-bold text-white underline underline-offset-2 hover:text-expoOrange"
           >
-            BI-Dynamics PTY LTD.
+            BI-Dynamics Pty Ltd.
           </Link>{" "}
           All Rights Reserved.
         </p>
