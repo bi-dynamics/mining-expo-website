@@ -41,12 +41,10 @@ const InfoTabs = () => {
           <>
             {/* Image carousel */}
             <div className="flex items-center justify-start w-full h-[100%] xl:h-full bg-[url('https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-event-theme.webp?alt=media&token=05d47b71-5c4f-45c7-821f-8f1f53c9a07c')] bg-cover bg-center duration-300 transition-all">
-              {/* gradient layer */}
-              <div className="h-full w-full z-[1] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
               {/* Content */}
-              <div className="absolute h-fit w-full z-[2] flex items-center justify-start gap-4">
+              <div className="absolute h-fit w-[90%] mx-auto z-[2] flex items-center justify-start sm:gap-4">
                 {/* Orange tag */}
-                <div className="w-12 h-52 bg-expoOrange hidden sm:block"></div>
+                <div className="w-6 sm:w-12 h-52 bg-expoOrange"></div>
                 <div className="font-rubik flex flex-col gap-4 4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-3xl lg:text-5xl text-white font-bold">
                     Mining Conference 2024 Theme
@@ -120,10 +118,12 @@ const InfoTabs = () => {
   };
 
   return (
-    <section className="flex flex-col py-16 gap-4 h-[130vh] md:h-[90vh] w-full bg-expoBlue">
+    <section className="flex flex-col py-0 gap-0 h-[90dvh] w-full bg-expoBlue">
       {/* Heading and buttons */}
-      <div className="flex flex-col gap-4 mx-auto w-[90%] xl:px-16 items-start justify-start">
-        <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white">
+      <div className="flex flex-col gap-0 mx-auto w-[90%] xl:px-16 items-start justify-start">
+        {/* gradient layer */}
+        <div className="h-[90dvh] w-full absolute left-0 z-[2] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
+        <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white z-[2] mt-16">
           THE EXPO
         </h2>
         {/* <div className="flex flex-wrap gap-4">
