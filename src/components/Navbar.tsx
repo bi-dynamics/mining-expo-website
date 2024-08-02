@@ -150,7 +150,7 @@ const Navbar = () => {
                       href="/main-event-programme/floor-plans"
                       title="Floor Plans"
                     >
-                      Floor plans for 2024 venues. <br /> COMING SOON
+                      Floor plans for 2024 venues.
                     </ListItem>
 
                     <ListItem
