@@ -108,14 +108,17 @@ function FloorPlans({
   const currentFloorPlan = sortedFloorPlansList[currentFloorPlanIndex];
 
   return (
-    <section className="py-16 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
+    <section className="py-16 px-4 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
       {/* Container */}
-      <div className="flex flex-col gap-2 items-center justify-center w-full h-fit">
+      <div className="flex flex-col gap-8 items-center justify-center w-full h-fit">
         {/* <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
           <span className=" font-bold">NB: </span>
           2024 Floor Plans will be published soon.
         </p> */}
-        <div className="w-full h-fit">
+        <div className="w-full h-fit flex flex-col justify-center items-center gap-4">
+          <p className="font-semibold text-center text-4xl md:text-6xl font-poppins">
+            {currentFloorPlan.alt}
+          </p>
           <Swiper
             navigation={true}
             loop={true}
@@ -127,18 +130,14 @@ function FloorPlans({
             centeredSlides={true}
             fadeEffect={{ crossFade: true }}
             effect={"fade"}
-            className="xl:h-[70vh] w-full md:w-[60%] flex items-center justify-center rounded-lg mb-8"
+            className="h-[60vh] w-full flex items-center justify-center rounded-lg mb-8"
           >
             <SwiperSlide className="md:px-10 md:py-14 px-8 w-full mx-auto">
-              <div className="swiper-zoom-container flex flex-col h-fit w-full items-center justify-center gap-4 my-8">
-                <p className="font-semibold text-xl lg:text-4xl font-poppins">
-                  {currentFloorPlan.alt}
-                </p>
+              <div className="swiper-zoom-container flex flex-col h-full w-full items-center justify-center gap-4 ">
                 <Image
                   src={currentFloorPlan.image as string}
                   alt={currentFloorPlan.alt as string}
-                  width={750}
-                  height={750}
+                  fill
                   className="block h-full w-full object-cover rounded-xl z-50"
                 />
               </div>
@@ -148,20 +147,17 @@ function FloorPlans({
           {/* Nested Swiper for Exhibitors */}
           {currentFloorPlan.exhibitors && (
             <Swiper
-              navigation={true}
-              slidesPerView={2.5}
+              slidesPerView={2.3}
               spaceBetween={20}
-              pagination={{ clickable: true }}
-              modules={[Navigation, Pagination]}
-              className="xl:h-[50vh] w-full md:w-[70%] xl:w-[60%] flex items-center justify-center rounded-lg mb-0 py-4"
+              className="xl:h-[40vh] w-full flex items-center justify-center rounded-lg mb-0 py-4"
             >
               {currentFloorPlan.exhibitors.map((exhibitor, exhibitorIndex) => (
                 <SwiperSlide
                   key={exhibitorIndex}
-                  className="w-full h-full mx-auto py-8"
+                  className="w-full h-full py-4 mx-auto"
                 >
                   <div className="flex flex-col bg-white items-center justify-center gap-4 p-4 rounded-lg shadow-lg h-full w-full">
-                    <div className="relative w-full h-1/2 mx-auto flex items-center justify-center">
+                    <div className="relative w-fit h-1/2 mx-auto flex items-center justify-center">
                       <Image
                         src={exhibitor.image}
                         alt={exhibitor.name}
