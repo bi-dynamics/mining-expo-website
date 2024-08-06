@@ -80,14 +80,14 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
                   <HoverCard>
                     <HoverCardTrigger
                       asChild
-                      className="h-fit flex items-start justify-start"
+                      className="h-1/2 mx-auto flex items-center justify-center"
                     >
                       <Image
                         src={image.logo as string}
                         alt={image.name as string}
                         width={250}
                         height={250}
-                        className="block object-cover rounded-xl z-30"
+                        className="block object-contain rounded-xl z-30"
                       />
                     </HoverCardTrigger>
                     <HoverCardContent
