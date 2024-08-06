@@ -6,13 +6,12 @@ function delegateRegistrationPage() {
       <PageBanner title="Conference Registration" />
       <section className="flex flex-col gap-16 items-center justify-center w-[90%] xl:w-[80%] h-fit mx-auto py-16">
         <h2 className=" text-5xl font-poppins font-bold text-black text-center">
-          Conference Registration
+          Conference Registration Closed
         </h2>
-        <iframe
-          src="https://www.cognitoforms.com/f/2QVll_rxDEOR3mB1yLnroQ/2"
-          className="w-[80%] h-[150vh] sm:h[100vh]"
-        ></iframe>
-        <script src="https://www.cognitoforms.com/f/iframe.js" async />
+        <p>
+          Online registrations closed. Physical registrations still possible at
+          conference venue. Entry is free of charge.
+        </p>
       </section>
     </main>
   );
