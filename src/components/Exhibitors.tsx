@@ -2,7 +2,13 @@
 import { ExhibitorData } from "@/lib/getExhibitors";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Pagination, FreeMode, Navigation } from "swiper/modules";
+import {
+  Grid,
+  Pagination,
+  FreeMode,
+  Navigation,
+  Autoplay,
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/grid";
@@ -11,6 +17,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/zoom";
+import "swiper/css/autoplay";
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { useRef, useState } from "react";
@@ -44,12 +51,13 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
 
           <Swiper
             grid={{
-              rows: 1,
+              rows: 2,
             }}
+            autoplay={{ disableOnInteraction: true, pauseOnMouseEnter: true }}
             centeredSlides={true}
             breakpoints={{
               "425": { slidesPerView: 3 },
-              "768": { slidesPerView: 4 },
+              "768": { slidesPerView: 6 },
             }}
             passiveListeners={false}
             grabCursor={true}
@@ -57,18 +65,18 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
               type: "progressbar",
             }}
             loop
-            modules={[Grid, Pagination, FreeMode, Navigation]}
+            modules={[Grid, Pagination, FreeMode, Navigation, Autoplay]}
             slidesPerView={3}
             navigation
-            spaceBetween={30}
+            spaceBetween={20}
             ref={swiperBoundaryRef}
-            className="w-full h-[50vh] flex items-start justify-start rounded-lg"
+            className="w-full h-[75vh] flex items-start justify-start rounded-lg"
           >
             {sortedExhibitorsList.map((image, index) =>
               image.logo ? (
                 <SwiperSlide
                   key={index}
-                  className="h-full py-4 w-fit flex items-center justify-center"
+                  className="py-4 h-full w-fit flex items-center justify-center"
                   onClick={() => {
                     setOpenModal(true),
                       setModalInfo({
@@ -87,7 +95,7 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
                         alt={image.name as string}
                         width={250}
                         height={250}
-                        className="block object-contain rounded-xl z-30"
+                        className="block object-contain h-full rounded-xl z-30"
                       />
                     </HoverCardTrigger>
                     <HoverCardContent
