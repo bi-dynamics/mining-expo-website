@@ -108,14 +108,14 @@ function FloorPlans({
   const currentFloorPlan = sortedFloorPlansList[currentFloorPlanIndex];
 
   return (
-    <section className="py-16 px-4 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
+    <section className="py-16 h-fit px-4 bg-[url('../../public/gallery-section-bg.png')] bg-cover bg-fixed bg-top">
       {/* Container */}
       <div className="flex flex-col gap-8 items-center justify-center w-full h-fit">
         {/* <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
           <span className=" font-bold">NB: </span>
           2024 Floor Plans will be published soon.
         </p> */}
-        <div className="w-full h-fit flex flex-col justify-center items-center gap-4">
+        <div className="w-full h-fit flex flex-col justify-center items-center gap-16">
           <p className="font-semibold text-center text-4xl md:text-6xl font-poppins">
             {currentFloorPlan.alt}
           </p>
@@ -148,8 +148,12 @@ function FloorPlans({
           {currentFloorPlan.exhibitors && (
             <Swiper
               slidesPerView={2.3}
+              breakpoints={{
+                "425": { slidesPerView: 3.3 },
+                "768": { slidesPerView: 4.3 },
+              }}
               spaceBetween={20}
-              className="xl:h-[40vh] w-full flex items-center justify-center rounded-lg mb-0 py-4"
+              className="xl:h-[60vh] w-full flex items-center justify-center rounded-lg mb-0 py-4"
             >
               {currentFloorPlan.exhibitors.map((exhibitor, exhibitorIndex) => (
                 <SwiperSlide
@@ -157,17 +161,16 @@ function FloorPlans({
                   className="w-full h-full py-4 mx-auto"
                 >
                   <div className="flex flex-col bg-white items-center justify-center gap-4 p-4 rounded-lg shadow-lg h-full w-full">
-                    <div className="relative w-fit h-1/2 mx-auto flex items-center justify-center">
+                    <div className="relative w-full h-full overflow-hidden mx-auto flex items-center justify-center">
                       <Image
                         src={exhibitor.image}
                         alt={exhibitor.name}
-                        width={200}
-                        height={200}
+                        fill
                         className="block object-contain rounded-xl z-50"
                       />
                     </div>
-                    <div className="w-full h-1/2 flex flex-col items-center justify-center">
-                      <p className="text-lg font-medium text-expoBlue">
+                    <div className="w-full h-2/3 flex flex-col items-center justify-center">
+                      <p className="text-lg text-center font-medium text-expoBlue">
                         {exhibitor.name}
                       </p>
                       <p className="text-base text-black/70">
