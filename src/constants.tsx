@@ -28,7 +28,11 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     subMenuItems: [
       { title: "Programme", path: "/conference-programme" },
       {
-        title: "Conference Registration",
+        title: "Presentations",
+        path: "/conference-programme/presentations",
+      },
+      {
+        title: "Registrations",
         path: "/conference-programme/conference-registration",
       },
       { title: "Speakers", path: "/conference-programme/speakers-list" },

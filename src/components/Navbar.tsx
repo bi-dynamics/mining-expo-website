@@ -26,9 +26,14 @@ const conference: { title: string; href: string; description: string }[] = [
     description: "Conference programme information.",
   },
   {
-    title: "Conference Registration",
+    title: "Presentations",
+    href: "/conference-programme/presentations",
+    description: "Conference presentations for 2024.",
+  },
+  {
+    title: "Registration",
     href: "/conference-programme/conference-registration",
-    description: "Register for the Expo conference.",
+    description: "Conference registration CLOSED.",
   },
   {
     title: "Speakers",
