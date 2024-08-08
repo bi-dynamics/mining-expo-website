@@ -12,6 +12,30 @@ const pastPresentations = [
         file: "/2024-Presentations/Navigating-the-Green-Shoots-Leveraging-Financial-and-Commodity-Insights-for-Sustainable-Growth-in-Namibias-Mining-Sector.pdf",
         alt: "Navigating the Green Shoots - Leveraging Financial and Commodity Insights for Sustainable Growth in Namibia's Mining Sector",
       },
+      {
+        file: "/2024-Presentations/Restarting-the-Langer-Heinrich-Uranium-mines.pdf",
+        alt: "Restarting the Langer Heinrich Uranium mines",
+      },
+      {
+        file: "/2024-Presentations/NIPDB-Investor-Retention-and-After-Care-Services.pdf",
+        alt: "NIPDB Investor Retention and After Care Services",
+      },
+      {
+        file: "/2024-Presentations/Driving-Local-Content-in-Namibias-Mining-Sector-The-Case-of-Kodo-Drilling.pdf",
+        alt: "Driving Local Content in Namibia's Mining Sector - The Case of Kodo Drilling",
+      },
+      {
+        file: "/2024-Presentations/Development-of-the-Tumas-Project-in-a-resurging-in-uranium-market.pdf",
+        alt: "Development of the Tumas Project in a resurging in uranium market",
+      },
+      {
+        file: "/2024-Presentations/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
+        alt: "Bannerman's Etango Project - Surving the Uranium Downtun - Repaired",
+      },
+      {
+        file: "/2024-Presentations/A-New-Dawn-for-Namibias-Extractive-Sector.pdf",
+        alt: "A New Dawn for Namibia's Extractive Sector",
+      },
     ],
   },
 ];
