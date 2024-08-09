@@ -25,16 +25,16 @@ const pastPresentations = [
         alt: "Driving Local Content in Namibia's Mining Sector - The Case of Kodo Drilling",
       },
       {
-        file: "/2024-Presentations/Development-of-the-Tumas-Project-in-a-resurging-in-uranium-market.pdf",
-        alt: "Development of the Tumas Project in a resurging in uranium market",
+        file: "/2024-Presentations/Deep-Yellow_JB_MH_Development-of-Tumas-Project-in-a-Resurging-Uranium-Market.pdf",
+        alt: "Deep Yellow - Development of the Tumas Project in a resurging uranium market",
       },
       {
         file: "/2024-Presentations/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
-        alt: "Bannerman's Etango Project - Surving the Uranium Downtun - Repaired",
+        alt: "Bannerman's Etango Project - Surving the Uranium Downtun",
       },
       {
         file: "/2024-Presentations/A-New-Dawn-for-Namibias-Extractive-Sector.pdf",
-        alt: "A New Dawn for Namibia's Extractive Sector",
+        alt: "A New Dawn for Namibia's Extractive Sector - Ministry of Mines and Energy",
       },
     ],
   },
@@ -56,7 +56,6 @@ const PresentationsPage = () => {
                 href={presentation.file}
                 download={presentation.file}
                 key={index}
-                target="_blank"
                 className={clsx(
                   "w-full flex items-center justify-center shrink group bg-expoBlue hover:bg-expoOrange transition-colors rounded-xl font-semibold",
                   { "bg-expoBlue/85": index % 2 !== 0 }
