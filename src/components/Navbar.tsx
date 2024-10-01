@@ -20,11 +20,11 @@ import { Icon } from "@iconify/react";
 import React from "react";
 
 const conference: { title: string; href: string; description: string }[] = [
-  {
-    title: "Programme",
-    href: "/conference-programme",
-    description: "Conference programme information.",
-  },
+  // {
+  //   title: "Programme",
+  //   href: "/conference-programme",
+  //   description: "Conference programme information.",
+  // },
   {
     title: "Presentations",
     href: "/conference-programme/presentations",

@@ -53,11 +53,11 @@ export default function Home() {
               Mining Exhibition
             </h3>
             <h2 className="font-poppins text-3xl xl:text-5xl font-bold">
-              Welcome to the Mining Expo & Conference <br /> 2024
+              Welcome to the Mining Expo & Conference <br /> 2025
             </h2>
             <p className="text-base font-rubik text-white/80">
-              The 11th edition of the Mining Expo & Conference will be held from
-              07 – 08 August, 2024 at the Windhoek Show Grounds, bringing the
+              The 12th edition of the Mining Expo & Conference will be held from
+              05 – 07 August, 2025 at the Windhoek Show Grounds, bringing the
               entire extractives sector under one roof.
             </p>
             <Link

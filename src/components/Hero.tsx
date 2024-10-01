@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import heroLogo from "../../public/hero-logo.png";
+import heroLogo from "../../public/hero-logo-2025.png";
 import { Icon } from "@iconify/react";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default function Hero() {
                   height="36"
                   className="text-expoOrange mr-4"
                 />{" "}
-                <span className="font-bold mr-2">Date:</span>7 & 8 August 2024
+                <span className="font-bold mr-2">Date:</span>5 - 7 August 2025
               </h3>
               <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
                 <Icon
