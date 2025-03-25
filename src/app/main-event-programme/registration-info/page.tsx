@@ -81,7 +81,7 @@ const boothPackages = [
 const RegistrationInfoPage = () => {
   return (
     <main>
-      <PageBanner title="Exhibition Registration" />
+      <PageBanner title="Exhibitor Registration" />
       <section className="flex flex-col w-full h-fit gap-6 py-16 justify-center items-center">
         <div className="flex flex-col items-center justify-center w-[80%] gap-4">
           <h2 className="text-2xl  lg:text-5xl font-poppins font-bold text-black text-center">
@@ -131,13 +131,13 @@ const RegistrationInfoPage = () => {
                 <br />
                 Friday,{" "}
                 <span className="font-bold text-black/80">
-                  09 August 2024
+                  09 August 2025
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 07h00 Halls will
                 close at 16h00. <br />
                 <br /> Saturday,{" "}
                 <span className="font-bold text-black/80">
-                  10 August 2024
+                  10 August 2025
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 08h30 Halls will
                 close at 13h00.
