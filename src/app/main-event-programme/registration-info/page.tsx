@@ -24,8 +24,9 @@ export const metadata: Metadata = {
 
 const boothPackages = [
   {
-    title: "Namibian Companies & Associate Chamber Members",
-    price: "N$ 20,267.50",
+    title:
+      "Chamber Members: Class D & Associate Members and Namibian Companies",
+    price: "N$ 33,441.00",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -38,7 +39,7 @@ const boothPackages = [
   },
   {
     title: "Chamber Member Class A, B & C",
-    price: "N$ 21,175",
+    price: "N$ 34,939",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -51,7 +52,7 @@ const boothPackages = [
   },
   {
     title: "SADC Member States",
-    price: "N$ 36,300",
+    price: "N$ 59,895",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -64,8 +65,8 @@ const boothPackages = [
   },
   {
     title: "International Companies",
-    price: "N$ 60,500",
-    priceNB: "(per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
+    price: "N$ 99,825",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
         one: "2x lunch tickets",
@@ -91,7 +92,7 @@ const RegistrationInfoPage = () => {
             registration
           </h3>
           <p className="text-black/70 font-semibold font-rubik text-sm lg:text-lg text-center p-4 bg-slate-100 rounded-xl">
-            Payment due date: 26 July 2024 <br />
+            Payment due date: 25 July 2025 <br />
             <span className="font-semibold text-red-500">
               Stands will only be erected upon receipt of 100% payment.
             </span>
@@ -184,12 +185,12 @@ const RegistrationInfoPage = () => {
                 following cancellation charges shall apply:
                 <br />
                 <span className="font-bold text-red-500">
-                  ​06 June – 06 July 2024
+                  ​04 June – 04 July 2025
                 </span>{" "}
                 = 50% of total stand fee.
                 <br />
                 <span className="font-bold text-red-500">
-                  06 July – 07 August 2024 to the start of the fair
+                  05 July – 05 August 2025 to the start of the fair
                 </span>{" "}
                 = 100% of total stand rent.
                 <br />A{" "}
@@ -215,19 +216,19 @@ const RegistrationInfoPage = () => {
               <h3 className="text-center text-lg font-bold text-expoOrange bg-expoBlue w-full h-20 py-4 rounded-t-lg px-3">
                 {boothPackage.title}
               </h3>
-              <div className="w-full text-center pb-4 font-rubik font-semibold text-white bg-expoBlue ">
+              <div className="w-full text-center pb-4 textl-lg lg:text-2xl font-rubik font-semibold text-white bg-expoBlue ">
                 <p>{boothPackage.price}</p>
                 <p className=" text-sm text-white/80 w-[80%] mx-auto">
                   {boothPackage.priceNB}
                 </p>
               </div>
-              <div className=" w-full flex flex-col items-center justify-center gap-4 px-10 p-8">
+              <div className=" w-full flex flex-col items-start justify-center gap-4 px-10 p-8">
                 <div className="w-full h-px bg-expoBlue/20"></div>
                 <p className="text-center font-semibold">Package Includes:</p>
                 {boothPackage.features.map((feature, index) => (
                   <ul
                     key={index}
-                    className="list-disc list-inside text-sm font-rubik font-light text-black/80 w-full"
+                    className="list-disc list-inside text-sm font-rubik font-regular text-expoBlue/80 w-full"
                   >
                     <li>{feature.one}</li>
                     <li>{feature.two}</li>
