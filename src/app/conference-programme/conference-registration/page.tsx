@@ -9,7 +9,7 @@ function delegateRegistrationPage() {
           Conference Registration Opening Soon
         </h2>
         <p>
-          Online registration are currently closed and will be opening soon.
+          Online registrations are currently closed and will be opening soon.
         </p>
       </section>
     </main>
