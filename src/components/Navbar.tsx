@@ -69,12 +69,12 @@ const past_events: {
   {
     title: "Past Presentations",
     href: "/past-presentations",
-    description: "Timeline of presentations from 2013 to present.",
+    description: "Timeline of presentations from 2013 to 2023.",
   },
   {
-    title: "Expo 2023",
-    href: "/past-presentations/expo-2023",
-    description: "Exhibitors, floor plans and presentations from 2023.",
+    title: "Expo 2024",
+    href: "/past-presentations/expo-2024",
+    description: "Exhibitors, floor plans and presentations from 2024.",
   },
 ];
 

@@ -7,7 +7,7 @@ import ExhibitorsSkeleton from "@/components/ExhibitorsSkeleton";
 export const metadata: Metadata = {
   title: "Exhibitors",
   description:
-    "View all exhibitors attending the Mining Expo & Conference 2024",
+    "View all exhibitors attending the Mining Expo & Conference 2025",
   openGraph: {
     images: [{ url: "../../opengraph-image.jpg" }],
   },
@@ -17,9 +17,14 @@ const ExhibitorsPage = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <PageBanner title="Exhibitors" />
-      <Suspense fallback={<ExhibitorsSkeleton />}>
+      <section className="flex flex-col gap-16 items-center justify-center w-[90%] xl:w-[80%] h-fit mx-auto py-16">
+        <h2 className=" text-5xl font-poppins font-bold text-black text-center">
+          Exhibitors Coming Soon
+        </h2>
+      </section>
+      {/* <Suspense fallback={<ExhibitorsSkeleton />}>
         <ExhibitorsWithSuspense />
-      </Suspense>
+      </Suspense> */}
     </div>
   );
 };

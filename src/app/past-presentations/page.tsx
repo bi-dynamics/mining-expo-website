@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageBanner from "@/components/PageBanner";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
+import { ExhibitorData, getExhibitorsByYear } from "@/lib/getExhibitors";
+import { FloorPlanData, getFloorPlansByYear } from "@/lib/getFloorPlans";
+import PastExpos from "@/components/PastExpos";
 
 const pastPresentations = [
   {
@@ -437,6 +440,39 @@ const pastPresentations = [
       },
     ],
   },
+  {
+    year: 2023,
+    src: [
+      {
+        file: "/Past-Presentations/2023/Nuclear-Energy-in-the-Global-Energy-Transition-Implications-for-Namibias-Uranium-Sector.pdf",
+        alt: "Nuclear Energy in the Global Energy Transition",
+      },
+      {
+        file: "/Past-Presentations/2023/Redeveloping-the-Okanjande-mine-building-a-leading-graphite-and-processing-company.pdf",
+        alt: "Redeveloping the Okanjande mine building a leading graphite and processing company",
+      },
+      {
+        file: "/Past-Presentations/2023/Rare-Earths-Alliance-Namibia-Strategic-Partnerships-for-Namibia-to-become-the-next-rare-earths-producer.pdf",
+        alt: "Rare Earths Alliance Namibia Strategic Partnerships for Namibia to become the next rare earths producer",
+      },
+      {
+        file: "/Past-Presentations/2023/MME-position-on-Critical-Raw-materials-and-the-sustainable-supply-of-critical-minerals-Presentation.pdf",
+        alt: "MME position on Critical Raw materials and the sustainable supply of critical minerals",
+      },
+      {
+        file: "/Past-Presentations/2023/Overview-of-Critical-Minerals-Deposits-in-Namibia-Geological-Survey-of-Namibia.pdf",
+        alt: "Overview of Critical Minerals Deposits in Namibia Geological Survey of Namibia",
+      },
+      {
+        file: "/Past-Presentations/2023/The-Minerals-value-Chains-in-Battery-industry-from-exploration-to-beneficiation-GSK.pdf",
+        alt: "The Minerals value Chains in Battery industry from exploration to beneficiation",
+      },
+      {
+        file: "/Past-Presentations/2023/2023-08-31-Speech-by-Mrs-Gosia-Lachut-EU-Deputy-Head-of-Mission-Mining-Conference.pdf",
+        alt: "Speech by Mrs. Gosia Lachut EU Deputy Head of Mission Mining Conference",
+      },
+    ],
+  },
 ];
 
 const PastPresentationsPage = () => {
@@ -445,8 +481,46 @@ const PastPresentationsPage = () => {
       (presentation) => presentation.year === yearToFilter
     );
   }
-
   const [currentYear, setCurrentYear] = useState(2013);
+  const [exhibitorsData, setExhibitorsData] = useState<ExhibitorData[] | null>(
+    null
+  );
+  const [floorPlansData, setFloorPlansData] = useState<FloorPlanData[] | null>(
+    null
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadExpoData = async () => {
+      if (currentYear >= 2023) {
+        setIsLoading(true);
+        setError(null);
+        try {
+          let exhibitors: ExhibitorData[] = [];
+          let floorPlans: FloorPlanData[] = [];
+
+          exhibitors = await getExhibitorsByYear(currentYear);
+          floorPlans = await getFloorPlansByYear(currentYear);
+
+          setExhibitorsData(exhibitors);
+          setFloorPlansData(floorPlans);
+        } catch (e: any) {
+          setError(e.message || `Failed to load expo data for ${currentYear}.`);
+          setExhibitorsData(null);
+          setFloorPlansData(null);
+        } finally {
+          setIsLoading(false);
+        }
+      } else {
+        setExhibitorsData(null);
+        setFloorPlansData(null);
+      }
+    };
+
+    loadExpoData();
+  }, [currentYear]);
+
   return (
     <div className="flex flex-col  w-full h-full">
       <PageBanner title="Mining Expo & Conference Past Presentations" />
@@ -499,6 +573,23 @@ const PastPresentationsPage = () => {
               </Link>
             ))
           )}
+        </div>
+        <div className="py-16 w-full">
+          {currentYear >= 2023 && isLoading && (
+            <p>Loading Expo Data for {currentYear}...</p>
+          )}
+          {currentYear >= 2023 && error && (
+            <p>
+              Error loading Expo Data for {currentYear}: {error}
+            </p>
+          )}
+          {currentYear >= 2023 && exhibitorsData && floorPlansData ? (
+            <PastExpos
+              exhibitorsList={exhibitorsData}
+              floorPlans={floorPlansData}
+              currentYear={currentYear}
+            />
+          ) : null}
         </div>
       </div>
     </div>

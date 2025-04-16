@@ -7,6 +7,22 @@ export interface FloorPlanData {
   alt?: string;
 }
 
+export async function getFloorPlansByYear(year: number) {
+  //for year 2023, the collection name is just floor_plans
+  //for year 2024 and beyond, the collection name is floor_plans_<year>
+  const collectionName = year === 2023 ? "floor_plans" : `floor_plans_${year}`;
+  const querySnapshot = await getDocs(collection(db, collectionName));
+  const floorPlans: FloorPlanData[] = [];
+
+  querySnapshot.forEach((doc) => {
+    floorPlans.push({
+      id: doc.id,
+      ...doc.data(),
+    });
+  });
+  return floorPlans;
+}
+
 export async function getFloorPlans(): Promise<FloorPlanData[]> {
   const querySnapshot = await getDocsFromServer(collection(db, "floor_plans"));
   const floorPlans: FloorPlanData[] = [];

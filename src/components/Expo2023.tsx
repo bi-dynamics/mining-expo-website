@@ -36,7 +36,7 @@ const pastEvents = [
   },
 ];
 
-function PastExpo({
+function Expo2023({
   exhibitorsList,
   floorPlans,
 }: {
@@ -221,4 +221,4 @@ function PastExpo({
   );
 }
 
-export default PastExpo;
+export default Expo2023;
