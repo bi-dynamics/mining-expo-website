@@ -9,12 +9,12 @@ function SponsorSlides() {
           Sponsored By
         </h2>
         <div className="w-[90%] sm:w-full h-fit flex flex-col md:flex-row justify-between md:justify-center md:gap-4 xl:gap-16 items-center">
-          <Image
+          {/* <Image
             src="/AHK-logo-with-flag-RGB.svg"
             alt="Andrada Sponsor"
             width={300}
             height={300}
-          />
+          /> */}
           <Image
             src="/RMB_Horizontal_Identity_RGB_Black.webp"
             alt="RMB Sponsor"

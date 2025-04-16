@@ -140,7 +140,7 @@ const Navbar = () => {
                             Main Event Programme
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Main event schedule for August 7 & 8, 2024.
+                            Main event schedule for August 5 - 7, 2025.
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -155,14 +155,14 @@ const Navbar = () => {
                       href="/main-event-programme/floor-plans"
                       title="Floor Plans"
                     >
-                      Floor plans for 2024 venues.
+                      Floor plans for 2025 venues.
                     </ListItem>
 
                     <ListItem
                       href="/main-event-programme/exhibitors"
                       title="Exhibitors"
                     >
-                      Exhibitors for 2024
+                      Exhibitors for 2025
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
