@@ -5,11 +5,10 @@ import heroLogo from "../../public/hero-logo-2025.png";
 import { Icon } from "@iconify/react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import CountDownTimer from "./CountDownTimer";
 import rmbSponsorLogo from "../../public/RMB_SPONSOR_LOGO_resize.webp";
 
 export default function Hero() {
-  // Countdown timer logic
-
   return (
     <section className="relative flex items-start justify-center w-full h-full">
       {/* container for image */}
@@ -94,7 +93,7 @@ export default function Hero() {
         </div>
         {/* bottom part of content */}
         {/* countdown section */}
-        {/* <CountDownTimer /> */}
+        <CountDownTimer />
       </div>
     </section>
   );
