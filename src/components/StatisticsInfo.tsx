@@ -47,8 +47,8 @@ function StatisticsInfo() {
     let animateSpeakers;
     let animateExhibitors;
     if (isInView) {
-      animateDays = animate(countDays, 2, { duration: 4.5 });
-      animateAttendees = animate(countAttendees, 500, {
+      animateDays = animate(countDays, 3, { duration: 4.5 });
+      animateAttendees = animate(countAttendees, 6000, {
         duration: 2,
         delay: 1,
       });
@@ -56,7 +56,7 @@ function StatisticsInfo() {
         duration: 2,
         delay: 1.5,
       });
-      animateExhibitors = animate(countExhibitors, 90, {
+      animateExhibitors = animate(countExhibitors, 150, {
         duration: 2,
         delay: 2,
       });
@@ -75,9 +75,7 @@ function StatisticsInfo() {
       className="flex flex-col gap-16 items-center justify-center py-16 w-full h-fit bg-expoBlue font-rubik"
     >
       <h2 className="font-bold text-2xl lg:text-4xl text-white w-[90%] xl:w-2/3 text-center">
-        {`"Green Shoots for
-                    Namibia's Mining Industry: a Season of Opportunity and
-                    Growth to Drive Economic Expansion"`}
+        {`“Driving Local Empowerment through Procurement and Economic Inclusion”`}
       </h2>
       {/* Container */}
       <div className="flex items-center justify-center mx-auto w-[90%] xl:w-[80%] h-full text-[#F2F2F2] overflow-hidden">

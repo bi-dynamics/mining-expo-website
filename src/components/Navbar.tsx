@@ -69,12 +69,7 @@ const past_events: {
   {
     title: "Past Presentations",
     href: "/past-presentations",
-    description: "Timeline of presentations from 2013 to 2023.",
-  },
-  {
-    title: "Expo 2024",
-    href: "/past-presentations/expo-2024",
-    description: "Exhibitors, floor plans and presentations from 2024.",
+    description: "Timeline of presentations from 2013 to 2024.",
   },
 ];
 
@@ -137,11 +132,11 @@ const Navbar = () => {
                         >
                           <div className="h-6 w-6" />
                           <div className="mb-2 mt-4 text-lg font-medium">
-                            Main Event Programme
+                            Schedule to be released soon
                           </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
+                          {/* <p className="text-sm leading-tight text-muted-foreground">
                             Main event schedule for August 5 - 7, 2025.
-                          </p>
+                          </p> */}
                         </a>
                       </NavigationMenuLink>
                     </li>
@@ -208,7 +203,7 @@ const Navbar = () => {
                   Past Events
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 py-4 px-3 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  <ul className="grid w-[400px] gap-3 py-4 px-3 md:w-[500px] md:grid-cols-1 lg:w-[700px] ">
                     {past_events.map((past_events) => (
                       <ListItem
                         key={past_events.title}

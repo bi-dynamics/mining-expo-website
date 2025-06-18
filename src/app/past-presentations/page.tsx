@@ -473,6 +473,39 @@ const pastPresentations = [
       },
     ],
   },
+  {
+    year: 2024,
+    src: [
+      {
+        file: "/Past-Presentations/2024/Navigating-the-Green-Shoots-Leveraging-Financial-and-Commodity-Insights-for-Sustainable-Growth-in-Namibias-Mining-Sector.pdf",
+        alt: "Navigating the Green Shoots - Leveraging Financial and Commodity Insights for Sustainable Growth in Namibia's Mining Sector",
+      },
+      {
+        file: "/Past-Presentations/2024/Restarting-the-Langer-Heinrich-Uranium-mines.pdf",
+        alt: "Restarting the Langer Heinrich Uranium mines",
+      },
+      {
+        file: "/Past-Presentations/2024/NIPDB-Investor-Retention-and-After-Care-Services.pdf",
+        alt: "NIPDB Investor Retention and After Care Services",
+      },
+      {
+        file: "/Past-Presentations/2024/Driving-Local-Content-in-Namibias-Mining-Sector-The-Case-of-Kodo-Drilling.pdf",
+        alt: "Driving Local Content in Namibia's Mining Sector - The Case of Kodo Drilling",
+      },
+      {
+        file: "/Past-Presentations/2024/Deep-Yellow_JB_MH_Development-of-Tumas-Project-in-a-Resurging-Uranium-Market.pdf",
+        alt: "Deep Yellow - Development of the Tumas Project in a resurging uranium market",
+      },
+      {
+        file: "/Past-Presentations/2024/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
+        alt: "Bannerman's Etango Project - Surving the Uranium Downtun",
+      },
+      {
+        file: "/Past-Presentations/2024/A-New-Dawn-for-Namibias-Extractive-Sector.pdf",
+        alt: "A New Dawn for Namibia's Extractive Sector - Ministry of Mines and Energy",
+      },
+    ],
+  },
 ];
 
 const PastPresentationsPage = () => {
@@ -525,9 +558,9 @@ const PastPresentationsPage = () => {
     <div className="flex flex-col  w-full h-full">
       <PageBanner title="Mining Expo & Conference Past Presentations" />
       <div className="py-16 gap-16 flex items-center justify-center flex-col w-[90%] lg:w-[60%]  mx-auto">
-        <h2 className="text-xl md:text-5xl font-poppins font-bold text-black text-center">
+        {/* <h2 className="text-xl md:text-5xl font-poppins font-bold text-black text-center">
           Mining Expo & Conference Past Presentations
-        </h2>
+        </h2> */}
         <div className="flex flex-wrap gap-2 items-start justify-center">
           {pastPresentations.map((presentation, index) => (
             <div key={index}>
@@ -576,10 +609,12 @@ const PastPresentationsPage = () => {
         </div>
         <div className="py-16 w-full">
           {currentYear >= 2023 && isLoading && (
-            <p>Loading Expo Data for {currentYear}...</p>
+            <p className="text-expoOrange text-xl mx-auto text-center">
+              Loading Expo Data for {currentYear}...
+            </p>
           )}
           {currentYear >= 2023 && error && (
-            <p>
+            <p className="text-red-500 text-xl mx-auto text-center">
               Error loading Expo Data for {currentYear}: {error}
             </p>
           )}

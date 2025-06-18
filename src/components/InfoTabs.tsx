@@ -47,12 +47,11 @@ const InfoTabs = () => {
                 <div className="w-6 sm:w-12 h-52 bg-expoOrange"></div>
                 <div className="font-rubik flex flex-col gap-4 4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-3xl lg:text-5xl text-white font-bold">
-                    Mining Conference 2024 Theme
+                    Mining Conference 2025 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    The Theme for the 2024 event was “Green Shoots for
-                    Namibia&apos;s Mining Industry: a Season of Opportunity and
-                    Growth to Drive Economic Expansion”
+                    “Driving Local Empowerment through Procurement and Economic
+                    Inclusion”
                   </p>
                 </div>
               </div>
@@ -123,9 +122,7 @@ const InfoTabs = () => {
       <div className="flex flex-col gap-0 mx-auto w-[90%] xl:px-16 items-start justify-start">
         {/* gradient layer */}
         <div className="h-[90dvh] w-full absolute left-0 z-[2] overflow-hidden bg-gradient-to-r from-expoBlue via-expoBlue/80 to-transparent backdrop-filter backdrop-brightness-50"></div>
-        <h2 className="font-poppins text-3xl lg:text-5xl font-bold text-white z-[2] mt-16">
-          THE EXPO
-        </h2>
+
         {/* <div className="flex flex-wrap gap-4">
           <Button
             onClick={() => setTab(1)}

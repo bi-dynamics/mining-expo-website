@@ -21,7 +21,7 @@ const FloorPlansPage = () => {
       <PageBanner title="Floor Plans" />
       <section className="flex flex-col gap-16 items-center justify-center w-[90%] xl:w-[80%] h-fit mx-auto py-16">
         <h2 className=" text-5xl font-poppins font-bold text-black text-center">
-          Floor Plans Coming Soon
+          Floor Plans to be released soon
         </h2>
       </section>
       {/* <Suspense fallback={<FloorPlanSkeleton />}>

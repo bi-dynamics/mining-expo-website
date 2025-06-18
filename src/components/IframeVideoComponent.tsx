@@ -9,7 +9,7 @@ const IframeVideoComponent = () => {
         <iframe
           width="600"
           height="330"
-          src="https://www.youtube.com/embed/rOlnU5Oeq7w?si=wY6Z_appCAYfZaOa"
+          src="https://www.youtube.com/embed/ZLyAqhop2FQ?si=rKvzTJgWojHKiztQ"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -19,7 +19,7 @@ const IframeVideoComponent = () => {
       ) : (
         // Video Thumbnail
         <div
-          className="flex items-center justify-center relative bg-center bg-cover bg-no-repeat cursor-pointer bg-[url('https://img.youtube.com/vi/rOlnU5Oeq7w/maxresdefault.jpg')] w-[350px] h-[190px] md:w-[800px] md:h-[500px] lg:w-[600px] lg:h-[330px] group rounded-2xl shadow-2xl"
+          className="flex items-center justify-center relative bg-center bg-cover bg-no-repeat cursor-pointer bg-[url('https://img.youtube.com/vi/ZLyAqhop2FQ/maxresdefault.jpg')] w-[350px] h-[190px] md:w-[800px] md:h-[500px] lg:w-[600px] lg:h-[330px] group rounded-2xl shadow-2xl"
           onClick={() => setShowVideo(true)}
         >
           {/* Play Button */}
