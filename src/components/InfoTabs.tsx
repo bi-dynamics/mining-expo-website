@@ -50,8 +50,8 @@ const InfoTabs = () => {
                     Mining Conference 2025 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    “Driving Local Empowerment through Procurement and Economic
-                    Inclusion”
+                    “Mining for Namibia&apos;s Future: Job Creation, Local
+                    Empowerment, and Economic Transformation”
                   </p>
                 </div>
               </div>
