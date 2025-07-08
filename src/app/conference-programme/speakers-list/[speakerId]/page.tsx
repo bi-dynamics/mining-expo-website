@@ -4,6 +4,7 @@ import PageBanner from "@/components/PageBanner";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getSpeakers, SpeakerData } from "@/lib/getSpeakers";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -93,6 +94,15 @@ function SpeakerPage({ params }: { params: { speakerId: string } }) {
   return (
     <main>
       <PageBanner title={`${speaker.speakerName}`} />
+      <section className="w-full flex items-start justify-start h-fit bg-[#F2F2F2] pt-8 px-[5%] xl:px-[20%]">
+        <Link
+          href="./"
+          className="flex items-center justify-center gap-2 w-fit h-fit px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+        >
+          <ArrowLeft color="#041a51" />
+          <p className="font-medium ">Back to Speakers List</p>
+        </Link>
+      </section>
       <section className="flex items-center justify-center bg-[#F2F2F2] h-fit w-full py-16">
         <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center bg-[#F2F2F2] h-fit w-full xl:w-[60%] gap-8">
           <div className="bg-white rounded-xl w-[90%] xl:w-2/3 h-full flex flex-col items-center justify-start p-4 xl:p-8 gap-8 text-sm xl:text-lg">

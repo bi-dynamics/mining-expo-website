@@ -11,6 +11,7 @@ import {
 import { ScheduleData } from "@/lib/getProgrammeSchedule";
 import { format } from "date-fns";
 import Image from "next/image";
+import { User } from "lucide-react";
 
 function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
   // const sortedSchedules = schedules.sort((a: any, b: any) => a.id - b.id);
@@ -32,14 +33,14 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
   const day1Schedule = sortedSchedules.filter((schedule) =>
     schedule.timeStart
       ? format(new Date(schedule.timeStart?.seconds! * 1000), "dd").includes(
-          "7"
+          "6"
         )
       : ""
   );
   const day2Schedule = sortedSchedules.filter((schedule) =>
     schedule.timeStart
       ? format(new Date(schedule.timeStart?.seconds! * 1000), "dd").includes(
-          "8"
+          "7"
         )
       : ""
   );
@@ -144,9 +145,9 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
                                 <Image
                                   src={speaker.speakerProfilePicture as string}
                                   alt={speaker.speakerName}
-                                  width={50}
-                                  height={50}
-                                  className="rounded-full bg-transparent"
+                                  width={128}
+                                  height={128}
+                                  className="rounded-full w-16 h-16 object-cover bg-transparent"
                                 />
                               </div>
                               <div className="font-rubik flex flex-col items-start justify-start">

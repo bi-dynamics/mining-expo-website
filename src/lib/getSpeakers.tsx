@@ -10,6 +10,7 @@ export interface SpeakerData {
   linkedinProfile?: string;
   websiteLink?: string;
   email?: string;
+  status?: "active" | "draft";
 }
 
 export async function getSpeakers(): Promise<SpeakerData[]> {
