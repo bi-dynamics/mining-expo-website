@@ -55,8 +55,8 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
             Programme Schedule
           </h2>
         </div>
-        <div className="w-full h-full flex flex-col gap-8 bg-white">
-          <div className="flex items-center justify-center bg-slate-100 px-8">
+        <div className="w-full h-full flex flex-col gap-8 bg-white py-8">
+          {/* <div className="flex items-center justify-center bg-slate-100 px-8">
             <Button
               onClick={() => setDay(1)}
               className={
@@ -77,7 +77,7 @@ function ProgrammeSchedule({ schedules }: { schedules: ScheduleData[] }) {
             >
               DAY 2
             </Button>
-          </div>
+          </div> */}
           {day == 1 ? (
             <Accordion
               type="single"
