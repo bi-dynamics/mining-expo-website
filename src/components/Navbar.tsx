@@ -23,12 +23,12 @@ const conference: { title: string; href: string; description: string }[] = [
   {
     title: "Programme",
     href: "/conference-programme",
-    description: "Conference programme information.",
+    description: "Conference programme information for 2025.",
   },
   {
     title: "Presentations",
     href: "/conference-programme/presentations",
-    description: "Conference presentations for 2024.",
+    description: "Conference presentations for 2025.",
   },
   {
     title: "Registration",
