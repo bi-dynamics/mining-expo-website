@@ -40,21 +40,45 @@ export default function Hero() {
               quality={100}
               priority
               loading="eager"
-              className=" object-cover shrink-0"
+              className=" object-cover h-full w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]"
             />
           </section>
           {/* Expo Info */}
           <section className="w-fit h-full flex flex-col items-center justify-between gap-8">
             {/* Dates */}
-            <div className="w-fit h-full flex flex-col items-start justify-center gap-2 p-2 font-rubik">
-              <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
-                <Icon
-                  icon="clarity:date-solid"
-                  width="36"
-                  height="36"
-                  className="text-expoOrange mr-4"
-                />{" "}
-                <span className="font-bold mr-2">Date:</span>5 - 7 August 2025
+            <div className="w-fit h-full flex flex-col items-start justify-center gap-4 p-2 font-rubik">
+              <h3 className="flex flex-col items-start justify-center text-white text-sm md:text-3xl">
+                <div className="flex items-center justify-center mb-2">
+                  <Icon
+                    icon="clarity:date-solid"
+                    width="36"
+                    height="36"
+                    className="text-expoOrange mr-4"
+                  />{" "}
+                  <span className="font-bold mr-2">
+                    Public Opening and Closing Times
+                  </span>
+                </div>
+                <div className="flex flex-col items-start justify-center gap-2 md:text-base">
+                  <div className="flex flex-col items-start justify-center ">
+                    <span className="font-medium md:text-xl">
+                      Tuesday, 5 August 2025
+                    </span>
+                    12h00 - 19h00
+                  </div>
+                  <div className="flex flex-col items-start justify-center">
+                    <span className="font-medium md:text-xl">
+                      Wednesday, 6 August 2025
+                    </span>
+                    07h30 - 19h00
+                  </div>
+                  <div className="flex flex-col items-start justify-center">
+                    <span className="font-medium md:text-xl">
+                      Thursday, 7 August 2025 (Final Day)
+                    </span>
+                    08h00 - 17h30
+                  </div>
+                </div>
               </h3>
               <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
                 <Icon
