@@ -127,16 +127,35 @@ const Navbar = () => {
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none gap-4 items-start flex-col justify-end rounded-md transition-color transition-transform ease-in-out  duration-300 bg-gradient-to-tl  hover:to-expoOrange/30 from-muted to-muted/90 p-6 no-underline outline-none focus:shadow-md"
                           href="/main-event-programme"
                         >
-                          <div className="h-6 w-6" />
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            Schedule to be released soon
+                          <div className="mb-2 mt-4 text-black text-lg font-medium">
+                            Main Event Program 2025
                           </div>
                           {/* <p className="text-sm leading-tight text-muted-foreground">
                             Main event schedule for August 5 - 7, 2025.
                           </p> */}
+                          <div className="h-fit w-full flex flex-col gap-2">
+                            <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
+                              <span className="font-semibold">
+                                Tuesday, 5 August 2025
+                              </span>
+                              12h00 - 19h00
+                            </p>
+                            <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
+                              <span className="font-semibold">
+                                Wednesday, 6 August 2025
+                              </span>
+                              07h30 - 19h00
+                            </p>
+                            <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
+                              <span className="font-semibold">
+                                Thursday, 7 August 2025
+                              </span>
+                              08h00 - 17h30
+                            </p>
+                          </div>
                         </a>
                       </NavigationMenuLink>
                     </li>
