@@ -17,14 +17,9 @@ const ExhibitorsPage = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <PageBanner title="Exhibitors" />
-      <section className="flex flex-col gap-16 items-center justify-center w-[90%] xl:w-[80%] h-fit mx-auto py-16">
-        <h2 className=" text-5xl font-poppins font-bold text-black text-center">
-          Exhibitors to be announced soon
-        </h2>
-      </section>
-      {/* <Suspense fallback={<ExhibitorsSkeleton />}>
+      <Suspense fallback={<ExhibitorsSkeleton />}>
         <ExhibitorsWithSuspense />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 };

@@ -20,11 +20,9 @@ const MainEventPage = () => {
   return (
     <div className="flex items-center justify-center flex-col w-full h-full">
       <PageBanner title="Main Event Programme" />
-      <section className="flex flex-col gap-16 items-center justify-center w-[90%] xl:w-[80%] h-fit mx-auto py-16">
-        <Suspense fallback={<MainEventScheduleSkeleton />}>
-          <MainEventScheduleWithSuspense />
-        </Suspense>
-      </section>
+      <Suspense fallback={<MainEventScheduleSkeleton />}>
+        <MainEventScheduleWithSuspense />
+      </Suspense>
     </div>
   );
 };

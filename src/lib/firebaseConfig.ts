@@ -23,7 +23,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = initializeFirestore(app, {
-  localCache: persistentLocalCache(),
+  localCache: persistentLocalCache({
+    cacheSizeBytes: 10485760, // 10MB
+  }),
 });
 
 export { db };

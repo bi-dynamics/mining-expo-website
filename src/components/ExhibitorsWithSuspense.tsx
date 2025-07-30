@@ -1,7 +1,7 @@
+import { getCurrentYearExhibitors } from "@/lib/getExhibitors";
 import Exhibitors from "./Exhibitors";
-import { getExhibitors2024 } from "@/lib/getExhibitors2024";
 
 export async function ExhibitorsWithSuspense() {
-  const exhibitors = await getExhibitors2024();
+  const exhibitors = await getCurrentYearExhibitors();
   return <Exhibitors exhibitorsList={exhibitors} />;
 }
