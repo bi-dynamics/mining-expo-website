@@ -5,6 +5,7 @@ export interface FloorPlanData {
   id?: string;
   image?: string;
   alt?: string;
+  sourceYears?: { src: string; year: number }[];
 }
 
 export async function getFloorPlansByYear(year: number) {
@@ -33,5 +34,26 @@ export async function getFloorPlans(): Promise<FloorPlanData[]> {
       ...doc.data(),
     });
   });
+  return floorPlans;
+}
+
+export async function getCurrentYearFloorPlans() {
+  const currentYear = new Date().getFullYear();
+  const querySnapshot = await getDocs(collection(db, "floor_plans"));
+  const floorPlans: FloorPlanData[] = [];
+
+  querySnapshot.forEach((doc) => {
+    const data = doc.data() as FloorPlanData;
+    if (
+      data.sourceYears &&
+      data.sourceYears.some((source) => source.year === currentYear)
+    ) {
+      floorPlans.push({
+        id: doc.id,
+        ...data,
+      });
+    }
+  });
+
   return floorPlans;
 }
