@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NavbarMobile from "@/components/Navbar-mobile";
 import Footer from "@/components/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const poppins = Poppins({
   weight: "700",
@@ -51,6 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KP5Q2L8Q" />
       <body className={`${poppins.variable} ${rubik.variable} antialiased`}>
         <Navbar />
         <NavbarMobile />
