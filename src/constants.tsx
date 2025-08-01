@@ -12,7 +12,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/main-event-programme",
     submenu: true,
     subMenuItems: [
-      { title: "Schedule to be released soon", path: "/main-event-programme" },
+      { title: "Main Event Schedule", path: "/main-event-programme" },
       {
         title: "Registration and Info",
         path: "/main-event-programme/registration-info",
