@@ -79,30 +79,45 @@ import "swiper/css/effect-fade";
 import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Button } from "./ui/button";
+import { CircleDashed, CircleEllipsis } from "lucide-react";
 
 function FloorPlans({
   floorPlansList,
 }: {
   floorPlansList: FloorPlanData2024[];
 }) {
-  const sortedFloorPlansList = floorPlansList.sort(
-    (a: any, b: any) => a.id - b.id
-  );
+  const currentYear = new Date().getFullYear();
+  const sortedFloorPlansList = floorPlansList
+    .sort((a: any, b: any) => a.id - b.id)
+    .filter((plan) =>
+      Array.isArray(plan.sourceYears)
+        ? plan.sourceYears.some(
+            (year) => year.year === currentYear || year.year === currentYear - 1
+          )
+        : false
+    ); //filter to current year or previous year as fallback
 
   const [currentFloorPlanIndex, setCurrentFloorPlanIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleNextFloorPlan = () => {
+    setIsLoading(true);
     setCurrentFloorPlanIndex(
       (prevIndex) => (prevIndex + 1) % sortedFloorPlansList.length
     );
+    setTimeout(() => setIsLoading(false), 1000); // Simulate loading delay
   };
 
   const handlePrevFloorPlan = () => {
+    setIsLoading(true);
+    // Wrap around to the last item if at the beginning
     setCurrentFloorPlanIndex(
       (prevIndex) =>
         (prevIndex - 1 + sortedFloorPlansList.length) %
         sortedFloorPlansList.length
     );
+    setTimeout(() => setIsLoading(false), 1000); // Simulate loading delay
   };
 
   const currentFloorPlan = sortedFloorPlansList[currentFloorPlanIndex];
@@ -119,32 +134,42 @@ function FloorPlans({
           <p className="font-semibold text-center text-4xl md:text-6xl font-poppins">
             {currentFloorPlan.alt}
           </p>
-          <Swiper
-            navigation={true}
-            loop={true}
-            grabCursor={true}
-            zoom={{ minRatio: 1, maxRatio: 2 }}
-            pagination={{ type: "fraction" }}
-            modules={[Navigation, Pagination, Zoom, EffectFade]}
-            slidesPerView={1}
-            centeredSlides={true}
-            fadeEffect={{ crossFade: true }}
-            effect={"fade"}
-            className="h-[60vh] w-full flex items-center justify-center rounded-lg mb-8"
-          >
-            <SwiperSlide className="md:px-10 md:py-14 px-8 w-full mx-auto">
-              <div className="swiper-zoom-container flex flex-col h-full w-full items-center justify-center gap-4 ">
-                <Image
-                  src={currentFloorPlan.image as string}
-                  alt={currentFloorPlan.alt as string}
-                  fill
-                  className="block h-full w-full object-cover rounded-xl z-50"
-                />
-              </div>
-            </SwiperSlide>
-          </Swiper>
+          {isLoading ? (
+            <div className="h-[60vh] w-full flex items-center justify-center rounded-lg mb-8">
+              <CircleDashed className=" animate-spin " />
+            </div>
+          ) : (
+            <Swiper
+              navigation={true}
+              loop={true}
+              grabCursor={true}
+              zoom={{ minRatio: 1, maxRatio: 2 }}
+              pagination={{ type: "fraction" }}
+              modules={[Navigation, Pagination, Zoom, EffectFade]}
+              slidesPerView={1}
+              centeredSlides={true}
+              fadeEffect={{ crossFade: true }}
+              effect={"fade"}
+              className="h-[60vh] w-full flex items-center justify-center rounded-lg mb-8"
+            >
+              <SwiperSlide className="md:px-10 md:py-14 px-8 w-full mx-auto">
+                <div className="swiper-zoom-container flex flex-col h-full w-full items-center justify-center gap-4 ">
+                  <Image
+                    src={
+                      currentFloorPlan.sourceYears?.find(
+                        (year) => year.year === currentYear
+                      )?.src as string
+                    }
+                    alt={currentFloorPlan.alt as string}
+                    fill
+                    className="block h-full w-full object-cover rounded-xl z-50"
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          )}
 
-          {/* Nested Swiper for Exhibitors */}
+          {/* Nested Swiper for Exhibitors
           {currentFloorPlan.exhibitors && (
             <Swiper
               slidesPerView={2.3}
@@ -181,11 +206,15 @@ function FloorPlans({
                 </SwiperSlide>
               ))}
             </Swiper>
-          )}
+          )} */}
         </div>
-        <div className="mt-4 flex gap-8 text-expoBlue font-poppins font-medium text-xl">
-          <button onClick={handlePrevFloorPlan}>Previous Plan</button>
-          <button onClick={handleNextFloorPlan}>Next Plan</button>
+        <div className="mt-4 flex gap-8 text-expoBlue disabled:scale-75 disabled:text-expoBlue/50 font-poppins disabled:bg-pink-400 font-medium text-xl">
+          <Button onClick={handlePrevFloorPlan} disabled={isLoading}>
+            Previous Plan
+          </Button>
+          <Button onClick={handleNextFloorPlan} disabled={isLoading}>
+            Next Plan
+          </Button>
         </div>
       </div>
     </section>

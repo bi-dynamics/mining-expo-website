@@ -6,6 +6,7 @@ export interface FloorPlanData2024 {
   image?: string;
   alt?: string;
   exhibitors?: ExhibitorsData[];
+  sourceYears?: { year: number; src: string }[];
 }
 
 export interface ExhibitorsData {
