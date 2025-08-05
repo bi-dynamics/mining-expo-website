@@ -8,11 +8,15 @@ function delegateRegistrationPage() {
         <h2 className=" text-5xl font-poppins font-bold text-black text-center">
           Conference Registration
         </h2>
-        <iframe
+        <p className="font-medium">
+          Online registrations are closed. Please register in person at the Expo
+          venue.
+        </p>
+        {/* <iframe
           src="https://www.cognitoforms.com/f/2QVll_rxDEOR3mB1yLnroQ/8"
           className="w-[80%] h-[150vh] sm:h[100vh]"
         ></iframe>
-        <script src="https://www.cognitoforms.com/f/iframe.js" async />
+        <script src="https://www.cognitoforms.com/f/iframe.js" async /> */}
       </section>
     </main>
   );
