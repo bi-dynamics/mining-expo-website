@@ -16,18 +16,18 @@ const pastPresentations = [
         file: "/2025-Presentations/Namibias-Diamond-Future-Demarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
         alt: "Namibia's Diamond Future: Demarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
       },
-      // {
-      //   file: "/2024-Presentations/NIPDB-Investor-Retention-and-After-Care-Services.pdf",
-      //   alt: "NIPDB Investor Retention and After Care Services",
-      // },
-      // {
-      //   file: "/2024-Presentations/Driving-Local-Content-in-Namibias-Mining-Sector-The-Case-of-Kodo-Drilling.pdf",
-      //   alt: "Driving Local Content in Namibia's Mining Sector - The Case of Kodo Drilling",
-      // },
-      // {
-      //   file: "/2024-Presentations/Deep-Yellow_JB_MH_Development-of-Tumas-Project-in-a-Resurging-Uranium-Market.pdf",
-      //   alt: "Deep Yellow - Development of the Tumas Project in a resurging uranium market",
-      // },
+      {
+        file: "/2025-Presentations/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
+        alt: "Otjikoto Gold Mine: A Pioneer in Namibia's Mining Revolution - John Roos",
+      },
+      {
+        file: "/2025-Presentations/Navachab-Gold-Mine-Expansion-Unlocking-Jobs-Innnovation-and-Economic-Transformation-George-Botshiwe.pdf",
+        alt: "Navachab Gold Mine Expansion: Unlocking Jobs, Innovation and Economic Transformation - George Botshiwe",
+      },
+      {
+        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibia-Uranium-Company-Irvinne-Simataa.pdf",
+        alt: "Husab Mine: Building a World-Class Namibia Uranium Company - Irvinne Simataa",
+      },
       // {
       //   file: "/2024-Presentations/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
       //   alt: "Bannerman's Etango Project - Surving the Uranium Downtun",
