@@ -32,10 +32,10 @@ const pastPresentations = [
         file: "/2025-Presentations/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
         alt: "Building Namibia's Integrated Marine Phosphate Industry to Fuel Economic Diversification and Value Creation - Mike Woodbone and Chris Jordinson",
       },
-      // {
-      //   file: "/2024-Presentations/A-New-Dawn-for-Namibias-Extractive-Sector.pdf",
-      //   alt: "A New Dawn for Namibia's Extractive Sector - Ministry of Mines and Energy",
-      // },
+      {
+        file: "/2025-Presentations/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
+        alt: "Etango: Contribution to Local Economic Growth - Werner Ewald",
+      },
     ],
   },
 ];
