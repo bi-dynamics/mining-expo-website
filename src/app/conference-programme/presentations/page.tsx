@@ -13,8 +13,8 @@ const pastPresentations = [
         alt: "Financing the Future - How Mining can Deliver Namibia's Development Promise - Angelique Peake",
       },
       {
-        file: "/2025-Presentations/Namibias-Diamond-Future-Demarine-Namibia.pdf",
-        alt: "Namibia's Diamond Future: Demarine Namibia navigating the course to resilience through the downturn cycles",
+        file: "/2025-Presentations/Namibias-Diamond-Future-Demarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
+        alt: "Namibia's Diamond Future: Demarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
       },
       // {
       //   file: "/2024-Presentations/NIPDB-Investor-Retention-and-After-Care-Services.pdf",
