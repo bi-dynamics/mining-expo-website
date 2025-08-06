@@ -6,7 +6,7 @@ const IframeVideoComponent = () => {
   return (
     <div className="z-[2] flex items-center justify-center w-[90%] xl:w-[40%] h-[70vh]">
       <iframe
-        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCoMNamibia%2Fvideos%2F3171052949722308%2F&width=900&show_text=false&height=500&appId"
+      src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCoMNamibia%2Fvideos%2F635849372879343&width=900&show_text=false&height=500&appId"
         width="600"
         height="330"
         allow="autoplay; web-share"
