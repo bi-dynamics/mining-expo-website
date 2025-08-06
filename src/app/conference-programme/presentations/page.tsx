@@ -25,8 +25,8 @@ const pastPresentations = [
         alt: "Navachab Gold Mine Expansion: Unlocking Jobs, Innovation and Economic Transformation - George Botshiwe",
       },
       {
-        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibia-Uranium-Company-Irvinne-Simataa.pdf",
-        alt: "Husab Mine: Building a World-Class Namibia Uranium Company - Irvinne Simataa",
+        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
+        alt: "Husab Mine: Building a World-Class Namibian Uranium Company - Irvinne Simataa",
       },
       // {
       //   file: "/2024-Presentations/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
