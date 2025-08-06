@@ -10,7 +10,7 @@ const pastPresentations = [
     src: [
       {
         file: "/2025-Presentations/Financing-the-Future-How-Mining-can-Deliver-Namibias-Development-Promise-Angelique-Peake.pdf",
-        alt: "Financing the Future - How Mining can Deliver Namibia's Development Promise - Angelique Peake",
+        alt: "Financing the Future: How Mining can Deliver Namibia's Development Promise - Angelique Peake",
       },
       {
         file: "/2025-Presentations/Namibias-Diamond-Future-Demarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
