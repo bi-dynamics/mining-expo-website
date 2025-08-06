@@ -28,10 +28,10 @@ const pastPresentations = [
         file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
         alt: "Husab Mine: Building a World-Class Namibian Uranium Company - Irvinne Simataa",
       },
-      // {
-      //   file: "/2024-Presentations/Bannermans-Etango-Project_Surving-the-Uranium-Downtun_Repaired.pdf",
-      //   alt: "Bannerman's Etango Project - Surving the Uranium Downtun",
-      // },
+      {
+        file: "/2025-Presentations/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
+        alt: "Building Namibia's Integrated Marine Phosphate Industry to Fuel Economic Diversification and Value Creation - Mike Woodbone and Chris Jordinson",
+      },
       // {
       //   file: "/2024-Presentations/A-New-Dawn-for-Namibias-Extractive-Sector.pdf",
       //   alt: "A New Dawn for Namibia's Extractive Sector - Ministry of Mines and Energy",
