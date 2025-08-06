@@ -43,7 +43,7 @@ const pastPresentations = [
 const PresentationsPage = () => {
   return (
     <div className="flex flex-col  w-full h-full">
-      <PageBanner title="2024 Presentations" />
+      <PageBanner title="2025 Presentations" />
       <div className="py-16 gap-16 flex items-center justify-center flex-col w-[90%] lg:w-[60%]  mx-auto">
         <h2 className="text-xl md:text-5xl font-poppins font-bold text-black text-center">
           2025 Conference Presentations
