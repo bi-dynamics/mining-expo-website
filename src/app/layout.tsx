@@ -52,12 +52,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-KP5Q2L8Q" />
       <body className={`${poppins.variable} ${rubik.variable} antialiased`}>
         <Navbar />
         <NavbarMobile />
         {children}
         <Footer />
+        <GoogleTagManager gtmId="GTM-KP5Q2L8Q" />
       </body>
     </html>
   );
