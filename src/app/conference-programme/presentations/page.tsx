@@ -36,6 +36,10 @@ const pastPresentations = [
         file: "/2025-Presentations/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
         alt: "Etango: Contribution to Local Economic Growth - Werner Ewald",
       },
+      {
+        file: "/2025-Presentations/The-Transformative-Impact-of-the-Tumas-Uranium-Project-John-Borshoff.pdf",
+        alt: "The Transformative Impact of the Tumas Uranium Project - John Borshoff",
+      },
     ],
   },
 ];
