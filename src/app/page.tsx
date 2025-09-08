@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Mining Expo & Conference 2025 05-07 August, 2025 Windhoek, Namibia located at the Windhoek Show Grounds. Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2025 The 12th edition of the Mining Expo & Conference will be held from 05 – 07 August, 2025 at the Windhoek Show Grounds.",
+    "Mining Expo & Conference 26 04-06 August, 2026 Windhoek, Namibia located at the Windhoek Show Grounds. Public Entry is Free. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2025 The 12th edition of the Mining Expo & Conference will be held from 05 – 07 August, 2025 at the Windhoek Show Grounds.",
 };
 
 export default function Home() {
@@ -53,11 +53,11 @@ export default function Home() {
               Mining Exhibition
             </h3>
             <h2 className="font-poppins text-3xl xl:text-5xl font-bold">
-              Welcome to the Mining Expo & Conference <br /> 2025
+              Welcome to the Mining Expo & Conference <br /> 2026
             </h2>
             <p className="text-base font-rubik text-white/80">
-              The 12th edition of the Mining Expo & Conference will be held from
-              05 – 07 August, 2025 at the Windhoek Show Grounds, bringing the
+              The 13th edition of the Mining Expo & Conference will be held from
+              04 – 06 August, 2026 at the Windhoek Show Grounds, bringing the
               entire extractives sector under one roof.
             </p>
             <Link

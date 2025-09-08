@@ -62,19 +62,19 @@ export default function Hero() {
                 <div className="flex flex-col items-start justify-center gap-2 md:text-base">
                   <div className="flex flex-col items-start justify-center ">
                     <span className="font-medium md:text-xl">
-                      Tuesday, 5 August 2025
+                      Tuesday, 4 August 2026
                     </span>
                     12h00 - 19h00
                   </div>
                   <div className="flex flex-col items-start justify-center">
                     <span className="font-medium md:text-xl">
-                      Wednesday, 6 August 2025
+                      Wednesday, 5 August 2026
                     </span>
                     07h30 - 19h00
                   </div>
                   <div className="flex flex-col items-start justify-center">
                     <span className="font-medium md:text-xl">
-                      Thursday, 7 August 2025 (Final Day)
+                      Thursday, 6 August 2026 (Final Day)
                     </span>
                     08h00 - 17h30
                   </div>
