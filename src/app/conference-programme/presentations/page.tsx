@@ -13,8 +13,8 @@ const pastPresentations = [
         alt: "Financing the Future: How Mining can Deliver Namibia's Development Promise - Angelique Peake",
       },
       {
-        file: "/2025-Presentations/Namibias-Diamond-Future-Demarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
-        alt: "Namibia's Diamond Future: Demarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
+        file: "/2025-Presentations/Namibias-Diamond-Future-Debmarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
+        alt: "Namibia's Diamond Future: Debmarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
       },
       {
         file: "/2025-Presentations/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
