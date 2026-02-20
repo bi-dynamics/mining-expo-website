@@ -95,10 +95,10 @@ function Footer() {
                 />
                 Mail:{" "}
                 <Link
-                  href="mailto:miningexponam@gmail.com"
+                  href="mailto:miningexpo@chamberofmines.org.na"
                   className="hover:text-expoOrange"
                 >
-                  miningexponam@gmail.com
+                  miningexpo@chamberofmines.org.na
                 </Link>
                 /
                 <Link

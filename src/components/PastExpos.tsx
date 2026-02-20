@@ -39,7 +39,7 @@ function PastExpo({
   );
 
   const sortedFloorplans = floorPlans?.sort((a: any, b: any) => a.id - b.id);
-
+  console.log(sortedFloorplans)
   const swiperBoundaryRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
 
@@ -173,7 +173,7 @@ function PastExpo({
                 </p>
                 <div className="swiper-zoom-container flex flex-col relative h-fit w-fit items-center justify-center my-0">
                   <Image
-                    src={image.image as string}
+                    src={image.sourceYears?.find((source) => source.year === currentYear)?.src as string}
                     alt={image.alt as string}
                     width={900}
                     height={900}

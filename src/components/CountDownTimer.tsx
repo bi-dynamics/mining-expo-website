@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 function CountDownTimer() {
-  const targetDate = new Date("08/07/2024 07:30:00");
+  const targetDate = useMemo(() => new Date("08/07/2024 07:30:00"), []);
 
   // Calculate initial difference and determine if countdown should end
   const initialDifference = targetDate.getTime() - new Date().getTime();

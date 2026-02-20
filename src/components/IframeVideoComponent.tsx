@@ -5,16 +5,16 @@ const IframeVideoComponent = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <div className="z-[2] flex items-center justify-center w-[90%] xl:w-[40%] h-[70vh]">
-      <iframe
+      {/* <iframe
         src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCoMNamibia%2Fvideos%2F726220137075321&width=900&show_text=false&height=500&appId"
         width="600"
         height="330"
         allow="autoplay; web-share"
         allowFullScreen
         className=""
-      />
+      /> */}
 
-      {/* {showVideo ? (
+      {showVideo ? (
         <iframe
           width="600"
           height="330"
@@ -34,7 +34,7 @@ const IframeVideoComponent = () => {
           
           <div className=" cursor-pointer relative h-16 w-24 rounded-md bg-[rgba(0,0,0,0.7)] hover:bg-[rgba(0,0,0,0.5)] group-hover:bg-[#FF0000] after:block after:absolute after:top-[20px] after:left-[40px] after:mx-auto after:border-dashed after:border-t-[12.5px] after:border-r-[0px] after:border-b-[12.5px] after:border-l-[20px] after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-[rgba(255, 255, 255, 1)]" />
         </div>
-      )} */}
+      )}
     </div>
   );
 };

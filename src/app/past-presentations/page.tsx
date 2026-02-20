@@ -506,6 +506,43 @@ const pastPresentations = [
       },
     ],
   },
+  {
+     year: 2025,
+    src: [
+      {
+        file: "/2025-Presentations/Financing-the-Future-How-Mining-can-Deliver-Namibias-Development-Promise-Angelique-Peake.pdf",
+        alt: "Financing the Future: How Mining can Deliver Namibia's Development Promise - Angelique Peake",
+      },
+      {
+        file: "/2025-Presentations/Namibias-Diamond-Future-Debmarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
+        alt: "Namibia's Diamond Future: Debmarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
+      },
+      {
+        file: "/2025-Presentations/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
+        alt: "Otjikoto Gold Mine: A Pioneer in Namibia's Mining Revolution - John Roos",
+      },
+      {
+        file: "/2025-Presentations/Navachab-Gold-Mine-Expansion-Unlocking-Jobs-Innnovation-and-Economic-Transformation-George-Botshiwe.pdf",
+        alt: "Navachab Gold Mine Expansion: Unlocking Jobs, Innovation and Economic Transformation - George Botshiwe",
+      },
+      {
+        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
+        alt: "Husab Mine: Building a World-Class Namibian Uranium Company - Irvinne Simataa",
+      },
+      {
+        file: "/2025-Presentations/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
+        alt: "Building Namibia's Integrated Marine Phosphate Industry to Fuel Economic Diversification and Value Creation - Mike Woodbone and Chris Jordinson",
+      },
+      {
+        file: "/2025-Presentations/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
+        alt: "Etango: Contribution to Local Economic Growth - Werner Ewald",
+      },
+      {
+        file: "/2025-Presentations/The-Transformative-Impact-of-the-Tumas-Uranium-Project-John-Borshoff.pdf",
+        alt: "The Transformative Impact of the Tumas Uranium Project - John Borshoff",
+      },
+    ],
+  }
 ];
 
 const PastPresentationsPage = () => {
@@ -514,6 +551,13 @@ const PastPresentationsPage = () => {
       (presentation) => presentation.year === yearToFilter
     );
   }
+
+  function filterFloorPlansByYear(yearToFilter: number) {
+    return floorPlansData?.filter(
+      (floorPlan) => floorPlan.sourceYears?.map((sourceYear) => sourceYear.year === yearToFilter)
+    );
+  }
+  
   const [currentYear, setCurrentYear] = useState(2013);
   const [exhibitorsData, setExhibitorsData] = useState<ExhibitorData[] | null>(
     null
@@ -621,7 +665,7 @@ const PastPresentationsPage = () => {
           {currentYear >= 2023 && exhibitorsData && floorPlansData ? (
             <PastExpos
               exhibitorsList={exhibitorsData}
-              floorPlans={floorPlansData}
+              floorPlans={filterFloorPlansByYear(currentYear) || null}
               currentYear={currentYear}
             />
           ) : null}

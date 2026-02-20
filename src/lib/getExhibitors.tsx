@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export interface ExhibitorData {
   id?: string;
@@ -11,11 +11,25 @@ export interface ExhibitorData {
 }
 
 export async function getExhibitorsByYear(year: number) {
-  //for year 2023, the collection name is just exhibitors
-  //for year 2024 and beyond, the collection name is exhibitors_<year>
-  const collectionName = year === 2023 ? "exhibitors" : `exhibitors_${year}`;
+  const currentYear = new Date().getFullYear();
+  //for year 2024, the collection name is  exhibitors_<year>
+  //for year 2023, 2025 and beyond, the collection name is exhibitors
+  const collectionName = year === 2024 ? `exhibitors_${year}` : "exhibitors";
   const querySnapshot = await getDocs(collection(db, collectionName));
   const exhibitors: ExhibitorData[] = [];
+
+  if (collectionName === "exhibitors") {
+    const q = query(collection(db, collectionName), where("yearsAtEvent", "array-contains", year));
+    const filteredSnapshot = await getDocs(q);
+    filteredSnapshot.forEach((doc) => {
+      exhibitors.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+    return exhibitors;
+  }
+
 
   querySnapshot.forEach((doc) => {
     exhibitors.push({

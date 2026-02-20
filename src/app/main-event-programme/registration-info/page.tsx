@@ -13,11 +13,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Exhibitor Registration",
   description:
-    "Exhibitor Registration Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
+    "Exhibitor Registration Information; Please read this important information before submitting your registration.",
   openGraph: {
     title: "Exhibitor Registration & Information",
     description:
-      "Exhibitor Information; Please read this important information before submitting your registration. Payment due date: 8 August 2024.",
+      "Exhibitor Information; Please read this important information before submitting your registration.",
     images: [{ url: "../../opengraph-image.jpg" }],
   },
 };

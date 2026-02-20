@@ -1,19 +1,24 @@
 import { db } from "./firebaseConfig";
-import { collection, getDocs, getDocsFromServer } from "firebase/firestore";
+import { collection, getDocs, getDocsFromServer, query, where } from "firebase/firestore";
 
 export interface FloorPlanData {
   id?: string;
   image?: string;
   alt?: string;
   sourceYears?: { src: string; year: number }[];
+  years?: number[];
 }
 
 export async function getFloorPlansByYear(year: number) {
-  //for year 2023, the collection name is just floor_plans
-  //for year 2024 and beyond, the collection name is floor_plans_<year>
-  const collectionName = year === 2023 ? "floor_plans" : `floor_plans_${year}`;
-  const querySnapshot = await getDocs(collection(db, collectionName));
+  //for year 2024, 2025 and beyond the collection name is floor_plans_<year>
+  //for year 2023 and before, the collection name is floor_plans
+  const collectionName = year >= 2024 ? `floor_plans_2024` : "floor_plans";
+  //have the query check for the years field of the object in the firestore array where the source year === year
+  //years is an array of numbers
+  const q = query(collection(db, collectionName));
+  const querySnapshot = await getDocs(q);
   const floorPlans: FloorPlanData[] = [];
+
 
   querySnapshot.forEach((doc) => {
     floorPlans.push({

@@ -8,15 +8,15 @@ function delegateRegistrationPage() {
         <h2 className=" text-5xl font-poppins font-bold text-black text-center">
           Exhibitor Registration
         </h2>
-        <iframe
+        {/* <iframe
           src="https://www.cognitoforms.com/f/2QVll_rxDEOR3mB1yLnroQ/5"
           className="w-[80%] h-[150vh] sm:h[100vh]"
         ></iframe>
-        <script src="https://www.cognitoforms.com/f/iframe.js" async />
-        {/* <p>
-          Exhibitor registrations for the Mining Expo & Conference 2025 will
-          begin 1 April 2025.
-        </p> */}
+        <script src="https://www.cognitoforms.com/f/iframe.js" async /> */}
+        <p>
+          Exhibitor registration for the 2026 Mining Expo will open on 1 March
+          2026. Online registration is not yet available.
+        </p>
       </section>
     </main>
   );
