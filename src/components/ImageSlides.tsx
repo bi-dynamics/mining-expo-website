@@ -11,23 +11,23 @@ import "swiper/css/pagination";
 
 const images = [
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-1_resize.webp?alt=media&token=3427f917-bd07-462c-a637-4b6a6be899fd",
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fgallery__2025_1.jpg?alt=media&token=3f203813-4282-4d31-9de4-3f4125d89d98",
     alt: "First Image",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-2_resize.webp?alt=media&token=9078be81-f428-4bd6-9a5f-406510bc84a6",
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fgallery_2025_2.jpg?alt=media&token=c42ac565-3d6f-456d-8bea-3fe015903581",
     alt: "Second Image",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-3_resize.webp?alt=media&token=e76f0940-a9d9-42d0-8432-8334278d8254",
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fgallery_2025_3.jpg?alt=media&token=bac0c6cc-0748-448e-96a1-c0632964fb3d",
     alt: "Third Image",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-4_resize.webp?alt=media&token=ce0178d1-d71b-4d56-a54b-476669b0706d",
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fgallery_2025_4.jpg?alt=media&token=112572bb-592c-4dd1-8b7c-10231d5a54a3",
     alt: "Fourth Image",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fmining-expo-gallery-5_resize.webp?alt=media&token=3ea396fe-5c0a-47a8-9a63-b268870f43b1",
+    src: "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2Fgallery_2025_5.jpg?alt=media&token=c595eba1-fdcb-4f6e-827e-edd1bf0a3b60",
     alt: "Fith Image",
   },
 ];

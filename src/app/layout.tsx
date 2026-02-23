@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     default: "MINING EXPO Namibia",
   },
   description:
-    "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
+    "Mining Expo & Conference 2026 in Windhoek, Namibia. Located at Windhoek Show Grounds - Public Entry is Free. Stay Connected by Downloading our Mobile Application",
   openGraph: {
     type: "website",
     url: "https://miningexponamibia.com/",
     title: "Mining Expo & Conference Namibia 2024",
     description:
-      "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
+      "Mining Expo & Conference 2026 in Windhoek, Namibia. Located at Windhoek Show Grounds - Public Entry is Free. Stay Connected by Downloading our Mobile Application",
     siteName: "Mining Expo & Conference Namibia",
   },
   twitter: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images:
       "https://firebasestorage.googleapis.com/v0/b/mining-expo-bc804.appspot.com/o/img%2Fwebsite_media%2FExpo-logo1.jpg?alt=media&token=14132796-0eb1-49a8-8d06-3bc81720d78c",
     description:
-      "Mining Expo & Conference 2024 07-08 August, 2024 Windhoek, Namibia Windhoek Show Grounds Public Entry is Free.. Stay Connected by Downloading our Mobile Application Welcome to the Mining Expo & Conf 2024 The 11th edition of the Mining Expo & Conference will be held from 07 – 08 August, 2024 at the Windhoek Show Grounds.",
+      "Mining Expo & Conference 2026 in Windhoek, Namibia. Located at Windhoek Show Grounds - Public Entry is Free. Stay Connected by Downloading our Mobile Application",
   },
 };
 
