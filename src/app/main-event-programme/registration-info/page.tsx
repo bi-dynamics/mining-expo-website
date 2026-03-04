@@ -26,7 +26,7 @@ const boothPackages = [
   {
     title:
       "Chamber Members: Class D & Associate Members and Namibian Companies",
-    price: "N$ 33,441.00",
+    price: "N$ 35,133.44",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -39,7 +39,7 @@ const boothPackages = [
   },
   {
     title: "Chamber Member Class A, B & C",
-    price: "N$ 34,939",
+    price: "N$ 36,658.69",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -52,7 +52,7 @@ const boothPackages = [
   },
   {
     title: "SADC Member States",
-    price: "N$ 59,895",
+    price: "N$ 62,8889.75",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -65,7 +65,7 @@ const boothPackages = [
   },
   {
     title: "International Companies",
-    price: "N$ 99,825",
+    price: "N$ 104,816.25",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
     features: [
       {
@@ -92,7 +92,7 @@ const RegistrationInfoPage = () => {
             registration
           </h3>
           <p className="text-black/70 font-semibold font-rubik text-sm lg:text-lg text-center p-4 bg-slate-100 rounded-xl">
-            Payment due date: 25 July 2025 <br />
+            Payment due date: 25 July 2026 <br />
             <span className="font-semibold text-red-500">
               Stands will only be erected upon receipt of 100% payment.
             </span>
@@ -120,7 +120,7 @@ const RegistrationInfoPage = () => {
               <AccordionContent>
                 <span className="font-bold text-red-500">
                   NB! No breaking down/dismantling of exhibition spaces is
-                  allowed on the last day of the EXPO
+                  allowed on the last day of the EXPO,
                 </span>
                 <br />
                 This includes the removal of products. There will be guards at
@@ -131,13 +131,13 @@ const RegistrationInfoPage = () => {
                 <br />
                 Friday,{" "}
                 <span className="font-bold text-black/80">
-                  09 August 2025
+                  07 August 2026
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 07h00 Halls will
-                close at 16h00. <br />
+                close at 17h00. <br />
                 <br /> Saturday,{" "}
                 <span className="font-bold text-black/80">
-                  10 August 2025
+                  08 August 2026
                 </span>{" "}
                 - Gates and Halls will open for Exhibitors at 08h30 Halls will
                 close at 13h00.
@@ -185,12 +185,12 @@ const RegistrationInfoPage = () => {
                 following cancellation charges shall apply:
                 <br />
                 <span className="font-bold text-red-500">
-                  ​04 June – 04 July 2025
+                  ​03 June – 03 July 2026
                 </span>{" "}
                 = 50% of total stand fee.
                 <br />
                 <span className="font-bold text-red-500">
-                  05 July – 05 August 2025 to the start of the fair
+                  04 July – 04 August 2026 to the start of the fair
                 </span>{" "}
                 = 100% of total stand rent.
                 <br />A{" "}
