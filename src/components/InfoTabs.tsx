@@ -26,7 +26,7 @@ const InfoTabs = () => {
                     The Chamber of Mines will be hosting its 11th Mining Expo &
                     Conference on the 07th & 08th August 2024 at the Windhoek
                     Show Grounds. RMB is the proud sponsor and title partner of
-                    this event, which includes the Mining Conference, Supplier’s
+                    this event, which includes the Mining Conference, Supplier&apos;s
                     Platform, Business 2 Business networking for exhibitors and
                     the annual networking cocktail function.
                   </p>
@@ -47,11 +47,10 @@ const InfoTabs = () => {
                 <div className="w-6 sm:w-12 h-52 bg-expoOrange"></div>
                 <div className="font-rubik flex flex-col gap-4 4 w-[80%] mx-auto sm:mx-0 xl:w-1/2 h-fit">
                   <h2 className=" text-3xl lg:text-5xl text-white font-bold">
-                    Mining Conference 2025 Theme
+                    Mining Conference 2026 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    “Mining for Namibia&apos;s Future: Job Creation, Local
-                    Empowerment, and Economic Transformation”
+                    To be announced soon.
                   </p>
                 </div>
               </div>
