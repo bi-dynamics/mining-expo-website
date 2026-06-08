@@ -47,7 +47,7 @@ export default function Hero() {
           <section className="w-fit h-full flex flex-col items-center justify-between gap-8">
             {/* Dates */}
             <div className="w-fit h-full flex flex-col items-start justify-center gap-4 p-2 font-rubik">
-              {/* <h3 className="flex flex-col items-start justify-center text-white text-sm md:text-3xl">
+              <h3 className="flex flex-col items-start justify-center text-white text-sm md:text-3xl">
                 <div className="flex items-center justify-center mb-2">
                   <Icon
                     icon="clarity:date-solid"
@@ -79,7 +79,7 @@ export default function Hero() {
                     08h00 - 17h30
                   </div>
                 </div>
-              </h3> */}
+              </h3>
               <h3 className="flex items-center justify-center text-white text-sm md:text-3xl">
                 <Icon
                   icon="mdi:location"

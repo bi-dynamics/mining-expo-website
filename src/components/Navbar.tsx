@@ -23,12 +23,12 @@ const conference: { title: string; href: string; description: string }[] = [
   {
     title: "Programme",
     href: "/conference-programme",
-    description: "Conference programme information for 2025.",
+    description: "Conference programme information for 2026.",
   },
   {
     title: "Presentations",
     href: "/conference-programme/presentations",
-    description: "Conference presentations for 2025.",
+    description: "Conference presentations for 2026.",
   },
   {
     title: "Registration",
@@ -47,31 +47,31 @@ const marketing_opportunities: {
   href: string;
   description: string;
 }[] = [
-  {
-    title: "Supplier's Platform",
-    href: "/suppliers-platform",
-    description:
-      "Presentation area for exhibitors to display services and product offerings.",
-  },
-  {
-    title: "B2B",
-    href: "/suppliers-platform/b2b",
-    description:
-      "Platform for exhibitors to engage directly with potential customers.",
-  },
-];
+    {
+      title: "Supplier's Platform",
+      href: "/suppliers-platform",
+      description:
+        "Presentation area for exhibitors to display services and product offerings.",
+    },
+    {
+      title: "B2B",
+      href: "/suppliers-platform/b2b",
+      description:
+        "Platform for exhibitors to engage directly with potential customers.",
+    },
+  ];
 
 const past_events: {
   title: string;
   href: string;
   description: string;
 }[] = [
-  {
-    title: "Past Presentations",
-    href: "/past-presentations",
-    description: "Timeline of presentations from 2013 to 2024.",
-  },
-];
+    {
+      title: "Past Presentations",
+      href: "/past-presentations",
+      description: "Timeline of presentations from 2013 to 2024.",
+    },
+  ];
 
 const Navbar = () => {
   const [opaqueNav, setOpaqueNav] = useState(false);
@@ -131,7 +131,7 @@ const Navbar = () => {
                           href="/main-event-programme"
                         >
                           <div className="mb-2 mt-4 text-black text-lg font-medium">
-                            Main Event Program 2025
+                            Main Event Program 2026
                           </div>
                           {/* <p className="text-sm leading-tight text-muted-foreground">
                             Main event schedule for August 5 - 7, 2025.
@@ -139,19 +139,19 @@ const Navbar = () => {
                           <div className="h-fit w-full flex flex-col gap-2">
                             <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
                               <span className="font-semibold">
-                                Tuesday, 5 August 2025
+                                Tuesday, 4 August 2026
                               </span>
                               12h00 - 19h00
                             </p>
                             <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
                               <span className="font-semibold">
-                                Wednesday, 6 August 2025
+                                Wednesday, 5 August 2026
                               </span>
                               07h30 - 19h00
                             </p>
                             <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
                               <span className="font-semibold">
-                                Thursday, 7 August 2025
+                                Thursday, 6 August 2026
                               </span>
                               08h00 - 17h30
                             </p>
@@ -169,14 +169,14 @@ const Navbar = () => {
                       href="/main-event-programme/floor-plans"
                       title="Floor Plans"
                     >
-                      Floor plans for 2025 venues.
+                      Floor plans for 2026 venues.
                     </ListItem>
 
                     <ListItem
                       href="/main-event-programme/exhibitors"
                       title="Exhibitors"
                     >
-                      Exhibitors for 2025
+                      Exhibitors for 2026
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
