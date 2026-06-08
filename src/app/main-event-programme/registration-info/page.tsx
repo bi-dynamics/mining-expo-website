@@ -27,52 +27,48 @@ const boothPackages = [
     title:
       "Chamber Members: Class D & Associate Members and Namibian Companies",
     price: "N$ 35,133.44",
-    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - Exclusive of VAT",
     features: [
       {
         one: "2x lunch tickets",
         two: "2x cocktail function access tickets",
-        three: "Suppliers Platform",
-        four: "B2B",
+        three: "B2B",
       },
     ],
   },
   {
     title: "Chamber Member Class A, B & C",
     price: "N$ 36,658.69",
-    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - Exclusive of VAT",
     features: [
       {
         one: "2x lunch tickets",
         two: "2x cocktail function access tickets",
-        three: "Suppliers Platform",
-        four: "B2B",
+        three: "B2B",
       },
     ],
   },
   {
     title: "SADC Member States",
     price: "N$ 62,8889.75",
-    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - Exclusive of VAT",
     features: [
       {
         one: "2x lunch tickets",
         two: "2x cocktail function access tickets",
-        three: "Suppliers Platform",
-        four: "B2B",
+        three: "B2B",
       },
     ],
   },
   {
     title: "International Companies",
     price: "N$ 104,816.25",
-    priceNB: "per 9m\u00B2 (3m x 3m) booth - exclusitve of VAT",
+    priceNB: "per 9m\u00B2 (3m x 3m) booth - Exclusive of VAT",
     features: [
       {
         one: "2x lunch tickets",
         two: "2x cocktail function access tickets",
-        three: "Suppliers Platform",
-        four: "B2B",
+        three: "B2B",
       },
     ],
   },
@@ -185,7 +181,7 @@ const RegistrationInfoPage = () => {
                 following cancellation charges shall apply:
                 <br />
                 <span className="font-bold text-red-500">
-                  ​03 June – 03 July 2026
+                  03 June – 03 July 2026
                 </span>{" "}
                 = 50% of total stand fee.
                 <br />
@@ -233,7 +229,6 @@ const RegistrationInfoPage = () => {
                     <li>{feature.one}</li>
                     <li>{feature.two}</li>
                     <li>{feature.three}</li>
-                    <li>{feature.four}</li>
                   </ul>
                 ))}
               </div>
