@@ -50,7 +50,7 @@ const InfoTabs = () => {
                     Mining Conference 2026 Theme
                   </h2>
                   <p className="text-lg text-white/80 font-medium">
-                    To be announced soon.
+                    From Dialog to Delivery: Assessing Progress in Creating Mining-Led Economic Growth and Employment since NamPPF
                   </p>
                 </div>
               </div>
