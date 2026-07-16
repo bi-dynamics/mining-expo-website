@@ -1,7 +1,7 @@
-import { getMainSchedule } from "@/lib/getMainSchedule";
-import MainEventSchedule from "./MainEventSchedule";
+import { getExpoSessions } from "@/lib/getSessions";
+import EventSchedule from "./EventSchedule";
 
 export async function MainEventScheduleWithSuspense() {
-  const schedules = await getMainSchedule();
-  return <MainEventSchedule schedules={schedules} />;
+  const sessions = await getExpoSessions();
+  return <EventSchedule heading="Schedule" sessions={sessions} />;
 }

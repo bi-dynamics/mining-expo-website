@@ -1,7 +1,7 @@
-import { getProgrammeSchedule } from "@/lib/getProgrammeSchedule";
-import ProgrammeSchedule from "./ProgrammeSchedule";
+import { getConferenceSessions } from "@/lib/getSessions";
+import EventSchedule from "./EventSchedule";
 
 export async function ProgrammeScheduleWithSuspense() {
-  const programmeSchedules = await getProgrammeSchedule();
-  return <ProgrammeSchedule schedules={programmeSchedules} />;
+  const sessions = await getConferenceSessions();
+  return <EventSchedule heading="Programme Schedule" sessions={sessions} />;
 }
