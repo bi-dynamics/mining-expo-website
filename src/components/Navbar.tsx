@@ -141,13 +141,13 @@ const Navbar = () => {
                               <span className="font-semibold">
                                 Tuesday, 4 August 2026
                               </span>
-                              12h00 - 19h00
+                              07h30 - 19h00
                             </p>
                             <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
                               <span className="font-semibold">
                                 Wednesday, 5 August 2026
                               </span>
-                              07h30 - 19h00
+                              12h00 - 19h00
                             </p>
                             <p className="flex flex-col text-xs leading-tight text-muted-foreground font-light">
                               <span className="font-semibold">

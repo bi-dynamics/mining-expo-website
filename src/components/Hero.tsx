@@ -64,13 +64,13 @@ export default function Hero() {
                     <span className="font-medium md:text-xl">
                       Tuesday, 4 August 2026
                     </span>
-                    12h00 - 19h00
+                    07h30 - 19h00
                   </div>
                   <div className="flex flex-col items-start justify-center">
                     <span className="font-medium md:text-xl">
                       Wednesday, 5 August 2026
                     </span>
-                    07h30 - 19h00
+                    12h00 - 19h00
                   </div>
                   <div className="flex flex-col items-start justify-center">
                     <span className="font-medium md:text-xl">
