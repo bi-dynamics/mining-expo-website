@@ -50,7 +50,7 @@ const boothPackages = [
   },
   {
     title: "SADC Member States",
-    price: "N$ 62,8889.75",
+    price: "N$ 62,889.75",
     priceNB: "per 9m\u00B2 (3m x 3m) booth - Exclusive of VAT",
     features: [
       {
