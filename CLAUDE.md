@@ -19,9 +19,10 @@ Public website for the Mining Expo & Conference (Chamber of Mines of Namibia), b
 
 - **Schedules** ([src/lib/getSessions.ts](src/lib/getSessions.ts), `/sessions`): split rule — sessions in track **"2026 Expo Programme"** → `/main-event-programme`; sessions in **any other track** → `/conference-programme`; sessions with **no track are deliberately excluded** (leftover demo data). Use `getExpoSessions()` / `getConferenceSessions()`. `startTime`/`endTime`/`date` arrive as **epoch-milliseconds strings** (e.g. `"1785816000000"`), normalized to `Date`.
 - **Exhibitors** ([src/lib/getEventExhibitors.ts](src/lib/getEventExhibitors.ts), `/exhibitors`): powers `/main-event-programme/exhibitors`. Exhibitors without a logo render an initials tile (`ExhibitorLogo.tsx`) instead of being hidden.
+- **Speakers** ([src/lib/getEventSpeakers.ts](src/lib/getEventSpeakers.ts), `/speakers`): powers the speakers list, the speaker detail page (server component; `getEventSpeaker(id)` + `notFound()`), and the sitemap. `title` and `company` are separate API fields — do not reintroduce the old `title.split("-")` hack.
 - Asset URLs (speaker photos, exhibitor logos) are **pre-signed S3 URLs that expire after 1 hour** — the revalidate window (300s) must stay well under 3600s or images break.
 
-**2. Firestore** (`src/lib/firebaseConfig.ts`, project `mining-expo-bc804`) — still backs the **past-presentations page** (`getExhibitorsByYear` in `getExhibitors.tsx`, collections `exhibitors` / `exhibitors_2024`), floor plans, and the speaker directory (`getFloorPlans*.tsx`, `getSpeakers.tsx`). Firestore `Timestamp`s are read as `.seconds * 1000`. The Firebase web API key comes from `API_KEY` in `.env.local`. Do not migrate the past-year pages to the API — historical data only exists in Firestore.
+**2. Firestore** (`src/lib/firebaseConfig.ts`, project `mining-expo-bc804`) — still backs the **past-presentations page** (`getExhibitorsByYear` in `getExhibitors.tsx`, collections `exhibitors` / `exhibitors_2024`) and **floor plans** (`getFloorPlans*.tsx`). Firestore `Timestamp`s are read as `.seconds * 1000`. The Firebase web API key comes from `API_KEY` in `.env.local`. Do not migrate the past-year pages to the API — historical data only exists in Firestore.
 
 ## Architecture patterns
 
