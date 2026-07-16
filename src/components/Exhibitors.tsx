@@ -1,6 +1,6 @@
 "use client";
-import { ExhibitorData } from "@/lib/getExhibitors";
-import Image from "next/image";
+import { Exhibitor } from "@/lib/getEventExhibitors";
+import ExhibitorLogo from "./ExhibitorLogo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Grid,
@@ -23,16 +23,12 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { useRef, useState } from "react";
 import { X } from "lucide-react";
 
-function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
-  const sortedExhibitorsList = exhibitorsList.sort((a, b) => {
-    return (a.name || "").localeCompare(b.name || "");
-  });
-
+function Exhibitors({ exhibitorsList }: { exhibitorsList: Exhibitor[] }) {
   const swiperBoundaryRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
   interface ModalInfoProps {
-    companyName: string | undefined;
-    companyDescription: string | undefined;
+    companyName: string;
+    companyDescription: string | null;
   }
   const [modalInfo, setModalInfo] = useState<ModalInfoProps | null>(null);
 
@@ -46,15 +42,15 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
         </p> */}
         <div className="h-fit w-full rounded-md flex flex-col gap-8">
           <h3 className="text-xl text-center  lg:text-4xl font-poppins font-bold text-expoBlue ">
-            2025 Exhibitors
+            2026 Exhibitors
           </h3>
-          {sortedExhibitorsList.length === 0 && (
+          {exhibitorsList.length === 0 && (
             <p className="text-black/70 font-rubik text-sm lg:text-lg text-left p-4 rounded-xl bg-slate-100">
               No exhibitors found.
             </p>
           )}
 
-          {sortedExhibitorsList.length > 0 && (
+          {exhibitorsList.length > 0 && (
             <Swiper
               grid={{
                 rows: 2,
@@ -78,52 +74,48 @@ function Exhibitors({ exhibitorsList }: { exhibitorsList: ExhibitorData[] }) {
               ref={swiperBoundaryRef}
               className="w-full h-[75vh] flex items-start justify-start rounded-lg"
             >
-              {sortedExhibitorsList
-                .filter((image) => !!image.logo)
-                .map((image) => (
-                  <SwiperSlide
-                    key={image.id}
-                    className="py-4 h-full w-fit flex items-center justify-center"
-                    onClick={() => {
-                      setOpenModal(true),
-                        setModalInfo({
-                          companyName: image.name,
-                          companyDescription: image.description,
-                        });
-                    }}
-                  >
-                    <HoverCard>
-                      <HoverCardTrigger
-                        asChild
-                        className="h-1/2 mx-auto flex items-center justify-center"
-                      >
-                        <Image
-                          src={image.logo as string}
-                          alt={image.name as string}
-                          width={250}
-                          height={250}
-                          className="block object-contain h-full rounded-xl z-30"
+              {exhibitorsList.map((exhibitor) => (
+                <SwiperSlide
+                  key={exhibitor.id}
+                  className="py-4 h-full w-fit flex items-center justify-center"
+                  onClick={() => {
+                    setOpenModal(true),
+                      setModalInfo({
+                        companyName: exhibitor.name,
+                        companyDescription: exhibitor.description,
+                      });
+                  }}
+                >
+                  <HoverCard>
+                    <HoverCardTrigger
+                      asChild
+                      className="h-1/2 mx-auto flex items-center justify-center"
+                    >
+                      <div>
+                        <ExhibitorLogo
+                          name={exhibitor.name}
+                          logoUrl={exhibitor.logoUrl}
                         />
-                      </HoverCardTrigger>
-                      <HoverCardContent
-                        className="w-80 max-h-80 overflow-y-scroll z-40"
-                        side="bottom"
-                        align="center"
-                        avoidCollisions
-                        collisionBoundary={
-                          swiperBoundaryRef?.current &&
-                          swiperBoundaryRef.current
-                        }
-                        collisionPadding={10}
-                      >
-                        <div className="font-bold font-poppins">
-                          {image.name}
-                        </div>
-                        <div>{image.description}</div>
-                      </HoverCardContent>
-                    </HoverCard>
-                  </SwiperSlide>
-                ))}
+                      </div>
+                    </HoverCardTrigger>
+                    <HoverCardContent
+                      className="w-80 max-h-80 overflow-y-scroll z-40"
+                      side="bottom"
+                      align="center"
+                      avoidCollisions
+                      collisionBoundary={
+                        swiperBoundaryRef?.current && swiperBoundaryRef.current
+                      }
+                      collisionPadding={10}
+                    >
+                      <div className="font-bold font-poppins">
+                        {exhibitor.name}
+                      </div>
+                      <div>{exhibitor.description}</div>
+                    </HoverCardContent>
+                  </HoverCard>
+                </SwiperSlide>
+              ))}
             </Swiper>
           )}
 
