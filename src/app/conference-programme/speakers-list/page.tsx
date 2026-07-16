@@ -7,7 +7,7 @@ import { SpeakersListWithSuspense } from "@/components/SpeakersWithSuspense";
 export const metadata: Metadata = {
   title: "Speakers",
   description:
-    "Meet the speakers attending the Mining Expo this year. Including, but not limited to: Hon. Tom Alweendo, Aphary Muyongo, Anthony Viljoen, Willy Mertens, Olavi Hangula",
+    "Meet the speakers attending the Mining Expo & Conference 2026 at the Windhoek Show Grounds.",
   openGraph: {
     images: [{ url: "../../opengraph-image.jpg" }],
   },
