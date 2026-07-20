@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
-import { getSpeakers } from "@/lib/getSpeakers";
+import { getEventSpeakers } from "@/lib/getEventSpeakers";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const speakers = await getSpeakers();
+  const speakers = await getEventSpeakers();
   const speakerEntries: MetadataRoute.Sitemap = speakers.map(({ id }) => ({
     url: `https://miningexponamibia.com/conference-programme/speakers-list/${id}`,
     changeFrequency: "yearly",

@@ -1,14 +1,8 @@
-const SESSIONS_API_URL =
-  process.env.SESSIONS_API_URL ??
-  "https://event.wemotive.in/api/v1/public/events/slug/mining-expo-2026-mpb3pqiq/sessions";
+import { fetchEventApi } from "./eventApi";
 
 /** Sessions in this track belong to the main event (expo) schedule; every
  *  other track belongs to the conference programme. */
 const EXPO_TRACK_NAME = "2026 Expo Programme";
-
-/** Speaker photo URLs are pre-signed and expire after 1 hour, so the cache
- *  window must stay well below that. */
-const REVALIDATE_SECONDS = 300;
 
 export interface ScheduleSpeaker {
   id: string;
@@ -82,22 +76,10 @@ function toSession(raw: ApiSession): ScheduleSession {
 }
 
 async function getSessions(): Promise<ScheduleSession[]> {
-  try {
-    const res = await fetch(SESSIONS_API_URL, {
-      next: { revalidate: REVALIDATE_SECONDS },
-    });
-    if (!res.ok) {
-      console.error(`Sessions API responded with ${res.status}`);
-      return [];
-    }
-    const body: SessionsApiResponse = await res.json();
-    return (body.data?.sessions ?? [])
-      .map(toSession)
-      .sort((a, b) => a.startTime.getTime() - b.startTime.getTime());
-  } catch (error) {
-    console.error("Failed to fetch sessions:", error);
-    return [];
-  }
+  const body = await fetchEventApi<SessionsApiResponse>("/sessions");
+  return (body?.data?.sessions ?? [])
+    .map(toSession)
+    .sort((a, b) => a.startTime.getTime() - b.startTime.getTime());
 }
 
 /** Sessions for the main event programme page. */
