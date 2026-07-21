@@ -94,6 +94,12 @@ function delegateRegistrationPage() {
                 </span>
               </a>
             </div>
+
+            <p className="text-black/70 font-rubik text-sm text-center lg:text-left">
+              Just in case you are not getting your OTP, kindly use{" "}
+              <strong className="font-bold text-expoBlue">123456</strong> to
+              access the app content.
+            </p>
           </div>
         </div>
       </section>
