@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import RMBSponsorLogo from "../../public/RMB_SPONSOR_LOGO_resize.webp";
+import { getCurrentEventYear } from "@/lib/eventTime";
 
 function Footer() {
   return (
@@ -125,7 +126,11 @@ function Footer() {
         </div>
 
         <p className="text-white/50 text-center">
-          © 2024, Powered by{" "}
+          {/* Rendered at build time on the server and re-evaluated on the
+              client, so the two can disagree if a year rolls over between
+              deploys — the visitor's value is the correct one. */}
+          © <span suppressHydrationWarning>{getCurrentEventYear()}</span>, Powered
+          by{" "}
           <Link
             href="http://bi-dynamics.com/"
             className="font-bold text-white underline underline-offset-2 hover:text-expoOrange"
