@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
-import conferenceRegistration from "../../../../public/conference-registration.png";
+import conferenceRegistration from "../../../../public/conference-registration.webp";
 
 export const metadata: Metadata = {
   title: "Conference Registration",

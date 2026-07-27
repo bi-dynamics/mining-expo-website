@@ -33,6 +33,11 @@ const dayKeyFormatter = new Intl.DateTimeFormat("en-CA", {
   day: "2-digit",
 });
 
+const yearFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EVENT_TIME_ZONE,
+  year: "numeric",
+});
+
 /** e.g. "August 04, 2026" */
 export function formatEventDate(date: Date): string {
   return dateFormatter.format(date);
@@ -51,4 +56,9 @@ export function formatEventDayLabel(date: Date): string {
 /** e.g. "2026-08-04" — sortable key for grouping sessions by event day. */
 export function getEventDayKey(date: Date): string {
   return dayKeyFormatter.format(date);
+}
+
+/** e.g. "2026" — the current year at the venue, for the footer copyright. */
+export function getCurrentEventYear(): string {
+  return yearFormatter.format(new Date());
 }

@@ -7,8 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Exhibitor Registration",
@@ -232,13 +230,6 @@ const RegistrationInfoPage = () => {
                   </ul>
                 ))}
               </div>
-              <Button
-                asChild
-                className=" w-[80%] bg-expoOrange text-expoBlue hover:text-expoOrange hover:bg-expoBlue"
-                size="lg"
-              >
-                <Link href="/delegate-registration">Register Now</Link>
-              </Button>
             </div>
           ))}
         </div>
