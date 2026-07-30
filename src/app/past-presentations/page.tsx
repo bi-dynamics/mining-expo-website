@@ -553,11 +553,15 @@ const PastPresentationsPage = () => {
   }
 
   function filterFloorPlansByYear(yearToFilter: number) {
-    return floorPlansData?.filter(
-      (floorPlan) => floorPlan.sourceYears?.map((sourceYear) => sourceYear.year === yearToFilter)
+    //only keep plans that actually have an image for the selected year,
+    //otherwise venues added in a later year render as blank slides
+    return floorPlansData?.filter((floorPlan) =>
+      floorPlan.sourceYears?.some(
+        (sourceYear) => sourceYear.year === yearToFilter && sourceYear.src
+      )
     );
   }
-  
+
   const [currentYear, setCurrentYear] = useState(2013);
   const [exhibitorsData, setExhibitorsData] = useState<ExhibitorData[] | null>(
     null
