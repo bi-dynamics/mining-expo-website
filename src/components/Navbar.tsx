@@ -47,31 +47,33 @@ const marketing_opportunities: {
   href: string;
   description: string;
 }[] = [
-    {
-      title: "Supplier's Platform",
-      href: "/suppliers-platform",
-      description:
-        "Presentation area for exhibitors to display services and product offerings.",
-    },
-    {
-      title: "B2B",
-      href: "/suppliers-platform/b2b",
-      description:
-        "Platform for exhibitors to engage directly with potential customers.",
-    },
-  ];
+  {
+    title: "Supplier's Platform",
+    href: "/suppliers-platform",
+    description:
+      "Presentation area for exhibitors to display services and product offerings.",
+  },
+  {
+    title: "B2B",
+    href: "/suppliers-platform/b2b",
+    description:
+      "Platform for exhibitors to engage directly with potential customers.",
+  },
+];
+
+const previousYear = new Date().getFullYear() - 1;
 
 const past_events: {
   title: string;
   href: string;
   description: string;
 }[] = [
-    {
-      title: "Past Presentations",
-      href: "/past-presentations",
-      description: "Timeline of presentations from 2013 to 2024.",
-    },
-  ];
+  {
+    title: "Past Presentations",
+    href: "/past-presentations",
+    description: `Timeline of presentations from 2013 to ${previousYear}`,
+  },
+];
 
 const Navbar = () => {
   const [opaqueNav, setOpaqueNav] = useState(false);
@@ -281,7 +283,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
