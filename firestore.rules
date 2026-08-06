@@ -1,0 +1,154 @@
+rules_version = '2';
+
+// Mining Expo (mining-expo-bc804) — Firestore rules, TARGET state.
+//
+// Deploy this only after the portal has been moved to the Admin SDK.
+// Until then deploy firestore.stage1.rules, which is portal-safe.
+// See SECURITY-RULES.md.
+//
+// Model
+//   - Public content stays world-readable: the website and the Ionic app both
+//     read anonymously and neither has a login to lean on.
+//   - Nothing is publicly writable. Content changes go through the admin
+//     portal, which uses the Admin SDK; that bypasses rules entirely, so the
+//     portal needs no client write path at all.
+//   - isAdmin() remains as a break-glass path for signed-in admin tooling.
+//     It is deliberately NOT `request.auth != null`: self-signup is open on
+//     this project, so "signed in" carries no authority.
+//   - scanner/ holds attendee PII and is closed to every client.
+//
+// Collections not matched below are denied by default.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------------------------------------------------------------- auth
+
+    // An admin is an explicitly designated account: either the `admin` custom
+    // claim, or a doc at /admins/{uid}. Merely being authenticated is not
+    // enough — anyone can self-register on this project.
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.admin == true ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // ---------------------------------------------------------- validation
+
+    // Intentionally not hasOnly(): live exhibitor docs carry a legacy key with
+    // a trailing space ("id ") that hasOnly() would reject on every update,
+    // because request.resource.data is the full post-update document.
+    // Types and bounds only.
+    function validExhibitor() {
+      let d = request.resource.data;
+      return (!('name' in d)         || (d.name is string && d.name.size() <= 200))
+          && (!('description' in d)  || (d.description is string && d.description.size() <= 5000))
+          && (!('logo' in d)         || (d.logo is string && d.logo.size() <= 2000))
+          && (!('status' in d)       || d.status in ['active', 'draft'])
+          && (!('yearsAtEvent' in d) || d.yearsAtEvent is list);
+    }
+
+    // ------------------------------------------------------ public content
+
+    // Read by: website (past-presentations), Ionic app, portal dashboard.
+    match /exhibitors/{doc} {
+      allow read: if true;
+      // create/update and delete are split because request.resource is null on
+      // delete — folding them into one `write` would block admin deletes.
+      allow create, update: if isAdmin() && validExhibitor();
+      allow delete: if isAdmin();
+    }
+
+    // Frozen historical data — website past-presentations only.
+    match /exhibitors_2024/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Read by: website floor plans, Ionic app.
+    match /floor_plans/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /floor_plans_2024/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Read by: Ionic app. The 2026 website sources speakers/sessions from the
+    // wemotive REST API instead, so these are app-only now.
+    match /speakers/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /conference_schedule/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /expo_schedule/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /suppliers_platform/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Feature flags / embed URLs read by the Ionic app at startup.
+    match /app_page_configs/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ------------------------------------------------------------- private
+
+    // Attendee badge scans: name, badge number, company, phone number.
+    // Personal data — no client may read it, in bulk or by id.
+    //
+    // Writes: the shipped Ionic app appends here anonymously from an unguarded
+    // route, so `if isAdmin()` breaks scanning on already-installed builds.
+    // All existing data is from Aug 2023 and the page that reads it never
+    // renders the result, so this file assumes scanning is retired.
+    //
+    // If scanning IS wanted at the 2026 expo, swap the write line for the
+    // append-only variant below — anonymous create, no read-back, no edits:
+    //
+    //   allow create: if validScan();
+    //   allow update, delete: if isAdmin();
+    //
+    //   function validScan() {
+    //     let d = request.resource.data;
+    //     return d.keys().hasOnly(['scan', 'dateTime', 'action'])
+    //         && d.scan is string && d.scan.size() <= 500
+    //         && d.action is string && d.action.size() <= 20;
+    //   }
+    //
+    // That still leaves an unauthenticated write endpoint (spam/cost vector),
+    // which is why it is not the default.
+    match /scanner/{doc} {
+      allow read: if false;
+      allow write: if isAdmin();
+    }
+
+    // Admin designation. Server-side exists() in isAdmin() bypasses rules, so
+    // this stays completely closed to clients. Manage it from the console or
+    // the Admin SDK.
+    match /admins/{uid} {
+      allow read, write: if false;
+    }
+
+    // ------------------------------------------------------------- default
+
+    // Documentation of the default, not an override: Firestore denies unless
+    // some rule allows, and allow rules are OR'd. Any collection added later
+    // is therefore denied until it is granted access explicitly above.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

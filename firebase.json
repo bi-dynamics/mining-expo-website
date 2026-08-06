@@ -1,0 +1,9 @@
+{
+  "firestore": {
+    "_comment": "Points at the interim ruleset, which is what is live. Switch to firestore.rules in stage 3, after the portal moves to the Admin SDK. See SECURITY-RULES.md.",
+    "rules": "firestore.stage1.rules"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

@@ -28,6 +28,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# Firebase rules rollout notes. This repo is public: the document names live
+# unclosed holes, admin uids and a real attendee's phone number. The .rules
+# files themselves are safe to commit and are tracked; the write-up is not.
+SECURITY-RULES.md
+
 # vercel
 .vercel
 
