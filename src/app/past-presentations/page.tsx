@@ -39,7 +39,7 @@ const pastPresentations = [
         alt: "Mine Safety and Challenges - Mathews Amunghete",
       },
       {
-        file: "/Past-Presentations/2013/Upstream_Downstream.pdf",
+        file: "/Past-Presentations/2013/Upstream__Downstream.pdf",
         alt: "Upstream Downstream",
       },
       {
@@ -84,7 +84,7 @@ const pastPresentations = [
         alt: "Security of water supply to mining industry",
       },
       {
-        file: "/Past-Presentations/2014/Namport_Expansion_initiative_to_support_the_Mining_Industry.pdf",
+        file: "/Past-Presentations/2014/Namport_Expansion_Initiatives_to_support_the_Mining_Industry.pdf",
         alt: "Namport Expansion Initiatives to support the Mining Industry",
       },
       {
@@ -510,35 +510,35 @@ const pastPresentations = [
      year: 2025,
     src: [
       {
-        file: "/2025-Presentations/Financing-the-Future-How-Mining-can-Deliver-Namibias-Development-Promise-Angelique-Peake.pdf",
+        file: "/Past-Presentations/2025/Financing-the-Future-How-Mining-can-Deliver-Namibias-Development-Promise-Angelique-Peake.pdf",
         alt: "Financing the Future: How Mining can Deliver Namibia's Development Promise - Angelique Peake",
       },
       {
-        file: "/2025-Presentations/Namibias-Diamond-Future-Debmarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
+        file: "/Past-Presentations/2025/Namibias-Diamond-Future-Debmarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
         alt: "Namibia's Diamond Future: Debmarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
       },
       {
-        file: "/2025-Presentations/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
+        file: "/Past-Presentations/2025/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
         alt: "Otjikoto Gold Mine: A Pioneer in Namibia's Mining Revolution - John Roos",
       },
       {
-        file: "/2025-Presentations/Navachab-Gold-Mine-Expansion-Unlocking-Jobs-Innnovation-and-Economic-Transformation-George-Botshiwe.pdf",
+        file: "/Past-Presentations/2025/Navachab-Gold-Mine-Expansion-Unlocking-Jobs-Innnovation-and-Economic-Transformation-George-Botshiwe.pdf",
         alt: "Navachab Gold Mine Expansion: Unlocking Jobs, Innovation and Economic Transformation - George Botshiwe",
       },
       {
-        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
+        file: "/Past-Presentations/2025/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
         alt: "Husab Mine: Building a World-Class Namibian Uranium Company - Irvinne Simataa",
       },
       {
-        file: "/2025-Presentations/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
+        file: "/Past-Presentations/2025/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
         alt: "Building Namibia's Integrated Marine Phosphate Industry to Fuel Economic Diversification and Value Creation - Mike Woodbone and Chris Jordinson",
       },
       {
-        file: "/2025-Presentations/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
+        file: "/Past-Presentations/2025/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
         alt: "Etango: Contribution to Local Economic Growth - Werner Ewald",
       },
       {
-        file: "/2025-Presentations/The-Transformative-Impact-of-the-Tumas-Uranium-Project-John-Borshoff.pdf",
+        file: "/Past-Presentations/2025/The-Transformative-Impact-of-the-Tumas-Uranium-Project-John-Borshoff.pdf",
         alt: "The Transformative Impact of the Tumas Uranium Project - John Borshoff",
       },
     ],
@@ -614,15 +614,7 @@ const PastPresentationsPage = () => {
             <div key={index}>
               <Button
                 key={index}
-                onClick={() => {
-                  //Adding this condition because year 2020 is not included
-                  //So adding an extra 1 to the current year after 2019 fixes it
-                  if (index >= 7) {
-                    setCurrentYear(index + 1 + 2013);
-                  } else {
-                    setCurrentYear(2013 + index);
-                  }
-                }}
+                onClick={() => setCurrentYear(presentation.year)}
                 className={clsx(
                   "w-fit font-bold font-rubik hover:bg-expoOrange/70 bg-expoBlue transition-colors",
                   {

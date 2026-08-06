@@ -1,0 +1,78 @@
+rules_version = '2';
+
+// Mining Expo (mining-expo-bc804) — Cloud Storage rules.
+//
+// Deploy in stage 3, together with firestore.rules, after the portal's uploads
+// have moved to the Admin SDK. Deploying earlier breaks logo upload.
+// See SECURITY-RULES.md.
+//
+// Everything under img/ is public marketing collateral (exhibitor logos, floor
+// plans, speaker photos, the suppliers-platform image), referenced by absolute
+// download URLs stored in Firestore. Read stays public; write does not.
+//
+// Note on read: the ?alt=media&token=... download URLs already in Firestore are
+// authenticated by their download token and bypass these rules, so those images
+// would keep loading even under `allow read: if false`. Public read is kept
+// anyway because getDownloadURL() from the SDK *is* rules-gated, and these are
+// public assets regardless.
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Mirrors isAdmin() in firestore.rules. Storage rules can query Firestore,
+    // so the /admins/{uid} allowlist works from here too.
+    // Not `request.auth != null` — self-signup is open on this project.
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.admin == true ||
+        firestore.exists(/databases/(default)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isSafeImage() {
+      return request.resource.contentType.matches('image/.*')
+          && request.resource.size < 5 * 1024 * 1024;
+    }
+
+    // Portal upload target. Written by the Admin SDK in the target state
+    // (which bypasses these rules); isAdmin() is the break-glass path.
+    match /img/exhibitors/{file} {
+      allow read: if true;
+      // Split: request.resource is null on delete, so a single `write` guarded
+      // by isSafeImage() would block admin deletes.
+      allow create, update: if isAdmin() && isSafeImage();
+      allow delete: if isAdmin();
+    }
+
+    match /img/floor_plans/{file} {
+      allow read: if true;
+      // Split: request.resource is null on delete, so a single `write` guarded
+      // by isSafeImage() would block admin deletes.
+      allow create, update: if isAdmin() && isSafeImage();
+      allow delete: if isAdmin();
+    }
+
+    match /img/speakers/{file} {
+      allow read: if true;
+      // Split: request.resource is null on delete, so a single `write` guarded
+      // by isSafeImage() would block admin deletes.
+      allow create, update: if isAdmin() && isSafeImage();
+      allow delete: if isAdmin();
+    }
+
+    match /img/suppliers_platform/{file} {
+      allow read: if true;
+      // Split: request.resource is null on delete, so a single `write` guarded
+      // by isSafeImage() would block admin deletes.
+      allow create, update: if isAdmin() && isSafeImage();
+      allow delete: if isAdmin();
+    }
+
+    // Any other path — including anything already in the bucket outside img/ —
+    // is denied. Confirm the bucket has nothing else public before deploying:
+    //   gsutil ls -r gs://mining-expo-bc804.appspot.com
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

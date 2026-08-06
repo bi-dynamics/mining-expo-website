@@ -1,0 +1,109 @@
+rules_version = '2';
+
+// Mining Expo (mining-expo-bc804) — Firestore rules, STAGE 1 (interim).
+//
+// Safe to deploy today, with no code changes anywhere. It closes the attendee
+// PII leak and locks every collection nothing writes to, while deliberately
+// leaving `exhibitors` publicly writable so the admin portal keeps working
+// exactly as it does now.
+//
+// This is not the end state — `exhibitors` being world-writable is still a
+// hole. Move to firestore.rules once the portal is on the Admin SDK.
+// See SECURITY-RULES.md.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.admin == true ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // ---- STILL OPEN, on purpose -----------------------------------------
+
+    // The portal's "use server" actions write here with the client SDK and no
+    // credentials, so requiring auth breaks exhibitor management. Closed in
+    // stage 3, after the portal moves to the Admin SDK.
+    match /exhibitors/{doc} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // ---- read-only -------------------------------------------------------
+    // Nothing in any of the three apps writes to these.
+
+    match /exhibitors_2024/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /floor_plans/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /floor_plans_2024/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /speakers/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /conference_schedule/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /expo_schedule/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /suppliers_platform/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /app_page_configs/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ---- closed ----------------------------------------------------------
+
+    // Attendee PII (name, badge number, company, phone). Closing read is the
+    // main win of this stage and costs nothing: the only consumer is
+    // ScannerPage's getScans(), whose result is assigned to `qr` and never
+    // rendered by scanner.html.
+    //
+    // Writes stay open to anonymous clients, deliberately. The shipped Ionic
+    // app appends here with no login from an unguarded route, and installed
+    // builds cannot be forced to update — closing this could silently break
+    // scanning at the expo with no way to walk it back.
+    //
+    // Shape is pinned to exactly what ScannerPage.addScan() sends, so the app's
+    // real payload still writes but arbitrary junk does not. Revisit in stage 4
+    // once it is settled whether scanning runs in 2026.
+    match /scanner/{doc} {
+      allow read: if false;
+      allow create: if request.resource.data.keys().hasOnly(['scan', 'dateTime', 'action'])
+                    && request.resource.data.scan is string
+                    && request.resource.data.scan.size() <= 500;
+      allow update, delete: if isAdmin();
+    }
+
+    match /admins/{uid} {
+      allow read, write: if false;
+    }
+
+    // Anything not listed above is denied by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

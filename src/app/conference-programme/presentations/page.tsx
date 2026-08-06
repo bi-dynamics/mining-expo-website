@@ -6,39 +6,35 @@ import clsx from "clsx";
 
 const pastPresentations = [
   {
-    year: 2025,
+    year: 2026,
     src: [
       {
-        file: "/2025-Presentations/Financing-the-Future-How-Mining-can-Deliver-Namibias-Development-Promise-Angelique-Peake.pdf",
-        alt: "Financing the Future: How Mining can Deliver Namibia's Development Promise - Angelique Peake",
+        file: "/Past-Presentations/2026/Leading-through-Change-Riaan-Burger.pdf",
+        alt: "Tough as a Diamond: Leading through Change - Riaan Burger",
       },
       {
-        file: "/2025-Presentations/Namibias-Diamond-Future-Debmarine-Namibia-navigating-the-course-to-resilience-through-the-downturn-cycles-Willy-Mertens.pdf",
-        alt: "Namibia's Diamond Future: Debmarine Namibia navigating the course to resilience through the downturn cycles - Willy Mertens",
+        file: "/Past-Presentations/2026/Creating-Lasting-Value-Through-B2Golds-Otjikoto-Gold-Mine-John-Roos.pdf",
+        alt: "Creating Lasting Value Through B2Gold's Otjikoto Gold Mine - John Roos",
       },
       {
-        file: "/2025-Presentations/Otjikoto-Gold-Mine-A-Pioneer-in-Namibias-Mining-Revolution-John-Roos.pdf",
-        alt: "Otjikoto Gold Mine: A Pioneer in Namibia's Mining Revolution - John Roos",
+        file: "/Past-Presentations/2026/Delivering-Investment-Jobs-and-Regional-Growth-through-the-Tumas-Uranium-Project-Zebra-Kasete.pdf",
+        alt: "Delivering Investment, Jobs and Regional Growth Through the Tumas Uranium Project - Zebra Kasete",
       },
       {
-        file: "/2025-Presentations/Navachab-Gold-Mine-Expansion-Unlocking-Jobs-Innnovation-and-Economic-Transformation-George-Botshiwe.pdf",
-        alt: "Navachab Gold Mine Expansion: Unlocking Jobs, Innovation and Economic Transformation - George Botshiwe",
+        file: "/Past-Presentations/2026/The-ProLith-Project-Innovating-Lithium-Extraction-in-Namibia-Timothy-Marais.pdf",
+        alt: "The ProLith Project: Innovating Lithium Extraction in Namibia - Timothy Marais",
       },
       {
-        file: "/2025-Presentations/Husab-Mine-Building-a-World-Class-Namibian-Uranium-Company-Irvinne-Simataa.pdf",
-        alt: "Husab Mine: Building a World-Class Namibian Uranium Company - Irvinne Simataa",
+        file: "/Past-Presentations/2026/Reflections-on-Minings-Commitments-and-the-Path-Forward-Fabian-Shaanika.pdf",
+        alt: "Reflections on Mining's Commitments and the Path Forward - Fabian Shaanika",
       },
       {
-        file: "/2025-Presentations/Building-Namibias-Intergrated-Marine-Phosphate-Industry-to-Fuel-Economic-Diversification-and-Value-Creation-Mike-Woodbone-and-Chris-Jordinson.pdf",
-        alt: "Building Namibia's Integrated Marine Phosphate Industry to Fuel Economic Diversification and Value Creation - Mike Woodbone and Chris Jordinson",
+        file: "/Past-Presentations/2026/Conference-Context-on-Minings-Commitments-One-Year-on-from-NamPPF-George-Botshiwe.pdf",
+        alt: "Conference Context on Mining's Commitments One Year on from NamPPF - George Botshiwe",
       },
       {
-        file: "/2025-Presentations/Etango-Contribution-to-Local-Economic-Growth-Werner-Ewald.pdf",
-        alt: "Etango: Contribution to Local Economic Growth - Werner Ewald",
-      },
-      {
-        file: "/2025-Presentations/The-Transformative-Impact-of-the-Tumas-Uranium-Project-John-Borshoff.pdf",
-        alt: "The Transformative Impact of the Tumas Uranium Project - John Borshoff",
+        file: "/Past-Presentations/2026/Appian-in-Namibia-Creating-Opportunities.pdf",
+        alt: "Appian in Namibia: Creating Opportunities with Rosh Pinah Zinc, Omitiomire Copper and beyond",
       },
     ],
   },
@@ -47,10 +43,10 @@ const pastPresentations = [
 const PresentationsPage = () => {
   return (
     <div className="flex flex-col  w-full h-full">
-      <PageBanner title="2025 Presentations" />
+      <PageBanner title="2026 Presentations" />
       <div className="py-16 gap-16 flex items-center justify-center flex-col w-[90%] lg:w-[60%]  mx-auto">
         <h2 className="text-xl md:text-5xl font-poppins font-bold text-black text-center">
-          2025 Conference Presentations
+          2026 Conference Presentations
         </h2>
 
         <div className="flex flex-col gap-2 items-start justify-center">
