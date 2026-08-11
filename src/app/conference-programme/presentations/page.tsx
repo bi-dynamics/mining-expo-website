@@ -76,9 +76,47 @@ const sections: PresentationSection[] = [
     ],
   },
   {
-    title: "NamXplore",
-    emptyMessage: "NamXplore presentations will be published here once available.",
-    presentations: [],
+    // Pitches are listed in the order they were given at the pitch challenge,
+    // which is the order the source files are numbered in.
+    title: "NamXplor",
+    presentations: [
+      {
+        file: "/Past-Presentations/2026/Kaoko-Copper-Belt-Project-Serval-Resources.pdf",
+        alt: "Kaoko Copper Belt Project: Unlocking the Potential of the Kaoko Belt - Serval Resources",
+      },
+      {
+        file: "/Past-Presentations/2026/Okotjize-Project-Theresia-Aochamus.pdf",
+        alt: "Okotjize Project: EPL 8097 & EPL 7327 - Dr. Theresia J. Aochamus",
+      },
+      {
+        file: "/Past-Presentations/2026/Mickal-Critical-Discovery-Minerals-Project-Mickal-Tjituka.pdf",
+        alt: "Mickal / Critical Discovery Minerals Project: Uranium, Copper, Gold, Lead and Graphite - Mickal Tjituka",
+      },
+      {
+        file: "/Past-Presentations/2026/Damara-Gold-Project-Simed-Trading.pdf",
+        alt: "Damara Gold Project: Untested Gold & REE Targets in the Damara Belt - Simed Trading CC",
+      },
+      {
+        file: "/Past-Presentations/2026/Okanjande-Graphite-Project.pdf",
+        alt: "Okanjande Graphite Project",
+      },
+      {
+        file: "/Past-Presentations/2026/ABMOGN-Exploration-EPL-9921-Uranium-Exploration-Given-Shipahu.pdf",
+        alt: "ABMOGN Exploration, EPL 9921: Uranium Exploration Investment Opportunity - Given Shipahu",
+      },
+      {
+        file: "/Past-Presentations/2026/Otjimbingwe-Project-Copper-and-Gold-Exploration-Naomi-Kefas.pdf",
+        alt: "Otjimbingwe Project, EPL 10571: Copper & Gold Exploration Opportunity - Naomi N. Kefas",
+      },
+      {
+        file: "/Past-Presentations/2026/Coastal-Clay-Project-Lavrenty-Repin.pdf",
+        alt: "Coastal Clay Project: A Clay-Based Manufacturing Enterprise - Lavrenty Repin",
+      },
+      {
+        file: "/Past-Presentations/2026/Henties-Bay-Industrial-Salt-Project-Kaunalenga-Avia.pdf",
+        alt: "Henties Bay Industrial Salt Project - Kaunalenga Kristof Tangeni Avia",
+      },
+    ],
   },
 ];
 
