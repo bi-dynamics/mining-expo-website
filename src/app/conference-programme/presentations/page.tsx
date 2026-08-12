@@ -73,6 +73,10 @@ const sections: PresentationSection[] = [
         file: "/Past-Presentations/2026/The-Debmarine-Namibia-Safety-Maturity-Journey-Charlotte-Maenge-Shipiki-Kali.pdf",
         alt: "The Debmarine Namibia Safety Maturity Journey - Charlotte Maenge Shipiki-Kali",
       },
+      {
+        file: "/Past-Presentations/2026/Contractor-Leadership-at-the-Interface-of-Change-Management-Jacklyn-Mwenze.pdf",
+        alt: "Contractor Leadership at the Interface of Change Management - Jacklyn Mwenze",
+      },
     ],
   },
   {
